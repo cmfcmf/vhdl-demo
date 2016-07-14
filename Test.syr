@@ -1,0 +1,1431 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: Test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Test"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : Test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Register_7Bit.vhd" into library work
+Parsing entity <DRegister>.
+INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Register_7Bit.vhd" Line 38. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <dregister>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Eingabemodul_STW.vhd" into library work
+Parsing entity <Eingabemodul_STW>.
+Parsing architecture <Behavioral> of entity <eingabemodul_stw>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Eingabemodul_OPW.vhd" into library work
+Parsing entity <Eingabemodul_OPW>.
+Parsing architecture <Behavioral> of entity <eingabemodul_opw>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Ausgabemodul_STW.vhd" into library work
+Parsing entity <Ausgabemodul_STW>.
+Parsing architecture <Behavioral> of entity <ausgabemodul_stw>.
+WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Ausgabemodul_STW.vhd" Line 45: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" into library work
+Parsing entity <Ausgabemodul_OPW>.
+INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" Line 39. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" Line 41. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" Line 42. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+Parsing architecture <Behavioral> of entity <ausgabemodul_opw>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/vga_characterrom.vhd" into library work
+Parsing entity <VgaCharacterRom>.
+Parsing architecture <Structure> of entity <vgacharacterrom>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/ScancodeToAscii.vhd" into library work
+Parsing entity <ScancodeToAscii>.
+Parsing architecture <Behavioral> of entity <scancodetoascii>.
+WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/ScancodeToAscii.vhd" Line 41: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Eingabemodul_STK.vhd" into library work
+Parsing entity <Eingabemodul_STK>.
+Parsing architecture <Behavioral> of entity <eingabemodul_stk>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Ausgabemodul_STK.vhd" into library work
+Parsing entity <Ausgabemodul_STK>.
+Parsing architecture <Behavioral> of entity <ausgabemodul_stk>.
+WARNING:HDLCompiler:439 - "/home/iseuser/projects/VGATest2/Ausgabemodul_STK.vhd" Line 49: Formal port ledout of mode buffer cannot be associated with actual port ledout of mode out
+Parsing VHDL file "/home/iseuser/projects/VGATest2/vga_controller (1).vhd" into library work
+Parsing entity <vga_controller>.
+Parsing architecture <behavior> of entity <vga_controller>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/RAM.vhd" into library work
+Parsing entity <RAM>.
+Parsing architecture <Behavioral> of entity <ram>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/KeyboardController.vhd" into library work
+Parsing entity <KeyboardController>.
+Parsing architecture <Behavioral> of entity <keyboardcontroller>.
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Counter.vhd" into library work
+Parsing entity <Counter>.
+Parsing architecture <Behavioral> of entity <counter>.
+WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Counter.vhd" Line 50: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/home/iseuser/projects/VGATest2/CharPrinter.vhd" into library work
+Parsing entity <CharPrinter>.
+Parsing architecture <Behavioral> of entity <charprinter>.
+WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/CharPrinter.vhd" Line 59: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/home/iseuser/projects/VGATest2/Test.vhd" into library work
+Parsing entity <Test>.
+Parsing architecture <Behavioral> of entity <test>.
+WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Test.vhd" Line 89: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Test.vhd" Line 112: Possible infinite loop; process does not have a wait statement
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Test> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Counter> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <vga_controller> (architecture <behavior>) with generics from library <work>.
+
+Elaborating entity <RAM> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <BRAM_SDP_MACRO> (architecture <bram_V>) with generics from library <unimacro>.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 299: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 313: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 321: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 351: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 374: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 712: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 750: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 776: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 798: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 816: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 458: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 648: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 671: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 398: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 429: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1029: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1168: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 853: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 903: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 879: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 951: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 927: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1353: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1354: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1355: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1356: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1357: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1358: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1378: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1379: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1380: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1381: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1382: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1383: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1402: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1419: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1470: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 3351: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:634 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1333: Net <di_pattern[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 1334: Net <dip_pattern[3]> does not have a driver.
+
+Elaborating entity <CharPrinter> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <VgaCharacterRom> (architecture <Structure>) from library <work>.
+
+Elaborating entity <BRAM_SINGLE_MACRO> (architecture <bram_V>) with generics from library <unimacro>.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 718: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 744: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 765: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 221: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 394: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 286: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 287: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 370: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 783: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 438: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 440: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1006: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 559: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 560: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 821: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 847: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 874: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 900: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 926: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1219: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1269: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1328: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 2603: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:634 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1171: Net <di_pattern[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd" Line 1172: Net <dip_pattern[3]> does not have a driver.
+
+Elaborating entity <KeyboardController> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Eingabemodul_STK> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Eingabemodul_OPW> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:92 - "/home/iseuser/projects/VGATest2/Register_7Bit.vhd" Line 50: enable should be on the sensitivity list of the process
+
+Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Eingabemodul_STW> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Ausgabemodul_STK> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Ausgabemodul_STW> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Ausgabemodul_OPW> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ScancodeToAscii> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Test>.
+    Related source file is "/home/iseuser/projects/VGATest2/Test.vhd".
+WARNING:Xst:647 - Input <rxd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/iseuser/projects/VGATest2/Test.vhd" line 77: Output port <count> of the instance <pixel_counter> is unconnected or connected to loadless signal.
+    Register <R> equivalent to <G> has been removed
+    Register <B> equivalent to <G> has been removed
+    Found 4-bit register for signal <G>.
+    Found 12-bit register for signal <write_address>.
+    Found 1-bit register for signal <write_to_ram_state>.
+    Found 1-bit register for signal <write_enable>.
+    Found 8-bit register for signal <input>.
+    Found 12-bit adder for signal <write_address[11]_GND_4_o_add_6_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <Test> synthesized.
+
+Synthesizing Unit <Counter>.
+    Related source file is "/home/iseuser/projects/VGATest2/Counter.vhd".
+        max = 4
+    Found 32-bit register for signal <current>.
+    Found 32-bit adder for signal <current[31]_GND_5_o_add_3_OUT> created at line 56.
+    Found 32-bit comparator greater for signal <GND_5_o_current[31]_LessThan_3_o> created at line 55
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <Counter> synthesized.
+
+Synthesizing Unit <vga_controller>.
+    Related source file is "/home/iseuser/projects/VGATest2/vga_controller (1).vhd".
+        h_pulse = 96
+        h_bp = 48
+        h_pixels = 640
+        h_fp = 16
+        h_pol = '0'
+        v_pulse = 2
+        v_bp = 29
+        v_pixels = 480
+        v_fp = 10
+        v_pol = '0'
+    Found 1-bit register for signal <v_sync>.
+    Found 1-bit register for signal <h_sync>.
+    Found 1-bit register for signal <disp_ena>.
+    Found 10-bit register for signal <v_count>.
+    Found 10-bit register for signal <h_count>.
+    Found 32-bit register for signal <column>.
+    Found 32-bit register for signal <row>.
+    Found 10-bit adder for signal <h_count[9]_GND_6_o_add_1_OUT> created at line 71.
+    Found 10-bit adder for signal <v_count[9]_GND_6_o_add_3_OUT> created at line 75.
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_7_o_LessThan_1_o> created at line 70
+    Found 10-bit comparator greater for signal <v_count[9]_PWR_7_o_LessThan_3_o> created at line 74
+    Found 10-bit comparator greater for signal <GND_6_o_PWR_7_o_LessThan_8_o> created at line 82
+    Found 10-bit comparator greater for signal <PWR_7_o_GND_6_o_LessThan_9_o> created at line 82
+    Found 10-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_10_o> created at line 89
+    Found 10-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_11_o> created at line 89
+    Found 10-bit comparator greater for signal <GND_6_o_PWR_7_o_LessThan_16_o> created at line 104
+    Found 10-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_17_o> created at line 104
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  87 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <vga_controller> synthesized.
+
+Synthesizing Unit <RAM>.
+    Related source file is "/home/iseuser/projects/VGATest2/RAM.vhd".
+    Summary:
+	no macro.
+Unit <RAM> synthesized.
+
+Synthesizing Unit <BRAM_SDP_MACRO>.
+    Related source file is "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd".
+        BRAM_SIZE = "36Kb"
+        DEVICE = "7SERIES"
+        DO_REG = 0
+        INITP_00 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_01 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_02 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_03 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_04 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_05 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_06 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_07 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_08 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_09 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_00 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_01 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_02 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_03 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_04 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_05 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_06 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_07 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_08 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_09 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_10 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_11 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_12 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_13 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_14 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_15 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_16 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_17 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_18 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_19 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_1F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_20 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_21 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_22 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_23 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_24 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_25 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_26 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_27 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_28 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_29 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_2F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_30 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_31 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_32 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_33 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_34 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_35 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_36 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_37 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_38 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_39 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_3F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_40 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_41 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_42 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_43 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_44 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_45 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_46 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_47 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_48 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_49 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_4F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_50 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_51 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_52 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_53 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_54 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_55 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_56 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_57 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_58 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_59 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_5F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_60 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_61 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_62 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_63 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_64 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_65 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_66 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_67 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_68 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_69 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_6F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_70 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_71 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_72 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_73 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_74 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_75 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_76 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_77 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_78 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_79 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT = "000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_FILE = "NONE"
+        READ_WIDTH = 8
+        WRITE_MODE = "WRITE_FIRST"
+        WRITE_WIDTH = 8
+        SIM_COLLISION_CHECK = "ALL"
+        SIM_MODE = "SAFE"
+        SRVAL = "000000000000000000000000000000000000000000000000000000000000000000000000"
+WARNING:Xst:2935 - Signal 'di_pattern<31:8>', unconnected in block 'BRAM_SDP_MACRO', is tied to its initial value (000000000000000000000000).
+WARNING:Xst:2935 - Signal 'dip_pattern', unconnected in block 'BRAM_SDP_MACRO', is tied to its initial value (0000).
+    Summary:
+	no macro.
+Unit <BRAM_SDP_MACRO> synthesized.
+
+Synthesizing Unit <CharPrinter>.
+    Related source file is "/home/iseuser/projects/VGATest2/CharPrinter.vhd".
+        screen_width = 640
+        screen_height = 480
+    Found 1-bit register for signal <read_enable>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <CharPrinter> synthesized.
+
+Synthesizing Unit <VgaCharacterRom>.
+    Related source file is "/home/iseuser/projects/VGATest2/vga_characterrom.vhd".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <VgaCharacterRom> synthesized.
+
+Synthesizing Unit <BRAM_SINGLE_MACRO>.
+    Related source file is "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhd".
+        BRAM_SIZE = "36Kb"
+        DEVICE = "7SERIES"
+        DO_REG = 0
+        INITP_00 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_01 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_02 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_03 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_04 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_05 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_06 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_07 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_08 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_09 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0A = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0B = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0C = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0D = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0E = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INITP_0F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_00 = "0000000000000000000000000000000001111110100000011000000110011001101111011000000110000001101001011000000101111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_01 = "0000000000000000000000000000000000001000000111000011111001111111011111110111111101111111001101100000000000000000000000000000000000000000000000000000000000000000011111101111111111111111111001111100001111111111111111111101101111111111011111100000000000000000"
+        INIT_02 = "0000000000000000000000000000000000111100000110000001100011100111111001111110011100111100001111000001100000000000000000000000000000000000000000000000000000000000000000000000100000011100001111100111111100111110000111000000100000000000000000000000000000000000"
+        INIT_03 = "0000000000000000000000000000000000000000000000000001100000111100001111000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000001111000001100000011000011111101111111111111111011111100011110000011000000000000000000000000000"
+        INIT_04 = "0000000000000000000000000000000000000000001111000110011001000010010000100110011000111100000000000000000000000000000000000000000011111111111111111111111111111111111111111111111111100111110000111100001111100111111111111111111111111111111111111111111111111111"
+        INIT_05 = "0000000000000000000000000000000000011110001100110011001100110011001100110001111001001100010110000111000001111000000000000000000011111111111111111111111111111111111111111100001110011001101111011011110110011001110000111111111111111111111111111111111111111111"
+        INIT_06 = "0000000000000000000000000000000000000111000011110000111000001100000011000000110000001100111111001100110011111100000000000000000000000000000000000000000000000000000110000001100001111110000110000011110001100110011001100110011001100110001111000000000000000000"
+        INIT_07 = "0000000000000000000000000000000000011000000110001101101100111100111001110011110011011011000110000001100000000000000000000000000000000000000000000000000000000011011001111110011111100110110001101100011011000110110001101111111011000110111111100000000000000000"
+        INIT_08 = "0000000000000000000000000000000001000000011000000111000001111000011111000111111101111100011110000111000001100000010000000000000000000000000000000000000000000000000000010000001100000111000011110001111101111111000111110000111100000111000000110000000100000000"
+        INIT_09 = "0000000000000000000000000000000001100110011001100000000001100110011001100110011001100110011001100110011001100110000000000000000000000000000000000000000000000000000000000001100000111100011111100001100000011000000110000111111000111100000110000000000000000000"
+        INIT_0A = "0000000000000000000000000011111001100011001100000001110000110110011000110110001100110110000111000000011001100011001111100000000000000000000000000000000000000000110110001101100011011000110110001101100011011110110110111101101111011011111111100000000000000000"
+        INIT_0B = "0000000000000000000000000000000001111110000110000011110001111110000110000001100000011000011111100011110000011000000000000000000000000000000000000000000000000000011111110111111101111111011111110000000000000000000000000000000000000000000000000000000000000000"
+        INIT_0C = "0000000000000000000000000000000000011000001111000111111000011000000110000001100000011000000110000001100000011000000000000000000000000000000000000000000000000000000110000001100000011000000110000001100000011000000110000111111000111100000110000000000000000000"
+        INIT_0D = "0000000000000000000000000000000000000000000000000000110000000110011111110000011000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000001100000111111100110000000110000000000000000000000000000000000000000000"
+        INIT_0E = "0000000000000000000000000000000000000000000000000001010000110110011111110011011000010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111000000110000001100000011000000000000000000000000000000000000000000000000"
+        INIT_0F = "0000000000000000000000000000000000000000000010000001110000011100001111100011111001111111011111110000000000000000000000000000000000000000000000000000000000000000000000000111111101111111001111100011111000011100000111000000100000000000000000000000000000000000"
+        INIT_10 = "0000000000000000000000000000000000011000000110000000000000011000000110000001100000111100001111000011110000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_11 = "0000000000000000000000000000000000110110001101100111111100110110001101100011011001111111001101100011011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010010001100110011001100110011000000000"
+        INIT_12 = "0000000000000000000000000000000001100001011000110000011000001100000110000011000001100011010000110000000000000000000000000000000000000000000000000001100000011000001111100110001101100001011000000110000000111110000000110100001101100011001111100001100000011000"
+        INIT_13 = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000110000001100000011000000000000000000000000000000000000000000011011100011001100110011001100110011101101101110000111000011011000110110000111000000000000000000"
+        INIT_14 = "0000000000000000000000000000000000001100000110000011000000110000001100000011000000110000001100000001100000001100000000000000000000000000000000000000000000000000001100000001100000001100000011000000110000001100000011000000110000011000001100000000000000000000"
+        INIT_15 = "0000000000000000000000000000000000000000000000000001100000011000011111100001100000011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100110001111001111111100111100011001100000000000000000000000000000000000000000"
+        INIT_16 = "0000000000000000000000000000000000000000000000000000000000000000011111110000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000110000001100000011000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_17 = "0000000000000000000000000000000000000001000000110000011000001100000110000011000001100000010000000000000000000000000000000000000000000000000000000000000000000000000110000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_18 = "0000000000000000000000000000000001111110000110000001100000011000000110000001100000011000000111100001110000011000000000000000000000000000000000000000000000000000000111000011011001100011011000110110101101101011011000110110001100110110000111000000000000000000"
+        INIT_19 = "0000000000000000000000000000000000111110011000110110000001100000011000000011110001100000011000000110001100111110000000000000000000000000000000000000000000000000011111110110001100000011000001100000110000011000001100000110000001100011001111100000000000000000"
+        INIT_1A = "0000000000000000000000000000000000111110011000110110000001100000011000000011111100000011000000110000001101111111000000000000000000000000000000000000000000000000011110000011000000110000001100000111111100110011001101100011110000111000001100000000000000000000"
+        INIT_1B = "0000000000000000000000000000000000001100000011000000110000001100000110000011000001100000011000000110001101111111000000000000000000000000000000000000000000000000001111100110001101100011011000110110001100111111000000110000001100000110000111000000000000000000"
+        INIT_1C = "0000000000000000000000000000000000011110001100000110000001100000011000000111111001100011011000110110001100111110000000000000000000000000000000000000000000000000001111100110001101100011011000110110001100111110011000110110001101100011001111100000000000000000"
+        INIT_1D = "0000000000000000000000000000000000001100000110000001100000000000000000000000000000011000000110000000000000000000000000000000000000000000000000000000000000000000000000000001100000011000000000000000000000000000000110000001100000000000000000000000000000000000"
+        INIT_1E = "0000000000000000000000000000000000000000000000000000000001111110000000000000000001111110000000000000000000000000000000000000000000000000000000000000000000000000011000000011000000011000000011000000011000001100000110000011000001100000000000000000000000000000"
+        INIT_1F = "0000000000000000000000000000000000011000000110000000000000011000000110000001100000110000011000110110001100111110000000000000000000000000000000000000000000000000000001100000110000011000001100000110000000110000000110000000110000000110000000000000000000000000"
+        INIT_20 = "0000000000000000000000000000000001100011011000110110001101100011011111110110001101100011001101100001110000001000000000000000000000000000000000000000000000000000001111100000001100111011011110110111101101111011011000110110001100111110000000000000000000000000"
+        INIT_21 = "0000000000000000000000000000000000111100011001100100001100000011000000110000001100000011010000110110011000111100000000000000000000000000000000000000000000000000001111110110011001100110011001100110011000111110011001100110011001100110001111110000000000000000"
+        INIT_22 = "0000000000000000000000000000000001111111011001100100011000000110000101100001111000010110010001100110011001111111000000000000000000000000000000000000000000000000000111110011011001100110011001100110011001100110011001100110011000110110000111110000000000000000"
+        INIT_23 = "0000000000000000000000000000000001011100011001100110001101100011011110110000001100000011010000110110011000111100000000000000000000000000000000000000000000000000000011110000011000000110000001100001011000011110000101100100011001100110011111110000000000000000"
+        INIT_24 = "0000000000000000000000000000000000111100000110000001100000011000000110000001100000011000000110000001100000111100000000000000000000000000000000000000000000000000011000110110001101100011011000110110001101111111011000110110001101100011011000110000000000000000"
+        INIT_25 = "0000000000000000000000000000000001100111011001100110011000110110000111100001111000110110011001100110011001100111000000000000000000000000000000000000000000000000000111100011001100110011001100110011000000110000001100000011000000110000011110000000000000000000"
+        INIT_26 = "0000000000000000000000000000000001100011011000110110001101100011011000110110101101111111011111110111011101100011000000000000000000000000000000000000000000000000011111110110011001000110000001100000011000000110000001100000011000000110000011110000000000000000"
+        INIT_27 = "0000000000000000000000000000000000111110011000110110001101100011011000110110001101100011011000110110001100111110000000000000000000000000000000000000000000000000011000110110001101100011011000110111001101111011011111110110111101100111011000110000000000000000"
+        INIT_28 = "0000000000000000011100000011000000111110011110110110101101100011011000110110001101100011011000110110001100111110000000000000000000000000000000000000000000000000000011110000011000000110000001100000011000111110011001100110011001100110001111110000000000000000"
+        INIT_29 = "0000000000000000000000000000000000111110011000110110001101100000001100000001110000000110011000110110001100111110000000000000000000000000000000000000000000000000011001110110011001100110011001100011011000111110011001100110011001100110001111110000000000000000"
+        INIT_2A = "0000000000000000000000000000000000111110011000110110001101100011011000110110001101100011011000110110001101100011000000000000000000000000000000000000000000000000001111000001100000011000000110000001100000011000000110000101101001111110011111100000000000000000"
+        INIT_2B = "0000000000000000000000000000000000110110011101110111111101101011011010110110101101100011011000110110001101100011000000000000000000000000000000000000000000000000000010000001110000110110011000110110001101100011011000110110001101100011011000110000000000000000"
+        INIT_2C = "0000000000000000000000000000000000111100000110000001100000011000000110000011110001100110011001100110011001100110000000000000000000000000000000000000000000000000011000110110001100110110001111100001110000011100001111100011011001100011011000110000000000000000"
+        INIT_2D = "0000000000000000000000000000000000111100000011000000110000001100000011000000110000001100000011000000110000111100000000000000000000000000000000000000000000000000011111110110001101000011000001100000110000011000001100000110000101100011011111110000000000000000"
+        INIT_2E = "0000000000000000000000000000000000111100001100000011000000110000001100000011000000110000001100000011000000111100000000000000000000000000000000000000000000000000010000000110000001110000001110000001110000001110000001110000001100000001000000000000000000000000"
+        INIT_2F = "0000000000000000111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001100011001101100001110000001000"
+        INIT_30 = "0000000000000000000000000000000001101110001100110011001100110011001111100011000000011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110000000110000001100"
+        INIT_31 = "0000000000000000000000000000000000111110011000110000001100000011000000110110001100111110000000000000000000000000000000000000000000000000000000000000000000000000001111100110011001100110011001100110011000110110000111100000011000000110000001110000000000000000"
+        INIT_32 = "0000000000000000000000000000000000111110011000110000001100000011011111110110001100111110000000000000000000000000000000000000000000000000000000000000000000000000011011100011001100110011001100110011001100110110001111000011000000110000001110000000000000000000"
+        INIT_33 = "0000000000011110001100110011000000111110001100110011001100110011001100110011001101101110000000000000000000000000000000000000000000000000000000000000000000000000000011110000011000000110000001100000011000001111000001100010011000110110000111000000000000000000"
+        INIT_34 = "0000000000000000000000000000000000111100000110000001100000011000000110000001100000011100000000000001100000011000000000000000000000000000000000000000000000000000011001110110011001100110011001100110011001101110001101100000011000000110000001110000000000000000"
+        INIT_35 = "0000000000000000000000000000000001100111011001100011011000011110000111100011011001100110000001100000011000000111000000000000000000000000001111000110011001100110011000000110000001100000011000000110000001100000011100000000000001100000011000000000000000000000"
+        INIT_36 = "0000000000000000000000000000000001100011011010110110101101101011011010110111111100110111000000000000000000000000000000000000000000000000000000000000000000000000001111000001100000011000000110000001100000011000000110000001100000011000000111000000000000000000"
+        INIT_37 = "0000000000000000000000000000000000111110011000110110001101100011011000110110001100111110000000000000000000000000000000000000000000000000000000000000000000000000011001100110011001100110011001100110011001100110001110110000000000000000000000000000000000000000"
+        INIT_38 = "0000000001111000001100000011000000111110001100110011001100110011001100110011001101101110000000000000000000000000000000000000000000000000000011110000011000000110001111100110011001100110011001100110011001100110001110110000000000000000000000000000000000000000"
+        INIT_39 = "0000000000000000000000000000000000111110011000110011000000011100000001100110001100111110000000000000000000000000000000000000000000000000000000000000000000000000000011110000011000000110000001100110011001101110001110110000000000000000000000000000000000000000"
+        INIT_3A = "0000000000000000000000000000000001101110001100110011001100110011001100110011001100110011000000000000000000000000000000000000000000000000000000000000000000000000001110000110110000001100000011000000110000001100001111110000110000001100000010000000000000000000"
+        INIT_3B = "0000000000000000000000000000000000110110011111110110101101101011011010110110001101100011000000000000000000000000000000000000000000000000000000000000000000000000000110000011110001100110011001100110011001100110011001100000000000000000000000000000000000000000"
+        INIT_3C = "0000000000011111001100000110000001111110011000110110001101100011011000110110001101100011000000000000000000000000000000000000000000000000000000000000000000000000011000110011011000011100000111000001110000110110011000110000000000000000000000000000000000000000"
+        INIT_3D = "0000000000000000000000000000000001110000000110000001100000011000000110000000111000011000000110000001100001110000000000000000000000000000000000000000000000000000011111110110001100000110000011000001100000110011011111110000000000000000000000000000000000000000"
+        INIT_3E = "0000000000000000000000000000000000001110000110000001100000011000000110000111000000011000000110000001100000001110000000000000000000000000000000000000000000000000000110000001100000011000000110000001100000000000000110000001100000011000000110000000000000000000"
+        INIT_3F = "0000000000000000000000000000000000000000011111110110001101100011011000110011011000011100000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111011011011100000000000000000"
+        INIT_40 = "0000000000000000000000000000000001101110001100110011001100110011001100110011001100110011000000000000000000110011000000000000000000000000000000000011111001100000001100000011110001100110010000110000001100000011000000110100001101100110001111000000000000000000"
+        INIT_41 = "0000000000000000000000000000000001101110001100110011001100110011001111100011000000011110000000000011011000011100000010000000000000000000000000000000000000000000001111100110001100000011000000110111111101100011001111100000000000001100000110000011000000000000"
+        INIT_42 = "0000000000000000000000000000000001101110001100110011001100110011001111100011000000011110000000000001100000001100000001100000000000000000000000000000000000000000011011100011001100110011001100110011111000110000000111100000000000000000001100110000000000000000"
+        INIT_43 = "0000000000000000000000000011110001100000001100000011110001100110000001100000011001100110001111000000000000000000000000000000000000000000000000000000000000000000011011100011001100110011001100110011111000110000000111100000000000011100001101100001110000000000"
+        INIT_44 = "0000000000000000000000000000000000111110011000110000001100000011011111110110001100111110000000000000000001100011000000000000000000000000000000000000000000000000001111100110001100000011000000110111111101100011001111100000000000110110000111000000100000000000"
+        INIT_45 = "0000000000000000000000000000000000111100000110000001100000011000000110000001100000011100000000000000000001100110000000000000000000000000000000000000000000000000001111100110001100000011000000110111111101100011001111100000000000011000000011000000011000000000"
+        INIT_46 = "0000000000000000000000000000000000111100000110000001100000011000000110000001100000011100000000000001100000001100000001100000000000000000000000000000000000000000001111000001100000011000000110000001100000011000000111000000000001100110001111000001100000000000"
+        INIT_47 = "0000000000000000000000000000000001100011011000110110001101111111011000110110001100110110000111000000000000011100001101100001110000000000000000000000000000000000011000110110001101100011011111110110001101100011001101100001110000001000000000000110001100000000"
+        INIT_48 = "0000000000000000000000000000000001110110000110110001101101111110011011000110111000110011000000000000000000000000000000000000000000000000000000000000000000000000011111110110011000000110000001100011111000000110011001100111111100000000000001100000110000011000"
+        INIT_49 = "0000000000000000000000000000000000111110011000110110001101100011011000110110001100111110000000000011011000011100000010000000000000000000000000000000000000000000011100110011001100110011001100110011001101111111001100110011001100110110011111000000000000000000"
+        INIT_4A = "0000000000000000000000000000000000111110011000110110001101100011011000110110001100111110000000000001100000001100000001100000000000000000000000000000000000000000001111100110001101100011011000110110001101100011001111100000000000000000011000110000000000000000"
+        INIT_4B = "0000000000000000000000000000000001101110001100110011001100110011001100110011001100110011000000000001100000001100000001100000000000000000000000000000000000000000011011100011001100110011001100110011001100110011001100110000000000110011000111100000110000000000"
+        INIT_4C = "0000000000000000000000000000000000111110011000110110001101100011011000110110001101100011011000110011111000000000011000110000000000000000000111100011000001100000011111100110001101100011011000110110001101100011011000110000000000000000011000110000000000000000"
+        INIT_4D = "0000000000000000000000000000000000011000000110000011110001100110000001100000011000000110011001100011110000011000000110000000000000000000000000000000000000000000001111100110001101100011011000110110001101100011011000110110001101100011000000000110001100000000"
+        INIT_4E = "0000000000000000000000000000000000011000000110000001100001111110000110000111111000011000001111000110011001100110000000000000000000000000000000000000000000000000001111110110011100000110000001100000011000000110000011110000011000100110001101100001110000000000"
+        INIT_4F = "0000000000000000000011100001101100011000000110000001100000011000000110000111111000011000000110000001100011011000011100000000000000000000000000000000000000000000011000110011001100110011001100110111101100110011001000110001111100110011001100110001111100000000"
+        INIT_50 = "0000000000000000000000000000000000111100000110000001100000011000000110000001100000011100000000000000110000011000001100000000000000000000000000000000000000000000011011100011001100110011001100110011111000110000000111100000000000000110000011000001100000000000"
+        INIT_51 = "0000000000000000000000000000000001101110001100110011001100110011001100110011001100110011000000000000011000001100000110000000000000000000000000000000000000000000001111100110001101100011011000110110001101100011001111100000000000000110000011000001100000000000"
+        INIT_52 = "0000000000000000000000000000000001100011011000110110001101110011011110110111111101101111011001110110001100000000001110110110111000000000000000000000000000000000011001100110011001100110011001100110011001100110001110110000000000111011011011100000000000000000"
+        INIT_53 = "0000000000000000000000000000000000000000000000000000000000000000000000000011111000000000000111000011011000110110000111000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000111110000110110001101100011110000000000"
+        INIT_54 = "0000000000000000000000000000000000000000000000110000001100000011000000110111111100000000000000000000000000000000000000000000000000000000000000000000000000000000001111100110001101100011000000110000011000001100000011000000000000001100000011000000000000000000"
+        INIT_55 = "0000000000000000011111000001100000110000011000010011101100000110000011000001100000110011011000110100001100000011000000110000000000000000000000000000000000000000000000000110000001100000011000000110000001111111000000000000000000000000000000000000000000000000"
+        INIT_56 = "0000000000000000000000000000000000011000001111000011110000111100000110000001100000011000000000000001100000011000000000000000000000000000000000000110000001100000011111000111100101110011011001100000110000011000001100110110001101000011000000110000001100000000"
+        INIT_57 = "0000000000000000000000000000000000000000000000000001101100110110011011000011011000011011000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001101100001101100001101100110110011011000000000000000000000000000000000000000000"
+        INIT_58 = "0101010110101010010101011010101001010101101010100101010110101010010101011010101001010101101010100101010110101010010101011010101000100010100010000010001010001000001000101000100000100010100010000010001010001000001000101000100000100010100010000010001010001000"
+        INIT_59 = "0001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100011101110101110111110111010111011111011101011101111101110101110111110111010111011111011101011101111101110101110111110111010111011"
+        INIT_5A = "0001100000011000000110000001100000011000000110000001100000011000000111110001100000011111000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001111100011000000110000001100000011000000110000001100000011000"
+        INIT_5B = "0110110001101100011011000110110001101100011011000110110001101100011111110000000000000000000000000000000000000000000000000000000001101100011011000110110001101100011011000110110001101100011011000110111101101100011011000110110001101100011011000110110001101100"
+        INIT_5C = "0110110001101100011011000110110001101100011011000110110001101100011011110110000001101111011011000110110001101100011011000110110000011000000110000001100000011000000110000001100000011000000110000001111100011000000111110000000000000000000000000000000000000000"
+        INIT_5D = "0110110001101100011011000110110001101100011011000110110001101100011011110110000001111111000000000000000000000000000000000000000001101100011011000110110001101100011011000110110001101100011011000110110001101100011011000110110001101100011011000110110001101100"
+        INIT_5E = "0000000000000000000000000000000000000000000000000000000000000000011111110110110001101100011011000110110001101100011011000110110000000000000000000000000000000000000000000000000000000000000000000111111101100000011011110110110001101100011011000110110001101100"
+        INIT_5F = "0001100000011000000110000001100000011000000110000001100000011000000111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100011000000111110001100000011000000110000001100000011000"
+        INIT_60 = "0000000000000000000000000000000000000000000000000000000000000000111111110001100000011000000110000001100000011000000110000001100000000000000000000000000000000000000000000000000000000000000000001111100000011000000110000001100000011000000110000001100000011000"
+        INIT_61 = "0001100000011000000110000001100000011000000110000001100000011000111110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110001111111100000000000000000000000000000000000000000000000000000000"
+        INIT_62 = "0001100000011000000110000001100000011000000110000001100000011000111111110001100000011000000110000001100000011000000110000001100000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000000000000"
+        INIT_63 = "0110110001101100011011000110110001101100011011000110110001101100111011000110110001101100011011000110110001101100011011000110110000011000000110000001100000011000000110000001100000011000000110001111100000011000111110000001100000011000000110000001100000011000"
+        INIT_64 = "0110110001101100011011000110110001101100011011000110110001101100111011000000110011111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000001100111011000110110001101100011011000110110001101100"
+        INIT_65 = "0110110001101100011011000110110001101100011011000110110001101100111011110000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000111011110110110001101100011011000110110001101100"
+        INIT_66 = "0000000000000000000000000000000000000000000000000000000000000000111111110000000011111111000000000000000000000000000000000000000001101100011011000110110001101100011011000110110001101100011011001110110000001100111011000110110001101100011011000110110001101100"
+        INIT_67 = "0000000000000000000000000000000000000000000000000000000000000000111111110000000011111111000110000001100000011000000110000001100001101100011011000110110001101100011011000110110001101100011011001110111100000000111011110110110001101100011011000110110001101100"
+        INIT_68 = "0001100000011000000110000001100000011000000110000001100000011000111111110000000011111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111101101100011011000110110001101100011011000110110001101100"
+        INIT_69 = "0000000000000000000000000000000000000000000000000000000000000000111111000110110001101100011011000110110001101100011011000110110001101100011011000110110001101100011011000110110001101100011011001111111100000000000000000000000000000000000000000000000000000000"
+        INIT_6A = "0001100000011000000110000001100000011000000110000001100000011000111110000001100011111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111100000011000111110000001100000011000000110000001100000011000"
+        INIT_6B = "0110110001101100011011000110110001101100011011000110110001101100111111110110110001101100011011000110110001101100011011000110110001101100011011000110110001101100011011000110110001101100011011001111110000000000000000000000000000000000000000000000000000000000"
+        INIT_6C = "0000000000000000000000000000000000000000000000000000000000000000000111110001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110001111111100011000111111110001100000011000000110000001100000011000"
+        INIT_6D = "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100011000000110000001100000011000000110000001100000011000000110001111100000000000000000000000000000000000000000000000000000000000"
+        INIT_6E = "0000111100001111000011110000111100001111000011110000111100001111000011110000111100001111000011110000111100001111000011110000111111111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000"
+        INIT_6F = "0000000000000000000000000000000000000000000000000000000000000000000000001111111111111111111111111111111111111111111111111111111111110000111100001111000011110000111100001111000011110000111100001111000011110000111100001111000011110000111100001111000011110000"
+        INIT_70 = "0000000000000000000000000000000000110011011000110110001101100011001100110001101100110011001100110011001100011110000000000000000000000000000000000000000000000000011011100011101100011011000110110001101100111011011011100000000000000000000000000000000000000000"
+        INIT_71 = "0000000000000000000000000000000000110110001101100011011000110110001101100011011000110110011111110000000000000000000000000000000000000000000000000000000000000000000000110000001100000011000000110000001100000011000000110110001101100011011111110000000000000000"
+        INIT_72 = "0000000000000000000000000000000000001110000110110001101100011011000110110001101101111110000000000000000000000000000000000000000000000000000000000000000000000000011111110110001100000110000011000001100000001100000001100110001101111111000000000000000000000000"
+        INIT_73 = "0000000000000000000000000000000000011000000110000001100000011000000110000001100000111011011011100000000000000000000000000000000000000000000000000000000000000011000001100000011000111110011001100110011001100110011001100110011000000000000000000000000000000000"
+        INIT_74 = "0000000000000000000000000000000000011100001101100110001101100011011111110110001101100011001101100001110000000000000000000000000000000000000000000000000000000000011111100001100000111100011001100110011001100110001111000001100001111110000000000000000000000000"
+        INIT_75 = "0000000000000000000000000000000000111100011001100110011001100110011001100111110000110000000110000000110001111000000000000000000000000000000000000000000000000000011101110011011000110110001101100011011001100011011000110110001100110110000111000000000000000000"
+        INIT_76 = "0000000000000000000000000000000000000011000001100111111011001111110110111101101101111110011000001100000000000000000000000000000000000000000000000000000000000000000000000000000001111110110110111101101111011011011111100000000000000000000000000000000000000000"
+        INIT_77 = "0000000000000000000000000000000001100011011000110110001101100011011000110110001101100011011000110011111000000000000000000000000000000000000000000000000000000000001110000000110000000110000001100000011000111110000001100000011000001100001110000000000000000000"
+        INIT_78 = "0000000000000000000000000000000011111111000000000000000000011000000110000111111000011000000110000000000000000000000000000000000000000000000000000000000000000000000000000111111100000000000000000111111100000000000000000111111100000000000000000000000000000000"
+        INIT_79 = "0000000000000000000000000000000001111110000000000011000000011000000011000000011000001100000110000011000000000000000000000000000000000000000000000000000000000000011111100000000000001100000110000011000001100000001100000001100000001100000000000000000000000000"
+        INIT_7A = "0000000000000000000000000000000000001110000110110001101100011011000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110000001100000011000000110001101100011011000011100000000000000000000"
+        INIT_7B = "0000000000000000000000000000000000000000000000000011101101101110000000000011101101101110000000000000000000000000000000000000000000000000000000000000000000000000000000000001100000011000000000000111111000000000000110000001100000000000000000000000000000000000"
+        INIT_7C = "0000000000000000000000000000000000000000000000000000000000011000000110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001110000110110001101100001110000000000"
+        INIT_7D = "0000000000000000000000000000000000111000001111000011011000110110001101110011000000110000001100000011000000110000111100000000000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_7E = "0000000000000000000000000000000000000000000000000000000000000000000000000001111100010011000001100000110000011011000011100000000000000000000000000000000000000000000000000000000000000000000000000000000000110110001101100011011000110110001101100001101100000000"
+        INIT_7F = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111000111110001111100011111000111110001111100011111000000000000000000000000000000000"
+        INIT = "000000000000000000000000000000000000000000000000000000000000000000000000"
+        INIT_FILE = "NONE"
+        READ_WIDTH = 1
+        SIM_MODE = "SAFE"
+        SRVAL = "000000000000000000000000000000000000000000000000000000000000000000000000"
+        WRITE_MODE = "WRITE_FIRST"
+        WRITE_WIDTH = 1
+WARNING:Xst:2935 - Signal 'di_pattern<31:1>', unconnected in block 'BRAM_SINGLE_MACRO', is tied to its initial value (0000000000000000000000000000000).
+WARNING:Xst:2935 - Signal 'dip_pattern', unconnected in block 'BRAM_SINGLE_MACRO', is tied to its initial value (0000).
+    Summary:
+	no macro.
+Unit <BRAM_SINGLE_MACRO> synthesized.
+
+Synthesizing Unit <KeyboardController>.
+    Related source file is "/home/iseuser/projects/VGATest2/KeyboardController.vhd".
+    Summary:
+	no macro.
+Unit <KeyboardController> synthesized.
+
+Synthesizing Unit <Eingabemodul_STK>.
+    Related source file is "/home/iseuser/projects/VGATest2/Eingabemodul_STK.vhd".
+    Summary:
+	no macro.
+Unit <Eingabemodul_STK> synthesized.
+
+Synthesizing Unit <Eingabemodul_OPW>.
+    Related source file is "/home/iseuser/projects/VGATest2/Eingabemodul_OPW.vhd".
+    Found 4-bit adder for signal <Qcnt[3]_GND_139_o_add_4_OUT> created at line 81.
+    Found 4-bit 3-to-1 multiplexer for signal <Dcnt> created at line 78.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Multiplexer(s).
+Unit <Eingabemodul_OPW> synthesized.
+
+Synthesizing Unit <DRegister_1>.
+    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+        bits = 2
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <output>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <DRegister_1> synthesized.
+
+Synthesizing Unit <DRegister_2>.
+    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+        bits = 11
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 11-bit register for signal <output>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <DRegister_2> synthesized.
+
+Synthesizing Unit <DRegister_3>.
+    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+        bits = 4
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <output>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <DRegister_3> synthesized.
+
+Synthesizing Unit <Eingabemodul_STW>.
+    Related source file is "/home/iseuser/projects/VGATest2/Eingabemodul_STW.vhd".
+    Summary:
+	no macro.
+Unit <Eingabemodul_STW> synthesized.
+
+Synthesizing Unit <Ausgabemodul_STK>.
+    Related source file is "/home/iseuser/projects/VGATest2/Ausgabemodul_STK.vhd".
+    Summary:
+	no macro.
+Unit <Ausgabemodul_STK> synthesized.
+
+Synthesizing Unit <Ausgabemodul_STW>.
+    Related source file is "/home/iseuser/projects/VGATest2/Ausgabemodul_STW.vhd".
+    Found 1-bit register for signal <state>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <Ausgabemodul_STW> synthesized.
+
+Synthesizing Unit <Ausgabemodul_OPW>.
+    Related source file is "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd".
+    Found 14-bit adder for signal <count_inc> created at line 1241.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[6]_MUX_152_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[5]_MUX_156_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[4]_MUX_160_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[3]_MUX_164_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[2]_MUX_168_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[1]_MUX_172_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[0]_MUX_176_o> created at line 94.
+WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Latch(s).
+	inferred  12 Multiplexer(s).
+Unit <Ausgabemodul_OPW> synthesized.
+
+Synthesizing Unit <DRegister_4>.
+    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+        bits = 8
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <output>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <DRegister_4> synthesized.
+
+Synthesizing Unit <DRegister_5>.
+    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+        bits = 7
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 7-bit register for signal <output>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <DRegister_5> synthesized.
+
+Synthesizing Unit <DRegister_6>.
+    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+        bits = 14
+WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 14-bit register for signal <output>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <DRegister_6> synthesized.
+
+Synthesizing Unit <ScancodeToAscii>.
+    Related source file is "/home/iseuser/projects/VGATest2/ScancodeToAscii.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ascii<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   8 Latch(s).
+Unit <ScancodeToAscii> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 2
+ 12-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 24
+ 1-bit register                                        : 7
+ 10-bit register                                       : 2
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 14-bit register                                       : 1
+ 2-bit register                                        : 1
+ 32-bit register                                       : 3
+ 4-bit register                                        : 2
+ 7-bit register                                        : 4
+ 8-bit register                                        : 2
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Comparators                                          : 9
+ 10-bit comparator greater                             : 8
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 5
+ 1-bit 4-to-1 multiplexer                              : 7
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 4-bit 3-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <converter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <input_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <column_10> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_11> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_12> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_13> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_14> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_15> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_16> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_17> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_18> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_19> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_20> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_21> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_22> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_23> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_24> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_25> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_26> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_27> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_28> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_29> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_30> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <column_31> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_9> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_10> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_11> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_12> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_13> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_14> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_15> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_16> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_17> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_18> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_19> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_20> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_21> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_22> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_23> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_24> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_25> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_26> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_27> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_28> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_29> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_30> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <row_31> of sequential type is unconnected in block <vga>.
+
+Synthesizing (advanced) Unit <Ausgabemodul_OPW>.
+The following registers are absorbed into counter <counter_register/output>: 1 register on signal <counter_register/output>.
+Unit <Ausgabemodul_OPW> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Counter>.
+The following registers are absorbed into counter <current>: 1 register on signal <current>.
+Unit <Counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Test>.
+The following registers are absorbed into counter <write_address>: 1 register on signal <write_address>.
+Unit <Test> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 4-bit adder                                           : 1
+# Counters                                             : 3
+ 12-bit up counter                                     : 1
+ 14-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 156
+ Flip-Flops                                            : 156
+# Comparators                                          : 9
+ 10-bit comparator greater                             : 8
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 20
+ 1-bit 2-to-1 multiplexer                              : 3
+ 1-bit 4-to-1 multiplexer                              : 7
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 3-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <ScancodeToAscii>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <G_0> in Unit <Test> is equivalent to the following 3 FFs/Latches, which will be removed : <G_1> <G_2> <G_3> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0001
+ 01    | 0010
+ 10    | 0100
+ 11    | 1000
+-------------------
+WARNING:Xst:1710 - FF/Latch <row_10> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_11> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_12> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_13> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_14> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_15> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_16> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_17> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_18> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_19> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_20> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_21> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_22> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_23> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_24> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_25> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_26> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_27> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_28> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_29> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_30> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_31> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_10> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_11> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_12> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_13> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_14> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_15> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_16> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_17> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_18> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_19> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_20> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_21> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_22> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_23> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_24> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_25> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_26> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_27> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_28> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_29> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_30> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_31> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <char_printer/state_FSM_FFd3> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <char_printer/read_enable> 
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    segmentout_10 in unit <Ausgabemodul_OPW>
+    segmentout_8 in unit <Ausgabemodul_OPW>
+    segmentout_9 in unit <Ausgabemodul_OPW>
+    segmentout_11 in unit <Ausgabemodul_OPW>
+
+
+Optimizing unit <DRegister_2> ...
+
+Optimizing unit <DRegister_4> ...
+
+Optimizing unit <Test> ...
+
+Optimizing unit <Eingabemodul_OPW> ...
+
+Optimizing unit <Ausgabemodul_OPW> ...
+
+Optimizing unit <ScancodeToAscii> ...
+
+Optimizing unit <vga_controller> ...
+WARNING:Xst:1710 - FF/Latch <input_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_1> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <vga/row_9> of sequential type is unconnected in block <Test>.
+WARNING:Xst:1293 - FF/Latch <pixel_counter/current_31> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_30> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_29> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_28> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_27> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_26> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_25> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_24> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_23> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_22> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_21> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_20> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_19> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_18> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_17> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_16> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_15> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_14> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_13> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_12> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_11> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_10> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_9> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_8> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_7> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_6> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_5> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_4> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_3> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_2> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <vga/h_count_9> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <vga/column_9> 
+INFO:Xst:2261 - The FF/Latch <write_enable> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <write_to_ram_state> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Test, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 135
+ Flip-Flops                                            : 135
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 225
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 24
+#      LUT2                        : 12
+#      LUT3                        : 11
+#      LUT4                        : 28
+#      LUT5                        : 32
+#      LUT6                        : 53
+#      MUXCY                       : 32
+#      VCC                         : 1
+#      XORCY                       : 28
+# FlipFlops/Latches                : 146
+#      FD                          : 39
+#      FDC                         : 28
+#      FDCE                        : 18
+#      FDE                         : 47
+#      FDP                         : 3
+#      LD                          : 11
+# RAMS                             : 2
+#      RAMB36E1                    : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 3
+#      OBUF                        : 35
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             142  out of  126800     0%  
+ Number of Slice LUTs:                  163  out of  63400     0%  
+    Number used as Logic:               163  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    193
+   Number with an unused Flip Flop:      51  out of    193    26%  
+   Number with an unused LUT:            30  out of    193    15%  
+   Number of fully used LUT-FF pairs:   112  out of    193    58%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          40
+ Number of bonded IOBs:                  39  out of    210    18%  
+    IOB Flip Flops/Latches:               4
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    135     1%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+Clock Signal                                                 | Clock buffer(FF name)                                                    | Load  |
+-------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+clk                                                          | BUFGP                                                                    | 95    |
+pixel_clk(pixel_counter/max_reached<31>1:O)                  | BUFG(*)(G_0)                                                             | 42    |
+keyboard/converter/_n0275<0>(keyboard/converter/_n0275<0>3:O)| NONE(*)(keyboard/converter/ascii_0)                                      | 7     |
+pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<1>| NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
+input<7>                                                     | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
+-------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                           | Load  |
+-----------------------------------+-----------------------------------------------------------+-------+
+input<7>(XST_GND:G)                | NONE(ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl)| 6     |
+-----------------------------------+-----------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.273ns (Maximum Frequency: 234.028MHz)
+   Minimum input arrival time before clock: 1.748ns
+   Maximum output required time after clock: 2.012ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.675ns (frequency: 272.072MHz)
+  Total number of paths / destination ports: 865 / 139
+-------------------------------------------------------------------------
+Delay:               3.675ns (Levels of Logic = 11)
+  Source:            pixel_counter/current_1 (FF)
+  Destination:       pixel_counter/current_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pixel_counter/current_1 to pixel_counter/current_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.478   0.550  pixel_counter/current_1 (pixel_counter/current_1)
+     LUT2:I0->O            1   0.124   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>1 (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<2> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5>)
+     MUXCY:CI->O           3   0.334   0.435  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<6> (pixel_counter/GND_5_o_current[31]_LessThan_3_o_inv)
+     LUT3:I2->O            1   0.124   0.000  pixel_counter/Mcount_current_lut<0> (pixel_counter/Mcount_current_lut<0>)
+     MUXCY:S->O            0   0.472   0.000  pixel_counter/Mcount_current_cy<0> (pixel_counter/Mcount_current_cy<0>)
+     XORCY:CI->O           1   0.510   0.000  pixel_counter/Mcount_current_xor<1> (pixel_counter/Mcount_current1)
+     FDC:D                     0.030          pixel_counter/current_1
+    ----------------------------------------
+    Total                      3.675ns (2.691ns logic, 0.985ns route)
+                                       (73.2% logic, 26.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'pixel_clk'
+  Clock period: 4.273ns (frequency: 234.028MHz)
+  Total number of paths / destination ports: 2554 / 60
+-------------------------------------------------------------------------
+Delay:               4.273ns (Levels of Logic = 5)
+  Source:            vga/h_count_7 (FF)
+  Destination:       vga/v_sync (FF)
+  Source Clock:      pixel_clk rising
+  Destination Clock: pixel_clk rising
+
+  Data Path: vga/h_count_7 to vga/v_sync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.478   0.730  vga/h_count_7 (vga/h_count_7)
+     LUT3:I0->O            4   0.124   0.556  vga/h_count[9]_PWR_7_o_LessThan_1_o1_SW0 (N23)
+     LUT6:I4->O            2   0.124   0.427  vga/h_count[9]_PWR_7_o_LessThan_1_o1_1 (vga/h_count[9]_PWR_7_o_LessThan_1_o1)
+     LUT5:I4->O           12   0.124   1.011  vga/GND_6_o_v_count[9]_mux_6_OUT<5>1 (vga/GND_6_o_v_count[9]_mux_6_OUT<5>)
+     LUT6:I0->O            1   0.124   0.421  vga/GND_6_o_GND_6_o_OR_33_o2 (vga/GND_6_o_GND_6_o_OR_33_o2)
+     LUT4:I3->O            1   0.124   0.000  vga/GND_6_o_GND_6_o_OR_33_o3 (vga/GND_6_o_GND_6_o_OR_33_o)
+     FDP:D                     0.030          vga/v_sync
+    ----------------------------------------
+    Total                      4.273ns (1.128ns logic, 3.145ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'pixel_clk'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              1.051ns (Levels of Logic = 1)
+  Source:            RESET (PAD)
+  Destination:       G_0 (FF)
+  Destination Clock: pixel_clk rising
+
+  Data Path: RESET to G_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   0.001   0.556  RESET_IBUF (RESET_IBUF)
+     FDC:CLR                   0.494          G_0
+    ----------------------------------------
+    Total                      1.051ns (0.495ns logic, 0.556ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 37 / 37
+-------------------------------------------------------------------------
+Offset:              1.748ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       keyboard/ausgabe/opw/segment_buffer_1/output_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: RESET to keyboard/ausgabe/opw/segment_buffer_1/output_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   0.001   0.933  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O           28   0.124   0.551  keyboard/ausgabe/stw/Mmux_CE11 (keyboard/ausgabe/CE)
+     FDE:CE                    0.139          keyboard/ausgabe/opw/segment_buffer_4/output_1
+    ----------------------------------------
+    Total                      1.748ns (0.264ns logic, 1.484ns route)
+                                       (15.1% logic, 84.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pixel_clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              0.949ns (Levels of Logic = 1)
+  Source:            G_0 (FF)
+  Destination:       R<3> (PAD)
+  Source Clock:      pixel_clk rising
+
+  Data Path: G_0 to R<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             12   0.478   0.471  G_0 (G_0)
+     OBUF:I->O                 0.000          R_3_OBUF (R<3>)
+    ----------------------------------------
+    Total                      0.949ns (0.478ns logic, 0.471ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 50 / 15
+-------------------------------------------------------------------------
+Offset:              2.012ns (Levels of Logic = 2)
+  Source:            keyboard/ausgabe/opw/counter_register/output_13 (FF)
+  Destination:       segmentout<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: keyboard/ausgabe/opw/counter_register/output_13 to segmentout<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.478   1.011  keyboard/ausgabe/opw/counter_register/output_13 (keyboard/ausgabe/opw/counter_register/output_13)
+     LUT6:I0->O            1   0.124   0.399  keyboard/ausgabe/opw/Mmux_segmentout[11]_segmentcode_buffer_4[6]_MUX_152_o11 (segmentout_6_OBUF)
+     OBUF:I->O                 0.000          segmentout_6_OBUF (segmentout<6>)
+    ----------------------------------------
+    Total                      2.012ns (0.602ns logic, 1.410ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+clk                         |    3.675|         |         |         |
+keyboard/converter/_n0275<0>|         |    1.054|         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock keyboard/converter/_n0275<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.604|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pixel_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pixel_clk      |    4.273|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.45 secs
+ 
+--> 
+
+
+Total memory usage is 533348 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  223 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

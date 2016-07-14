@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/iseuser/projects/VGATest2/Test.ncd
+OUTFILE=/home/iseuser/projects/VGATest2/Test.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/iseuser/projects/VGATest2
+LICENSE=WebPack
+USER_INFO=201502255_0_0_151

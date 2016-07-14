@@ -1,0 +1,97 @@
+
+
+NET "RESET" LOC = V10;
+NET "h_sync" LOC = B11;
+NET "v_sync" LOC = B12;
+NET "led" LOC = V11;
+NET "rxd" LOC = J15;
+
+NET "kbclk" LOC = F4;
+NET "kbdata" LOC = B2;
+NET "ledout[0]" LOC = H17;
+NET "ledout[1]" LOC = K15;
+NET "ledout[2]" LOC = J13;
+NET "ledout[3]" LOC = N14;
+NET "ledout[4]" LOC = R18;
+NET "ledout[5]" LOC = V17;
+NET "ledout[6]" LOC = U17;
+NET "ledout[7]" LOC = U16;
+NET "segmentout[0]" LOC = T10;
+NET "segmentout[1]" LOC = R10;
+NET "segmentout[2]" LOC = K16;
+NET "segmentout[3]" LOC = K13;
+NET "segmentout[4]" LOC = P15;
+NET "segmentout[5]" LOC = T11;
+NET "segmentout[6]" LOC = L18;
+NET "segmentout[7]" LOC = H15;
+NET "segmentout[8]" LOC = J17;
+NET "segmentout[9]" LOC = J18;
+NET "segmentout[10]" LOC = T9;
+NET "segmentout[11]" LOC = J14;
+
+NET "RESET" IOSTANDARD = LVCMOS33;
+NET "h_sync" IOSTANDARD = LVCMOS33;
+NET "v_sync" IOSTANDARD = LVCMOS33;
+NET "led" IOSTANDARD = LVCMOS33;
+NET "rxd" IOSTANDARD = LVCMOS33;
+
+NET "kbclk" IOSTANDARD = LVCMOS33;
+NET "kbdata" IOSTANDARD = LVCMOS33;
+NET "ledout[7]" IOSTANDARD = LVCMOS33;
+NET "ledout[6]" IOSTANDARD = LVCMOS33;
+NET "ledout[5]" IOSTANDARD = LVCMOS33;
+NET "ledout[3]" IOSTANDARD = LVCMOS33;
+NET "ledout[4]" IOSTANDARD = LVCMOS33;
+NET "ledout[2]" IOSTANDARD = LVCMOS33;
+NET "ledout[1]" IOSTANDARD = LVCMOS33;
+NET "ledout[0]" IOSTANDARD = LVCMOS33;
+NET "segmentout[11]" IOSTANDARD = LVCMOS33;
+NET "segmentout[10]" IOSTANDARD = LVCMOS33;
+NET "segmentout[9]" IOSTANDARD = LVCMOS33;
+NET "segmentout[8]" IOSTANDARD = LVCMOS33;
+NET "segmentout[7]" IOSTANDARD = LVCMOS33;
+NET "segmentout[6]" IOSTANDARD = LVCMOS33;
+NET "segmentout[5]" IOSTANDARD = LVCMOS33;
+NET "segmentout[4]" IOSTANDARD = LVCMOS33;
+NET "segmentout[3]" IOSTANDARD = LVCMOS33;
+NET "segmentout[2]" IOSTANDARD = LVCMOS33;
+NET "segmentout[1]" IOSTANDARD = LVCMOS33;
+NET "segmentout[0]" IOSTANDARD = LVCMOS33;
+
+
+## Clock signal
+#Bank = 35, Pin name = #IO_L12P_T1_MRCC_35,					Sch name = clk100mhz
+NET "clk" LOC = E3;
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "clk" TNM_NET = "sys_clk_pin";
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+# PlanAhead Generated physical constraints 
+
+NET "R[0]" LOC = A3;
+NET "R[1]" LOC = B4;
+NET "R[2]" LOC = C5;
+NET "R[3]" LOC = A4;
+NET "G[0]" LOC = C6;
+NET "G[1]" LOC = A5;
+NET "G[2]" LOC = B6;
+NET "G[3]" LOC = A6;
+NET "B[0]" LOC = B7;
+NET "B[1]" LOC = C7;
+NET "B[2]" LOC = D7;
+NET "B[3]" LOC = D8;
+
+# PlanAhead Generated IO constraints 
+
+NET "B[3]" IOSTANDARD = LVCMOS33;
+NET "B[2]" IOSTANDARD = LVCMOS33;
+NET "B[1]" IOSTANDARD = LVCMOS33;
+NET "B[0]" IOSTANDARD = LVCMOS33;
+NET "G[3]" IOSTANDARD = LVCMOS33;
+NET "G[2]" IOSTANDARD = LVCMOS33;
+NET "G[1]" IOSTANDARD = LVCMOS33;
+NET "G[0]" IOSTANDARD = LVCMOS33;
+NET "R[3]" IOSTANDARD = LVCMOS33;
+NET "R[2]" IOSTANDARD = LVCMOS33;
+NET "R[1]" IOSTANDARD = LVCMOS33;
+NET "R[0]" IOSTANDARD = LVCMOS33;

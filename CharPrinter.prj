@@ -1,0 +1,2 @@
+vhdl work "vga_characterrom.vhd"
+vhdl work "CharPrinter.vhd"

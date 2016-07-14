@@ -1,0 +1,153 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Jul 14 21:56:33 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ledout<3>" LOCATE = SITE "N14" LEVEL 1;
+COMP "ledout<4>" LOCATE = SITE "R18" LEVEL 1;
+COMP "ledout<5>" LOCATE = SITE "V17" LEVEL 1;
+COMP "segmentout<10>" LOCATE = SITE "T9" LEVEL 1;
+COMP "h_sync" LOCATE = SITE "B11" LEVEL 1;
+COMP "ledout<6>" LOCATE = SITE "U17" LEVEL 1;
+COMP "segmentout<11>" LOCATE = SITE "J14" LEVEL 1;
+COMP "ledout<7>" LOCATE = SITE "U16" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "B<0>" LOCATE = SITE "B7" LEVEL 1;
+COMP "B<1>" LOCATE = SITE "C7" LEVEL 1;
+COMP "B<2>" LOCATE = SITE "D7" LEVEL 1;
+COMP "B<3>" LOCATE = SITE "D8" LEVEL 1;
+COMP "led" LOCATE = SITE "V11" LEVEL 1;
+COMP "segmentout<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "segmentout<1>" LOCATE = SITE "R10" LEVEL 1;
+COMP "segmentout<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "segmentout<3>" LOCATE = SITE "K13" LEVEL 1;
+COMP "segmentout<4>" LOCATE = SITE "P15" LEVEL 1;
+COMP "segmentout<5>" LOCATE = SITE "T11" LEVEL 1;
+COMP "R<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "kbdata" LOCATE = SITE "B2" LEVEL 1;
+COMP "segmentout<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "R<1>" LOCATE = SITE "B4" LEVEL 1;
+COMP "segmentout<7>" LOCATE = SITE "H15" LEVEL 1;
+COMP "R<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "v_sync" LOCATE = SITE "B12" LEVEL 1;
+COMP "segmentout<8>" LOCATE = SITE "J17" LEVEL 1;
+COMP "R<3>" LOCATE = SITE "A4" LEVEL 1;
+COMP "segmentout<9>" LOCATE = SITE "J18" LEVEL 1;
+COMP "G<0>" LOCATE = SITE "C6" LEVEL 1;
+COMP "G<1>" LOCATE = SITE "A5" LEVEL 1;
+COMP "G<2>" LOCATE = SITE "B6" LEVEL 1;
+COMP "G<3>" LOCATE = SITE "A6" LEVEL 1;
+COMP "kbclk" LOCATE = SITE "F4" LEVEL 1;
+COMP "rxd" LOCATE = SITE "J15" LEVEL 1;
+COMP "ledout<0>" LOCATE = SITE "H17" LEVEL 1;
+COMP "RESET" LOCATE = SITE "V10" LEVEL 1;
+COMP "ledout<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "ledout<2>" LOCATE = SITE "J13" LEVEL 1;
+PIN
+        char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<63>
+        = BEL
+        "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl"
+        PINNAME CLKARDCLKU;
+PIN
+        char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<62>
+        = BEL
+        "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl"
+        PINNAME CLKARDCLKL;
+PIN ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<63> = BEL
+        "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl" PINNAME
+        CLKARDCLKU;
+PIN ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<62> = BEL
+        "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl" PINNAME
+        CLKARDCLKL;
+PIN ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<65> = BEL
+        "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl" PINNAME
+        CLKBWRCLKU;
+PIN ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<64> = BEL
+        "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl" PINNAME
+        CLKBWRCLKL;
+TIMEGRP sys_clk_pin = BEL "write_enable" BEL "input_0" BEL "input_1" BEL
+        "input_2" BEL "input_3" BEL "input_4" BEL "input_5" BEL "input_6" BEL
+        "keyboard/ausgabe/stw/state" BEL "char_printer/state_FSM_FFd3" BEL
+        "pixel_counter/current_0" BEL "pixel_counter/current_1" BEL
+        "write_address_0" BEL "write_address_1" BEL "write_address_2" BEL
+        "write_address_3" BEL "write_address_4" BEL "write_address_5" BEL
+        "write_address_6" BEL "write_address_7" BEL "write_address_8" BEL
+        "write_address_9" BEL "write_address_10" BEL "write_address_11" BEL
+        "char_printer/state_FSM_FFd2" BEL "char_printer/state_FSM_FFd1" BEL
+        "char_printer/state_FSM_FFd4" BEL
+        "keyboard/eingabe/opw/bitregister_counter/output_1" BEL
+        "keyboard/eingabe/opw/bitregister_counter/output_2" BEL
+        "keyboard/eingabe/opw/bitregister_counter/output_3" BEL
+        "keyboard/eingabe/opw/bitregister_counter/output_4" BEL
+        "keyboard/eingabe/opw/bitregistersync_kbclk/output_1" BEL
+        "keyboard/eingabe/opw/bitregistersync_kbclk/output_2" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_11" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_10" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_9" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_8" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_7" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_6" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_5" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_4" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_3" BEL
+        "keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_2" BEL
+        "keyboard/ausgabe/opw/counter_register/output_14" BEL
+        "keyboard/ausgabe/opw/counter_register/output_13" BEL
+        "keyboard/ausgabe/opw/counter_register/output_12" BEL
+        "keyboard/ausgabe/opw/counter_register/output_11" BEL
+        "keyboard/ausgabe/opw/counter_register/output_10" BEL
+        "keyboard/ausgabe/opw/counter_register/output_9" BEL
+        "keyboard/ausgabe/opw/counter_register/output_8" BEL
+        "keyboard/ausgabe/opw/counter_register/output_7" BEL
+        "keyboard/ausgabe/opw/counter_register/output_6" BEL
+        "keyboard/ausgabe/opw/counter_register/output_5" BEL
+        "keyboard/ausgabe/opw/counter_register/output_4" BEL
+        "keyboard/ausgabe/opw/counter_register/output_3" BEL
+        "keyboard/ausgabe/opw/counter_register/output_2" BEL
+        "keyboard/ausgabe/opw/counter_register/output_1" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_1" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_2" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_3" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_4" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_5" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_6" BEL
+        "keyboard/ausgabe/opw/segment_buffer_1/output_7" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_1" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_2" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_3" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_4" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_5" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_6" BEL
+        "keyboard/ausgabe/opw/segment_buffer_2/output_7" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_1" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_2" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_3" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_4" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_5" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_6" BEL
+        "keyboard/ausgabe/opw/segment_buffer_3/output_7" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_1" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_2" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_3" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_4" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_5" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_6" BEL
+        "keyboard/ausgabe/opw/segment_buffer_4/output_7" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_8" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_7" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_6" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_5" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_4" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_3" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_2" BEL
+        "keyboard/ausgabe/opw/nach_scancode_register/output_1" BEL
+        "clk_BUFGP/BUFG" PIN
+        "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<63>"
+        PIN
+        "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<62>"
+        PIN "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<63>"
+        PIN "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<62>"
+        PIN "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<65>"
+        PIN "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<64>";
+SCHEMATIC END;
+
