@@ -35,7 +35,8 @@ entity Ausgabemodul_STK is
            RESET : in  STD_LOGIC;
            clk : in  STD_LOGIC;
            ledout : out  STD_LOGIC_VECTOR (7 downto 0);
-           segmentout : out  STD_LOGIC_VECTOR (11 downto 0));
+           segmentout : out  STD_LOGIC_VECTOR (11 downto 0);
+			  actual_char_read : out STD_LOGIC);
 end Ausgabemodul_STK;
 
 architecture Behavioral of Ausgabemodul_STK is
@@ -48,5 +49,6 @@ begin
 	stw : entity work.Ausgabemodul_STW port map (RESET, ready_int, E0, F0, clk, CE);
 	opw : entity work.Ausgabemodul_OPW port map (scancode, ready, RESET, clk, CE, segmentout, ledout, ready_int, E0, F0);
 
+	actual_char_read <= CE;
 end Behavioral;
 

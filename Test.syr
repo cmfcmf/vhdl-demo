@@ -108,62 +108,62 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Register_7Bit.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd" into library work
 Parsing entity <DRegister>.
-INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Register_7Bit.vhd" Line 38. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd" Line 38. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
 Parsing architecture <Behavioral> of entity <dregister>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Eingabemodul_STW.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Eingabemodul_STW.vhd" into library work
 Parsing entity <Eingabemodul_STW>.
 Parsing architecture <Behavioral> of entity <eingabemodul_stw>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Eingabemodul_OPW.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Eingabemodul_OPW.vhd" into library work
 Parsing entity <Eingabemodul_OPW>.
 Parsing architecture <Behavioral> of entity <eingabemodul_opw>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Ausgabemodul_STW.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STW.vhd" into library work
 Parsing entity <Ausgabemodul_STW>.
 Parsing architecture <Behavioral> of entity <ausgabemodul_stw>.
-WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Ausgabemodul_STW.vhd" Line 45: Possible infinite loop; process does not have a wait statement
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" into library work
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STW.vhd" Line 45: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_OPW.vhd" into library work
 Parsing entity <Ausgabemodul_OPW>.
-INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" Line 39. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
-INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" Line 41. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
-INFO:HDLCompiler:1676 - "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd" Line 42. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_OPW.vhd" Line 39. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_OPW.vhd" Line 41. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
+INFO:HDLCompiler:1676 - "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_OPW.vhd" Line 42. declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output
 Parsing architecture <Behavioral> of entity <ausgabemodul_opw>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/vga_characterrom.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/vga_characterrom.vhd" into library work
 Parsing entity <VgaCharacterRom>.
 Parsing architecture <Structure> of entity <vgacharacterrom>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/ScancodeToAscii.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/ScancodeToAscii.vhd" into library work
 Parsing entity <ScancodeToAscii>.
 Parsing architecture <Behavioral> of entity <scancodetoascii>.
-WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/ScancodeToAscii.vhd" Line 41: Possible infinite loop; process does not have a wait statement
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Eingabemodul_STK.vhd" into library work
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/ScancodeToAscii.vhd" Line 41: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Eingabemodul_STK.vhd" into library work
 Parsing entity <Eingabemodul_STK>.
 Parsing architecture <Behavioral> of entity <eingabemodul_stk>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Ausgabemodul_STK.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STK.vhd" into library work
 Parsing entity <Ausgabemodul_STK>.
 Parsing architecture <Behavioral> of entity <ausgabemodul_stk>.
-WARNING:HDLCompiler:439 - "/home/iseuser/projects/VGATest2/Ausgabemodul_STK.vhd" Line 49: Formal port ledout of mode buffer cannot be associated with actual port ledout of mode out
-Parsing VHDL file "/home/iseuser/projects/VGATest2/vga_controller (1).vhd" into library work
+WARNING:HDLCompiler:439 - "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STK.vhd" Line 50: Formal port ledout of mode buffer cannot be associated with actual port ledout of mode out
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/vga_controller (1).vhd" into library work
 Parsing entity <vga_controller>.
 Parsing architecture <behavior> of entity <vga_controller>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/RAM.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/RAM.vhd" into library work
 Parsing entity <RAM>.
 Parsing architecture <Behavioral> of entity <ram>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/KeyboardController.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/KeyboardController.vhd" into library work
 Parsing entity <KeyboardController>.
 Parsing architecture <Behavioral> of entity <keyboardcontroller>.
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Counter.vhd" into library work
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Counter.vhd" into library work
 Parsing entity <Counter>.
 Parsing architecture <Behavioral> of entity <counter>.
-WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Counter.vhd" Line 50: Possible infinite loop; process does not have a wait statement
-Parsing VHDL file "/home/iseuser/projects/VGATest2/CharPrinter.vhd" into library work
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Counter.vhd" Line 50: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/CharPrinter.vhd" into library work
 Parsing entity <CharPrinter>.
 Parsing architecture <Behavioral> of entity <charprinter>.
-WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/CharPrinter.vhd" Line 59: Possible infinite loop; process does not have a wait statement
-Parsing VHDL file "/home/iseuser/projects/VGATest2/Test.vhd" into library work
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/CharPrinter.vhd" Line 66: Possible infinite loop; process does not have a wait statement
+Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" into library work
 Parsing entity <Test>.
 Parsing architecture <Behavioral> of entity <test>.
-WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Test.vhd" Line 89: Possible infinite loop; process does not have a wait statement
-WARNING:HDLCompiler:1369 - "/home/iseuser/projects/VGATest2/Test.vhd" Line 112: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 89: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 112: Possible infinite loop; process does not have a wait statement
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -257,7 +257,7 @@ Elaborating entity <Eingabemodul_STK> (architecture <Behavioral>) from library <
 Elaborating entity <Eingabemodul_OPW> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:92 - "/home/iseuser/projects/VGATest2/Register_7Bit.vhd" Line 50: enable should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd" Line 50: enable should be on the sensitivity list of the process
 
 Elaborating entity <DRegister> (architecture <Behavioral>) with generics from library <work>.
 
@@ -284,9 +284,10 @@ Elaborating entity <ScancodeToAscii> (architecture <Behavioral>) from library <w
 =========================================================================
 
 Synthesizing Unit <Test>.
-    Related source file is "/home/iseuser/projects/VGATest2/Test.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd".
 WARNING:Xst:647 - Input <rxd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/iseuser/projects/VGATest2/Test.vhd" line 77: Output port <count> of the instance <pixel_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 77: Output port <count> of the instance <pixel_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 110: Output port <ledout> of the instance <keyboard> is unconnected or connected to loadless signal.
     Register <R> equivalent to <G> has been removed
     Register <B> equivalent to <G> has been removed
     Found 4-bit register for signal <G>.
@@ -301,7 +302,7 @@ INFO:Xst:3210 - "/home/iseuser/projects/VGATest2/Test.vhd" line 77: Output port 
 Unit <Test> synthesized.
 
 Synthesizing Unit <Counter>.
-    Related source file is "/home/iseuser/projects/VGATest2/Counter.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Counter.vhd".
         max = 4
     Found 32-bit register for signal <current>.
     Found 32-bit adder for signal <current[31]_GND_5_o_add_3_OUT> created at line 56.
@@ -314,7 +315,7 @@ Synthesizing Unit <Counter>.
 Unit <Counter> synthesized.
 
 Synthesizing Unit <vga_controller>.
-    Related source file is "/home/iseuser/projects/VGATest2/vga_controller (1).vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/vga_controller (1).vhd".
         h_pulse = 96
         h_bp = 48
         h_pixels = 640
@@ -350,7 +351,7 @@ Synthesizing Unit <vga_controller>.
 Unit <vga_controller> synthesized.
 
 Synthesizing Unit <RAM>.
-    Related source file is "/home/iseuser/projects/VGATest2/RAM.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/RAM.vhd".
     Summary:
 	no macro.
 Unit <RAM> synthesized.
@@ -519,7 +520,7 @@ WARNING:Xst:2935 - Signal 'dip_pattern', unconnected in block 'BRAM_SDP_MACRO', 
 Unit <BRAM_SDP_MACRO> synthesized.
 
 Synthesizing Unit <CharPrinter>.
-    Related source file is "/home/iseuser/projects/VGATest2/CharPrinter.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/CharPrinter.vhd".
         screen_width = 640
         screen_height = 480
     Found 1-bit register for signal <read_enable>.
@@ -527,9 +528,9 @@ Synthesizing Unit <CharPrinter>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
-    | Transitions        | 4                                              |
-    | Inputs             | 0                                              |
-    | Outputs            | 1                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
     | Clock              | clk (rising_edge)                              |
     | Reset              | RESET (positive)                               |
     | Reset type         | asynchronous                                   |
@@ -538,13 +539,18 @@ Synthesizing Unit <CharPrinter>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+    Found 12-bit adder for signal <t<11:0>> created at line 61.
+    Found 5x7-bit multiplier for signal <n0033> created at line 61.
     Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
 	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <CharPrinter> synthesized.
 
 Synthesizing Unit <VgaCharacterRom>.
-    Related source file is "/home/iseuser/projects/VGATest2/vga_characterrom.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/vga_characterrom.vhd".
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
@@ -713,20 +719,20 @@ WARNING:Xst:2935 - Signal 'dip_pattern', unconnected in block 'BRAM_SINGLE_MACRO
 Unit <BRAM_SINGLE_MACRO> synthesized.
 
 Synthesizing Unit <KeyboardController>.
-    Related source file is "/home/iseuser/projects/VGATest2/KeyboardController.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/KeyboardController.vhd".
     Summary:
 	no macro.
 Unit <KeyboardController> synthesized.
 
 Synthesizing Unit <Eingabemodul_STK>.
-    Related source file is "/home/iseuser/projects/VGATest2/Eingabemodul_STK.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Eingabemodul_STK.vhd".
     Summary:
 	no macro.
 Unit <Eingabemodul_STK> synthesized.
 
 Synthesizing Unit <Eingabemodul_OPW>.
-    Related source file is "/home/iseuser/projects/VGATest2/Eingabemodul_OPW.vhd".
-    Found 4-bit adder for signal <Qcnt[3]_GND_139_o_add_4_OUT> created at line 81.
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Eingabemodul_OPW.vhd".
+    Found 4-bit adder for signal <Qcnt[3]_GND_159_o_add_4_OUT> created at line 81.
     Found 4-bit 3-to-1 multiplexer for signal <Dcnt> created at line 78.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -734,7 +740,7 @@ Synthesizing Unit <Eingabemodul_OPW>.
 Unit <Eingabemodul_OPW> synthesized.
 
 Synthesizing Unit <DRegister_1>.
-    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd".
         bits = 2
 WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 2-bit register for signal <output>.
@@ -743,7 +749,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <DRegister_1> synthesized.
 
 Synthesizing Unit <DRegister_2>.
-    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd".
         bits = 11
 WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 11-bit register for signal <output>.
@@ -752,7 +758,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <DRegister_2> synthesized.
 
 Synthesizing Unit <DRegister_3>.
-    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd".
         bits = 4
 WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4-bit register for signal <output>.
@@ -761,19 +767,19 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <DRegister_3> synthesized.
 
 Synthesizing Unit <Eingabemodul_STW>.
-    Related source file is "/home/iseuser/projects/VGATest2/Eingabemodul_STW.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Eingabemodul_STW.vhd".
     Summary:
 	no macro.
 Unit <Eingabemodul_STW> synthesized.
 
 Synthesizing Unit <Ausgabemodul_STK>.
-    Related source file is "/home/iseuser/projects/VGATest2/Ausgabemodul_STK.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STK.vhd".
     Summary:
 	no macro.
 Unit <Ausgabemodul_STK> synthesized.
 
 Synthesizing Unit <Ausgabemodul_STW>.
-    Related source file is "/home/iseuser/projects/VGATest2/Ausgabemodul_STW.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STW.vhd".
     Found 1-bit register for signal <state>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -781,27 +787,28 @@ Synthesizing Unit <Ausgabemodul_STW>.
 Unit <Ausgabemodul_STW> synthesized.
 
 Synthesizing Unit <Ausgabemodul_OPW>.
-    Related source file is "/home/iseuser/projects/VGATest2/Ausgabemodul_OPW.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_OPW.vhd".
     Found 14-bit adder for signal <count_inc> created at line 1241.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[6]_MUX_152_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[5]_MUX_156_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[4]_MUX_160_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[3]_MUX_164_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[2]_MUX_168_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[1]_MUX_172_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[0]_MUX_176_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[6]_MUX_153_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[5]_MUX_157_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[4]_MUX_161_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[3]_MUX_165_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[2]_MUX_169_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[1]_MUX_173_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[0]_MUX_177_o> created at line 94.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   4 Latch(s).
+	inferred   5 Latch(s).
 	inferred  12 Multiplexer(s).
 Unit <Ausgabemodul_OPW> synthesized.
 
 Synthesizing Unit <DRegister_4>.
-    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd".
         bits = 8
 WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <output>.
@@ -810,7 +817,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <DRegister_4> synthesized.
 
 Synthesizing Unit <DRegister_5>.
-    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd".
         bits = 7
 WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 7-bit register for signal <output>.
@@ -819,7 +826,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <DRegister_5> synthesized.
 
 Synthesizing Unit <DRegister_6>.
-    Related source file is "/home/iseuser/projects/VGATest2/Register_7Bit.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Register_7Bit.vhd".
         bits = 14
 WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 14-bit register for signal <output>.
@@ -828,7 +835,7 @@ WARNING:Xst:647 - Input <RESET> is never used. This port will be preserved and l
 Unit <DRegister_6> synthesized.
 
 Synthesizing Unit <ScancodeToAscii>.
-    Related source file is "/home/iseuser/projects/VGATest2/ScancodeToAscii.vhd".
+    Related source file is "/media/sf_Desktop/VHDL_Endprojekt/ScancodeToAscii.vhd".
 WARNING:Xst:737 - Found 1-bit latch for signal <ascii<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ascii<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ascii<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -845,9 +852,11 @@ Unit <ScancodeToAscii> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 6
+# Multipliers                                          : 1
+ 7x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 7
  10-bit adder                                          : 2
- 12-bit adder                                          : 1
+ 12-bit adder                                          : 2
  14-bit adder                                          : 1
  32-bit adder                                          : 1
  4-bit adder                                           : 1
@@ -862,13 +871,13 @@ Macro Statistics
  4-bit register                                        : 2
  7-bit register                                        : 4
  8-bit register                                        : 2
-# Latches                                              : 12
- 1-bit latch                                           : 12
+# Latches                                              : 13
+ 1-bit latch                                           : 13
 # Comparators                                          : 9
  10-bit comparator greater                             : 8
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 23
- 1-bit 2-to-1 multiplexer                              : 5
+# Multiplexers                                         : 24
+ 1-bit 2-to-1 multiplexer                              : 6
  1-bit 4-to-1 multiplexer                              : 7
  10-bit 2-to-1 multiplexer                             : 3
  11-bit 2-to-1 multiplexer                             : 1
@@ -884,6 +893,9 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <nach_scancode_register> is unconnected in block <opw>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <segmentout_7> (without init value) has a constant value of 1 in block <opw>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <converter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <input_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <column_10> of sequential type is unconnected in block <vga>.
@@ -936,6 +948,10 @@ Synthesizing (advanced) Unit <Ausgabemodul_OPW>.
 The following registers are absorbed into counter <counter_register/output>: 1 register on signal <counter_register/output>.
 Unit <Ausgabemodul_OPW> synthesized (advanced).
 
+Synthesizing (advanced) Unit <CharPrinter>.
+	Multiplier <Mmult_n0033> in block <CharPrinter> and adder/subtractor <Madd_t<11:0>> in block <CharPrinter> are combined into a MAC<Maddsub_n0033>.
+Unit <CharPrinter> synthesized (advanced).
+
 Synthesizing (advanced) Unit <Counter>.
 The following registers are absorbed into counter <current>: 1 register on signal <current>.
 Unit <Counter> synthesized (advanced).
@@ -948,6 +964,8 @@ Unit <Test> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# MACs                                                 : 1
+ 7x5-to-12-bit MAC                                     : 1
 # Adders/Subtractors                                   : 3
  10-bit adder                                          : 2
  4-bit adder                                           : 1
@@ -976,17 +994,18 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <segmentout_7> (without init value) has a constant value of 1 in block <Ausgabemodul_OPW>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <ScancodeToAscii>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <G_0> in Unit <Test> is equivalent to the following 3 FFs/Latches, which will be removed : <G_1> <G_2> <G_3> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <state[1:4]> with one-hot encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
 -------------------
  State | Encoding
 -------------------
- 00    | 0001
- 01    | 0010
- 10    | 0100
- 11    | 1000
+ 00    | 00
+ 01    | 01
+ 11    | 11
+ 10    | 10
 -------------------
 WARNING:Xst:1710 - FF/Latch <row_10> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_11> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
@@ -1032,7 +1051,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_28> (without
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_29> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_30> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_31> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <char_printer/state_FSM_FFd3> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <char_printer/read_enable> 
 WARNING:Xst:3001 - This design contains one or more registers or latches with an active
    asynchronous set and asynchronous reset. While this circuit can be built,
    it creates a sub-optimal implementation in terms of area, power and
@@ -1051,9 +1069,9 @@ WARNING:Xst:3001 - This design contains one or more registers or latches with an
 
   List of register instances with asynchronous set and reset:
     segmentout_10 in unit <Ausgabemodul_OPW>
-    segmentout_8 in unit <Ausgabemodul_OPW>
-    segmentout_9 in unit <Ausgabemodul_OPW>
     segmentout_11 in unit <Ausgabemodul_OPW>
+    segmentout_9 in unit <Ausgabemodul_OPW>
+    segmentout_8 in unit <Ausgabemodul_OPW>
 
 
 Optimizing unit <DRegister_2> ...
@@ -1071,6 +1089,14 @@ Optimizing unit <ScancodeToAscii> ...
 Optimizing unit <vga_controller> ...
 WARNING:Xst:1710 - FF/Latch <input_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_1> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_8> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_7> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_6> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_5> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_4> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_3> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_2> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_1> of sequential type is unconnected in block <Test>.
 WARNING:Xst:2677 - Node <vga/row_9> of sequential type is unconnected in block <Test>.
 WARNING:Xst:1293 - FF/Latch <pixel_counter/current_31> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_30> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
@@ -1102,8 +1128,9 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/curre
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_4> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_3> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_2> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <write_to_ram_state> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <write_enable> 
+INFO:Xst:2261 - The FF/Latch <pixel_counter/current_0> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <char_printer/state_FSM_FFd2> 
 INFO:Xst:2261 - The FF/Latch <vga/h_count_9> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <vga/column_9> 
-INFO:Xst:2261 - The FF/Latch <write_enable> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <write_to_ram_state> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1115,8 +1142,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 135
- Flip-Flops                                            : 135
+# Registers                                            : 125
+ Flip-Flops                                            : 125
 
 =========================================================================
 
@@ -1139,24 +1166,24 @@ Top Level Output File Name         : Test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 225
+# BELS                             : 253
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 24
-#      LUT2                        : 12
-#      LUT3                        : 11
-#      LUT4                        : 28
-#      LUT5                        : 32
-#      LUT6                        : 53
-#      MUXCY                       : 32
+#      INV                         : 2
+#      LUT1                        : 26
+#      LUT2                        : 19
+#      LUT3                        : 18
+#      LUT4                        : 24
+#      LUT5                        : 37
+#      LUT6                        : 54
+#      MUXCY                       : 38
 #      VCC                         : 1
-#      XORCY                       : 28
-# FlipFlops/Latches                : 146
-#      FD                          : 39
-#      FDC                         : 28
+#      XORCY                       : 33
+# FlipFlops/Latches                : 136
+#      FD                          : 31
+#      FDC                         : 27
 #      FDCE                        : 18
 #      FDE                         : 47
-#      FDP                         : 3
+#      FDP                         : 2
 #      LD                          : 11
 # RAMS                             : 2
 #      RAMB36E1                    : 2
@@ -1174,16 +1201,16 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             142  out of  126800     0%  
- Number of Slice LUTs:                  163  out of  63400     0%  
-    Number used as Logic:               163  out of  63400     0%  
+ Number of Slice Registers:             132  out of  126800     0%  
+ Number of Slice LUTs:                  180  out of  63400     0%  
+    Number used as Logic:               180  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    193
-   Number with an unused Flip Flop:      51  out of    193    26%  
-   Number with an unused LUT:            30  out of    193    15%  
-   Number of fully used LUT-FF pairs:   112  out of    193    58%  
-   Number of unique control sets:        10
+ Number of LUT Flip Flop pairs used:    200
+   Number with an unused Flip Flop:      68  out of    200    34%  
+   Number with an unused LUT:            20  out of    200    10%  
+   Number of fully used LUT-FF pairs:   112  out of    200    56%  
+   Number of unique control sets:         9
 
 IO Utilization: 
  Number of IOs:                          40
@@ -1213,15 +1240,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-Clock Signal                                                 | Clock buffer(FF name)                                                    | Load  |
--------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-clk                                                          | BUFGP                                                                    | 95    |
-pixel_clk(pixel_counter/max_reached<31>1:O)                  | BUFG(*)(G_0)                                                             | 42    |
-keyboard/converter/_n0275<0>(keyboard/converter/_n0275<0>3:O)| NONE(*)(keyboard/converter/ascii_0)                                      | 7     |
-pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<1>| NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
-input<7>                                                     | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
--------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)                                                    | Load  |
+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+clk                                                                                  | BUFGP                                                                    | 85    |
+char_printer/GND_59_o_pixel_clk_OR_35_o1(char_printer/GND_59_o_pixel_clk_OR_35_o11:O)| BUFG(*)(G_0)                                                             | 42    |
+keyboard/converter/_n0275<0>(keyboard/converter/_n0275<0>3:O)                        | NONE(*)(keyboard/converter/ascii_0)                                      | 7     |
+pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<1>                        | NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
+input<7>                                                                             | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -1240,7 +1267,7 @@ Timing Summary:
 Speed Grade: -1
 
    Minimum period: 4.273ns (Maximum Frequency: 234.028MHz)
-   Minimum input arrival time before clock: 1.748ns
+   Minimum input arrival time before clock: 1.749ns
    Maximum output required time after clock: 2.012ns
    Maximum combinational path delay: No path found
 
@@ -1250,10 +1277,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.675ns (frequency: 272.072MHz)
-  Total number of paths / destination ports: 865 / 139
+  Clock period: 3.377ns (frequency: 296.165MHz)
+  Total number of paths / destination ports: 841 / 136
 -------------------------------------------------------------------------
-Delay:               3.675ns (Levels of Logic = 11)
+Delay:               3.377ns (Levels of Logic = 11)
   Source:            pixel_counter/current_1 (FF)
   Destination:       pixel_counter/current_1 (FF)
   Source Clock:      clk rising
@@ -1263,7 +1290,7 @@ Delay:               3.675ns (Levels of Logic = 11)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.478   0.550  pixel_counter/current_1 (pixel_counter/current_1)
+     FDC:C->Q              4   0.478   0.556  pixel_counter/current_1 (pixel_counter/current_1)
      LUT2:I0->O            1   0.124   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>1 (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>)
      MUXCY:S->O            1   0.472   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0>)
      MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1>)
@@ -1271,32 +1298,32 @@ Delay:               3.675ns (Levels of Logic = 11)
      MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3>)
      MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4>)
      MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5>)
-     MUXCY:CI->O           3   0.334   0.435  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<6> (pixel_counter/GND_5_o_current[31]_LessThan_3_o_inv)
-     LUT3:I2->O            1   0.124   0.000  pixel_counter/Mcount_current_lut<0> (pixel_counter/Mcount_current_lut<0>)
+     MUXCY:CI->O           3   0.029   0.435  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<6> (pixel_counter/GND_5_o_current[31]_LessThan_3_o_inv)
+     LUT2:I1->O            1   0.124   0.000  pixel_counter/Mcount_current_lut<0> (pixel_counter/Mcount_current_lut<0>)
      MUXCY:S->O            0   0.472   0.000  pixel_counter/Mcount_current_cy<0> (pixel_counter/Mcount_current_cy<0>)
      XORCY:CI->O           1   0.510   0.000  pixel_counter/Mcount_current_xor<1> (pixel_counter/Mcount_current1)
      FDC:D                     0.030          pixel_counter/current_1
     ----------------------------------------
-    Total                      3.675ns (2.691ns logic, 0.985ns route)
-                                       (73.2% logic, 26.8% route)
+    Total                      3.377ns (2.386ns logic, 0.991ns route)
+                                       (70.7% logic, 29.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'pixel_clk'
+Timing constraint: Default period analysis for Clock 'char_printer/GND_59_o_pixel_clk_OR_35_o1'
   Clock period: 4.273ns (frequency: 234.028MHz)
   Total number of paths / destination ports: 2554 / 60
 -------------------------------------------------------------------------
 Delay:               4.273ns (Levels of Logic = 5)
   Source:            vga/h_count_7 (FF)
   Destination:       vga/v_sync (FF)
-  Source Clock:      pixel_clk rising
-  Destination Clock: pixel_clk rising
+  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
+  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
 
   Data Path: vga/h_count_7 to vga/v_sync
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              3   0.478   0.730  vga/h_count_7 (vga/h_count_7)
-     LUT3:I0->O            4   0.124   0.556  vga/h_count[9]_PWR_7_o_LessThan_1_o1_SW0 (N23)
+     LUT3:I0->O            4   0.124   0.556  vga/h_count[9]_PWR_7_o_LessThan_1_o1_SW0 (N20)
      LUT6:I4->O            2   0.124   0.427  vga/h_count[9]_PWR_7_o_LessThan_1_o1_1 (vga/h_count[9]_PWR_7_o_LessThan_1_o1)
      LUT5:I4->O           12   0.124   1.011  vga/GND_6_o_v_count[9]_mux_6_OUT<5>1 (vga/GND_6_o_v_count[9]_mux_6_OUT<5>)
      LUT6:I0->O            1   0.124   0.421  vga/GND_6_o_GND_6_o_OR_33_o2 (vga/GND_6_o_GND_6_o_OR_33_o2)
@@ -1307,52 +1334,52 @@ Delay:               4.273ns (Levels of Logic = 5)
                                        (26.4% logic, 73.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'pixel_clk'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 43 / 43
+-------------------------------------------------------------------------
+Offset:              1.749ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       input_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: RESET to input_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            51   0.001   0.933  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O           35   0.124   0.552  write_to_ram_state_ascii_ready_AND_73_o11 (ascii_ready)
+     FDE:CE                    0.139          keyboard/ausgabe/opw/segment_buffer_4/output_1
+    ----------------------------------------
+    Total                      1.749ns (0.264ns logic, 1.485ns route)
+                                       (15.1% logic, 84.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'char_printer/GND_59_o_pixel_clk_OR_35_o1'
   Total number of paths / destination ports: 42 / 42
 -------------------------------------------------------------------------
 Offset:              1.051ns (Levels of Logic = 1)
   Source:            RESET (PAD)
   Destination:       G_0 (FF)
-  Destination Clock: pixel_clk rising
+  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
 
   Data Path: RESET to G_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            52   0.001   0.556  RESET_IBUF (RESET_IBUF)
+     IBUF:I->O            51   0.001   0.556  RESET_IBUF (RESET_IBUF)
      FDC:CLR                   0.494          G_0
     ----------------------------------------
     Total                      1.051ns (0.495ns logic, 0.556ns route)
                                        (47.1% logic, 52.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 37 / 37
--------------------------------------------------------------------------
-Offset:              1.748ns (Levels of Logic = 2)
-  Source:            RESET (PAD)
-  Destination:       keyboard/ausgabe/opw/segment_buffer_1/output_1 (FF)
-  Destination Clock: clk rising
-
-  Data Path: RESET to keyboard/ausgabe/opw/segment_buffer_1/output_1
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            52   0.001   0.933  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O           28   0.124   0.551  keyboard/ausgabe/stw/Mmux_CE11 (keyboard/ausgabe/CE)
-     FDE:CE                    0.139          keyboard/ausgabe/opw/segment_buffer_4/output_1
-    ----------------------------------------
-    Total                      1.748ns (0.264ns logic, 1.484ns route)
-                                       (15.1% logic, 84.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'pixel_clk'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'char_printer/GND_59_o_pixel_clk_OR_35_o1'
   Total number of paths / destination ports: 14 / 14
 -------------------------------------------------------------------------
 Offset:              0.949ns (Levels of Logic = 1)
   Source:            G_0 (FF)
   Destination:       R<3> (PAD)
-  Source Clock:      pixel_clk rising
+  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
 
   Data Path: G_0 to R<3>
                                 Gate     Net
@@ -1378,7 +1405,7 @@ Offset:              2.012ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              12   0.478   1.011  keyboard/ausgabe/opw/counter_register/output_13 (keyboard/ausgabe/opw/counter_register/output_13)
-     LUT6:I0->O            1   0.124   0.399  keyboard/ausgabe/opw/Mmux_segmentout[11]_segmentcode_buffer_4[6]_MUX_152_o11 (segmentout_6_OBUF)
+     LUT6:I0->O            1   0.124   0.399  keyboard/ausgabe/opw/Mmux_segmentout[11]_segmentcode_buffer_4[6]_MUX_153_o11 (segmentout_6_OBUF)
      OBUF:I->O                 0.000          segmentout_6_OBUF (segmentout<6>)
     ----------------------------------------
     Total                      2.012ns (0.602ns logic, 1.410ns route)
@@ -1389,13 +1416,21 @@ Offset:              2.012ns (Levels of Logic = 2)
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock char_printer/GND_59_o_pixel_clk_OR_35_o1
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+char_printer/GND_59_o_pixel_clk_OR_35_o1|    4.273|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock clk
 ----------------------------+---------+---------+---------+---------+
                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------+---------+---------+---------+---------+
-clk                         |    3.675|         |         |         |
-keyboard/converter/_n0275<0>|         |    1.054|         |         |
+clk                         |    3.377|         |         |         |
+keyboard/converter/_n0275<0>|         |    1.315|         |         |
 ----------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock keyboard/converter/_n0275<0>
@@ -1403,29 +1438,21 @@ Clock to Setup on destination clock keyboard/converter/_n0275<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.604|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock pixel_clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-pixel_clk      |    4.273|         |         |         |
+clk            |         |         |    2.603|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.45 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 16.63 secs
  
 --> 
 
 
-Total memory usage is 533348 kilobytes
+Total memory usage is 533376 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  223 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :  235 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

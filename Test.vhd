@@ -84,7 +84,7 @@ ram : entity work.RAM port map (clk, RESET, read_address, read_enable, read_outp
 
 char_printer : entity work.CharPrinter 
 	generic map (640, 480) 
-	port map (clk, RESET, column, row, set_pixel, read_address, read_output, read_enable);
+	port map (clk, RESET, pixel_clk, column, row, set_pixel, read_address, read_output, read_enable);
 
 draw : process
 begin
@@ -107,7 +107,7 @@ end process;
 
 led <= '1';
 
-keyboard : entity work.KeyboardController port map (clk, RESET, kbclk, kbdata, ledout, segmentout, ascii_char, ascii_ready);
+keyboard : entity work.KeyboardController port map (clk, RESET, kbclk, kbdata, open, segmentout, ascii_char, ascii_ready);
 
 write_to_ram : process 
 begin
@@ -115,15 +115,16 @@ begin
 		if write_to_ram_state = '1' then
 			write_address <= std_logic_vector(unsigned(write_address) + 1);
 			write_to_ram_state <= '0';
+			write_enable <= '0';
 		end if;
-		if ascii_ready = '1' then
+		if write_to_ram_state = '0' and ascii_ready = '1' then
 			write_enable <= '1';
 			input <= ascii_char;
 			write_to_ram_state <= '1';
-		else
-			write_enable <= '0';
 		end if;
 	end if;
 end process;
+
+ledout <= write_address (7 downto 0);
 
 end Behavioral;

@@ -47,10 +47,9 @@ architecture Behavioral of KeyboardController is
 begin
 
 	eingabe : entity work.Eingabemodul_STK port map (clk, RESET, kbclk, kbdata, scancode, ready);
-	ausgabe : entity work.Ausgabemodul_STK port map (scancode, ready, RESET, clk, ledout, segmentout);
+	ausgabe : entity work.Ausgabemodul_STK port map (scancode, ready, RESET, clk, ledout, segmentout, ascii_read);
 	
 	converter : entity work.ScancodeToAscii port map (scancode, ascii_char);
-	ascii_read <= ready;
 	
 end Behavioral;
 

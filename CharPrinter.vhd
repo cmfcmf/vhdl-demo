@@ -33,6 +33,7 @@ entity CharPrinter is
 	 );
     Port ( clk : in  STD_LOGIC;
            RESET : in  STD_LOGIC;
+			  pixel_clk : in STD_LOGIC;
            x : in INTEGER; -- actual pixel x coordinate
 			  y : in INTEGER; -- actual pixel y coordinate
 			  set_pixel : out STD_LOGIC; -- whether or not to draw the pixel.
@@ -45,16 +46,22 @@ end CharPrinter;
 architecture Behavioral of CharPrinter is
 signal char_column : STD_LOGIC_VECTOR (31 downto 0);
 signal char_row : STD_LOGIC_VECTOR (31 downto 0);
+signal char_row_shifted : STD_LOGIC_VECTOR (4 downto 0);
+signal char_column_shifted : STD_LOGIC_VECTOR (6 downto 0);
 
 signal state : STD_LOGIC_VECTOR (1 downto 0) := "00";
+signal t : INTEGER;
 begin
 
 char_column <= std_logic_vector(to_unsigned(x, char_column'length));
 char_row <= std_logic_vector(to_unsigned(y, char_row'length));
-read_address <= (char_row (8 downto 4)) & (char_column (9 downto 3)); -- char_row (11 downto 0)
+char_row_shifted <= char_row (8 downto 4);
+char_column_shifted <= char_column (9 downto 3);
+
+t <= (to_integer(unsigned(char_row_shifted)) * 80) + to_integer(unsigned(char_column_shifted));
+read_address <= std_logic_vector(to_unsigned(t, read_address'length));
 
 font_rom : entity work.VgaCharacterRom port map (clk, RESET, read_output, char_column (2 downto 0), char_row (3 downto 0), '1', set_pixel);
--- font_rom : entity work.VgaCharacterRom port map (clk, RESET, "00000000", "000", "0000", '1', open);
 
 print : process
 begin
@@ -62,12 +69,12 @@ begin
 		state <= "00";
 		read_enable <= '0';
 	elsif rising_edge(clk) then
-		if state = "00" then		
-			read_enable <= '1';
-			state <= "01";
-		elsif state = "01" then
+		if state = "01" or pixel_clk = '1' then		
 			read_enable <= '0';
 			state <= "10";
+		elsif state = "00" then
+			read_enable <= '1';
+			state <= "01";
 		elsif state = "10" then
 			read_enable <= '0';
 			state <= "11";

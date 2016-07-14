@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Jul 14 21:56:33 2016
+// Written by: Map P.20131013 on Fri Jul 15 00:03:26 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -65,16 +65,15 @@ PIN ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<65> = BEL
 PIN ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<64> = BEL
         "ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl" PINNAME
         CLKBWRCLKL;
-TIMEGRP sys_clk_pin = BEL "write_enable" BEL "input_0" BEL "input_1" BEL
-        "input_2" BEL "input_3" BEL "input_4" BEL "input_5" BEL "input_6" BEL
-        "keyboard/ausgabe/stw/state" BEL "char_printer/state_FSM_FFd3" BEL
-        "pixel_counter/current_0" BEL "pixel_counter/current_1" BEL
-        "write_address_0" BEL "write_address_1" BEL "write_address_2" BEL
-        "write_address_3" BEL "write_address_4" BEL "write_address_5" BEL
-        "write_address_6" BEL "write_address_7" BEL "write_address_8" BEL
-        "write_address_9" BEL "write_address_10" BEL "write_address_11" BEL
-        "char_printer/state_FSM_FFd2" BEL "char_printer/state_FSM_FFd1" BEL
-        "char_printer/state_FSM_FFd4" BEL
+TIMEGRP sys_clk_pin = BEL "input_0" BEL "input_1" BEL "input_2" BEL "input_3"
+        BEL "input_4" BEL "input_5" BEL "input_6" BEL
+        "char_printer/read_enable" BEL "keyboard/ausgabe/stw/state" BEL
+        "char_printer/state_FSM_FFd1" BEL "pixel_counter/current_0" BEL
+        "pixel_counter/current_1" BEL "write_address_0" BEL "write_address_1"
+        BEL "write_address_2" BEL "write_address_3" BEL "write_address_4" BEL
+        "write_address_5" BEL "write_address_6" BEL "write_address_7" BEL
+        "write_address_8" BEL "write_address_9" BEL "write_address_10" BEL
+        "write_address_11" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_1" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_2" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_3" BEL
@@ -133,15 +132,7 @@ TIMEGRP sys_clk_pin = BEL "write_enable" BEL "input_0" BEL "input_1" BEL
         "keyboard/ausgabe/opw/segment_buffer_4/output_5" BEL
         "keyboard/ausgabe/opw/segment_buffer_4/output_6" BEL
         "keyboard/ausgabe/opw/segment_buffer_4/output_7" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_8" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_7" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_6" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_5" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_4" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_3" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_2" BEL
-        "keyboard/ausgabe/opw/nach_scancode_register/output_1" BEL
-        "clk_BUFGP/BUFG" PIN
+        "write_to_ram_state" BEL "clk_BUFGP/BUFG" PIN
         "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<63>"
         PIN
         "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<62>"

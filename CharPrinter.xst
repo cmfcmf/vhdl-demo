@@ -1,5 +1,5 @@
-set -tmpdir "/home/iseuser/projects/VGATest2/xst/projnav.tmp"
-set -xsthdpdir "/home/iseuser/projects/VGATest2/xst"
+set -tmpdir "/media/sf_Desktop/VHDL_Endprojekt/xst/projnav.tmp"
+set -xsthdpdir "/media/sf_Desktop/VHDL_Endprojekt/xst"
 run -compileonly yes
 -p xc7a100t-1-csg324
 -top CharPrinter
