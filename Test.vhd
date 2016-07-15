@@ -74,19 +74,19 @@ signal tmp : STD_LOGIC_VECTOR (31 downto 0);
 signal set_pixel : STD_LOGIC := '0';
 begin
 
-pixel_counter : entity work.Counter generic map (4) port map (clk, RESET, '1', pixel_clk, open);
+pixel_clock : entity work.Counter generic map (4) port map (clk, RESET, '1', pixel_clk, open);
 
-vga : entity work.vga_controller 
-	generic map (96, 48, 640, 16, '0', 2, 29, 480, 10, '0') 
+vga_module : entity work.vga_module 
+	generic map (96, 48, 640, 16, 2, 29, 480, 10) 
 	port map (pixel_clk, RESET, h_sync, v_sync, displ_ena, column, row);
 
-ram : entity work.RAM port map (clk, RESET, read_address, read_enable, read_output, write_address, write_enable, input);
+character_ram : entity work.RAM port map (clk, RESET, read_address, read_enable, read_output, write_address, write_enable, input);
 
 char_printer : entity work.CharPrinter 
 	generic map (640, 480) 
 	port map (clk, RESET, pixel_clk, column, row, set_pixel, read_address, read_output, read_enable);
 
-draw : process
+rgb_generator : process
 begin
 	if RESET = '1' then
 		R <= "0000";
@@ -109,8 +109,9 @@ led <= '1';
 
 keyboard : entity work.KeyboardController port map (clk, RESET, kbclk, kbdata, open, segmentout, ascii_char, ascii_ready);
 
-write_to_ram : process 
+char_to_ram_writer : process 
 begin
+	input <= ascii_char;
 	if rising_edge(clk) then
 		if write_to_ram_state = '1' then
 			write_address <= std_logic_vector(unsigned(write_address) + 1);
@@ -119,7 +120,6 @@ begin
 		end if;
 		if write_to_ram_state = '0' and ascii_ready = '1' then
 			write_enable <= '1';
-			input <= ascii_char;
 			write_to_ram_state <= '1';
 		end if;
 	end if;

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: Test.prj
@@ -143,8 +143,9 @@ Parsing entity <Ausgabemodul_STK>.
 Parsing architecture <Behavioral> of entity <ausgabemodul_stk>.
 WARNING:HDLCompiler:439 - "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_STK.vhd" Line 50: Formal port ledout of mode buffer cannot be associated with actual port ledout of mode out
 Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/vga_controller (1).vhd" into library work
-Parsing entity <vga_controller>.
-Parsing architecture <behavior> of entity <vga_controller>.
+Parsing entity <vga_module>.
+Parsing architecture <behavior> of entity <vga_module>.
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/vga_controller (1).vhd" Line 53: Possible infinite loop; process does not have a wait statement
 Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/RAM.vhd" into library work
 Parsing entity <RAM>.
 Parsing architecture <Behavioral> of entity <ram>.
@@ -173,7 +174,7 @@ Elaborating entity <Test> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <Counter> (architecture <Behavioral>) with generics from library <work>.
 
-Elaborating entity <vga_controller> (architecture <behavior>) with generics from library <work>.
+Elaborating entity <vga_module> (architecture <behavior>) with generics from library <work>.
 
 Elaborating entity <RAM> (architecture <Behavioral>) from library <work>.
 
@@ -286,15 +287,14 @@ Elaborating entity <ScancodeToAscii> (architecture <Behavioral>) from library <w
 Synthesizing Unit <Test>.
     Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd".
 WARNING:Xst:647 - Input <rxd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 77: Output port <count> of the instance <pixel_counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 77: Output port <count> of the instance <pixel_clock> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 110: Output port <ledout> of the instance <keyboard> is unconnected or connected to loadless signal.
-    Register <R> equivalent to <G> has been removed
-    Register <B> equivalent to <G> has been removed
     Found 4-bit register for signal <G>.
+    Found 4-bit register for signal <B>.
+    Found 4-bit register for signal <R>.
     Found 12-bit register for signal <write_address>.
     Found 1-bit register for signal <write_to_ram_state>.
     Found 1-bit register for signal <write_enable>.
-    Found 8-bit register for signal <input>.
     Found 12-bit adder for signal <write_address[11]_GND_4_o_add_6_OUT> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -314,18 +314,16 @@ Synthesizing Unit <Counter>.
 	inferred   1 Multiplexer(s).
 Unit <Counter> synthesized.
 
-Synthesizing Unit <vga_controller>.
+Synthesizing Unit <vga_module>.
     Related source file is "/media/sf_Desktop/VHDL_Endprojekt/vga_controller (1).vhd".
         h_pulse = 96
         h_bp = 48
         h_pixels = 640
         h_fp = 16
-        h_pol = '0'
         v_pulse = 2
         v_bp = 29
         v_pixels = 480
         v_fp = 10
-        v_pol = '0'
     Found 1-bit register for signal <v_sync>.
     Found 1-bit register for signal <h_sync>.
     Found 1-bit register for signal <disp_ena>.
@@ -333,22 +331,22 @@ Synthesizing Unit <vga_controller>.
     Found 10-bit register for signal <h_count>.
     Found 32-bit register for signal <column>.
     Found 32-bit register for signal <row>.
-    Found 10-bit adder for signal <h_count[9]_GND_6_o_add_1_OUT> created at line 71.
-    Found 10-bit adder for signal <v_count[9]_GND_6_o_add_3_OUT> created at line 75.
-    Found 10-bit comparator greater for signal <h_count[9]_PWR_7_o_LessThan_1_o> created at line 70
-    Found 10-bit comparator greater for signal <v_count[9]_PWR_7_o_LessThan_3_o> created at line 74
-    Found 10-bit comparator greater for signal <GND_6_o_PWR_7_o_LessThan_8_o> created at line 82
-    Found 10-bit comparator greater for signal <PWR_7_o_GND_6_o_LessThan_9_o> created at line 82
-    Found 10-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_10_o> created at line 89
-    Found 10-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_11_o> created at line 89
-    Found 10-bit comparator greater for signal <GND_6_o_PWR_7_o_LessThan_16_o> created at line 104
-    Found 10-bit comparator greater for signal <GND_6_o_GND_6_o_LessThan_17_o> created at line 104
+    Found 10-bit adder for signal <h_count[9]_GND_6_o_add_1_OUT> created at line 66.
+    Found 10-bit adder for signal <v_count[9]_GND_6_o_add_3_OUT> created at line 70.
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_7_o_LessThan_1_o> created at line 65
+    Found 10-bit comparator greater for signal <v_count[9]_PWR_7_o_LessThan_3_o> created at line 69
+    Found 10-bit comparator lessequal for signal <n0007> created at line 77
+    Found 10-bit comparator lessequal for signal <n0009> created at line 77
+    Found 10-bit comparator lessequal for signal <n0013> created at line 82
+    Found 10-bit comparator lessequal for signal <n0015> created at line 82
+    Found 10-bit comparator greater for signal <h_count[9]_PWR_7_o_LessThan_16_o> created at line 97
+    Found 10-bit comparator greater for signal <v_count[9]_GND_6_o_LessThan_17_o> created at line 97
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  87 D-type flip-flop(s).
 	inferred   8 Comparator(s).
-	inferred   6 Multiplexer(s).
-Unit <vga_controller> synthesized.
+	inferred   2 Multiplexer(s).
+Unit <vga_module> synthesized.
 
 Synthesizing Unit <RAM>.
     Related source file is "/media/sf_Desktop/VHDL_Endprojekt/RAM.vhd".
@@ -860,7 +858,7 @@ Macro Statistics
  14-bit adder                                          : 1
  32-bit adder                                          : 1
  4-bit adder                                           : 1
-# Registers                                            : 24
+# Registers                                            : 25
  1-bit register                                        : 7
  10-bit register                                       : 2
  11-bit register                                       : 1
@@ -868,20 +866,21 @@ Macro Statistics
  14-bit register                                       : 1
  2-bit register                                        : 1
  32-bit register                                       : 3
- 4-bit register                                        : 2
+ 4-bit register                                        : 4
  7-bit register                                        : 4
- 8-bit register                                        : 2
+ 8-bit register                                        : 1
 # Latches                                              : 13
  1-bit latch                                           : 13
 # Comparators                                          : 9
- 10-bit comparator greater                             : 8
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 4
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 24
+# Multiplexers                                         : 20
  1-bit 2-to-1 multiplexer                              : 6
  1-bit 4-to-1 multiplexer                              : 7
- 10-bit 2-to-1 multiplexer                             : 3
+ 10-bit 2-to-1 multiplexer                             : 2
  11-bit 2-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 1
  4-bit 3-to-1 multiplexer                              : 1
  7-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
@@ -895,54 +894,22 @@ Macro Statistics
 
 WARNING:Xst:1290 - Hierarchical block <nach_scancode_register> is unconnected in block <opw>.
    It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <column_10> in Unit <vga_module> is equivalent to the following 20 FFs/Latches, which will be removed : <column_11> <column_12> <column_13> <column_14> <column_15> <column_16> <column_17> <column_18> <column_19> <column_20> <column_21> <column_22> <column_23> <column_24> <column_25> <column_26> <column_27> <column_28> <column_29> <column_30> 
+INFO:Xst:2261 - The FF/Latch <row_10> in Unit <vga_module> is equivalent to the following 20 FFs/Latches, which will be removed : <row_11> <row_12> <row_13> <row_14> <row_15> <row_16> <row_17> <row_18> <row_19> <row_20> <row_21> <row_22> <row_23> <row_24> <row_25> <row_26> <row_27> <row_28> <row_29> <row_30> 
 WARNING:Xst:1710 - FF/Latch <segmentout_7> (without init value) has a constant value of 1 in block <opw>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <converter>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <input_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <column_10> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_11> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_12> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_13> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_14> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_15> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_16> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_17> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_18> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_19> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_20> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_21> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_22> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_23> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_24> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_25> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_26> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_27> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_28> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_29> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_30> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <column_31> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_9> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_10> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_11> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_12> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_13> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_14> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_15> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_16> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_17> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_18> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_19> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_20> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_21> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_22> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_23> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_24> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_25> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_26> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_27> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_28> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_29> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_30> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <row_31> of sequential type is unconnected in block <vga>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G_0> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G_1> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G_3> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B_1> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_0> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_2> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <column_10> of sequential type is unconnected in block <vga_module>.
+WARNING:Xst:2677 - Node <column_31> of sequential type is unconnected in block <vga_module>.
+WARNING:Xst:2677 - Node <row_9> of sequential type is unconnected in block <vga_module>.
+WARNING:Xst:2677 - Node <row_10> of sequential type is unconnected in block <vga_module>.
+WARNING:Xst:2677 - Node <row_31> of sequential type is unconnected in block <vga_module>.
+WARNING:Xst:2404 -  FFs/Latches <G<3:3>> (without init value) have a constant value of 0 in block <Test>.
 
 Synthesizing (advanced) Unit <Ausgabemodul_OPW>.
 The following registers are absorbed into counter <counter_register/output>: 1 register on signal <counter_register/output>.
@@ -960,30 +927,34 @@ Synthesizing (advanced) Unit <Test>.
 The following registers are absorbed into counter <write_address>: 1 register on signal <write_address>.
 Unit <Test> synthesized (advanced).
 
+Synthesizing (advanced) Unit <vga_module>.
+The following registers are absorbed into counter <h_count>: 1 register on signal <h_count>.
+The following registers are absorbed into counter <v_count>: 1 register on signal <v_count>.
+Unit <vga_module> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # MACs                                                 : 1
  7x5-to-12-bit MAC                                     : 1
-# Adders/Subtractors                                   : 3
- 10-bit adder                                          : 2
+# Adders/Subtractors                                   : 1
  4-bit adder                                           : 1
-# Counters                                             : 3
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
  12-bit up counter                                     : 1
  14-bit up counter                                     : 1
  32-bit up counter                                     : 1
-# Registers                                            : 156
- Flip-Flops                                            : 156
+# Registers                                            : 135
+ Flip-Flops                                            : 135
 # Comparators                                          : 9
- 10-bit comparator greater                             : 8
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 4
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 20
+# Multiplexers                                         : 14
  1-bit 2-to-1 multiplexer                              : 3
  1-bit 4-to-1 multiplexer                              : 7
- 10-bit 2-to-1 multiplexer                             : 3
  11-bit 2-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 3
  4-bit 3-to-1 multiplexer                              : 1
  7-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
@@ -996,7 +967,58 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <segmentout_7> (without init value) has a constant value of 1 in block <Ausgabemodul_OPW>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <ScancodeToAscii>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <G_0> in Unit <Test> is equivalent to the following 3 FFs/Latches, which will be removed : <G_1> <G_2> <G_3> 
+WARNING:Xst:1426 - The value init of the FF/Latch column_31 hinder the constant cleaning in the block vga_module.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch row_31 hinder the constant cleaning in the block vga_module.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <row_10> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_11> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_12> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_13> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_14> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_15> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_16> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_17> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_18> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_19> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_20> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_21> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_22> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_23> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_24> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_25> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_26> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_27> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_28> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_29> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <row_30> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_10> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_11> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_12> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_13> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_14> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_15> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_16> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_17> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_18> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_19> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_20> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_21> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_22> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_23> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_24> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_25> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_26> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_27> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_28> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_29> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <column_30> has a constant value of 0 in block <vga_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <R_0> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R_2> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B_1> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G_0> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G_1> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <R_1> in Unit <Test> is equivalent to the following 5 FFs/Latches, which will be removed : <R_3> <B_0> <B_2> <B_3> <G_2> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
 -------------------
@@ -1007,50 +1029,6 @@ Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
  11    | 11
  10    | 10
 -------------------
-WARNING:Xst:1710 - FF/Latch <row_10> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_11> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_12> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_13> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_14> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_15> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_16> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_17> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_18> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_19> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_20> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_21> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_22> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_23> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_24> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_25> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_26> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_27> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_28> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_29> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_30> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <row_31> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_10> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_11> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_12> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_13> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_14> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_15> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_16> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_17> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_18> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_19> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_20> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_21> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_22> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_23> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_24> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_25> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_26> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_27> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_28> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_29> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_30> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_31> (without init value) has a constant value of 0 in block <vga_controller>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:3001 - This design contains one or more registers or latches with an active
    asynchronous set and asynchronous reset. While this circuit can be built,
    it creates a sub-optimal implementation in terms of area, power and
@@ -1070,8 +1048,8 @@ WARNING:Xst:3001 - This design contains one or more registers or latches with an
   List of register instances with asynchronous set and reset:
     segmentout_10 in unit <Ausgabemodul_OPW>
     segmentout_11 in unit <Ausgabemodul_OPW>
-    segmentout_9 in unit <Ausgabemodul_OPW>
     segmentout_8 in unit <Ausgabemodul_OPW>
+    segmentout_9 in unit <Ausgabemodul_OPW>
 
 
 Optimizing unit <DRegister_2> ...
@@ -1086,8 +1064,7 @@ Optimizing unit <Ausgabemodul_OPW> ...
 
 Optimizing unit <ScancodeToAscii> ...
 
-Optimizing unit <vga_controller> ...
-WARNING:Xst:1710 - FF/Latch <input_7> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+Optimizing unit <vga_module> ...
 WARNING:Xst:2677 - Node <keyboard/eingabe/opw/bitregister_keyboard_data_loader/output_1> of sequential type is unconnected in block <Test>.
 WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_8> of sequential type is unconnected in block <Test>.
 WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_7> of sequential type is unconnected in block <Test>.
@@ -1097,40 +1074,41 @@ WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_4> o
 WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_3> of sequential type is unconnected in block <Test>.
 WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_2> of sequential type is unconnected in block <Test>.
 WARNING:Xst:2677 - Node <keyboard/ausgabe/opw/nach_scancode_register/output_1> of sequential type is unconnected in block <Test>.
-WARNING:Xst:2677 - Node <vga/row_9> of sequential type is unconnected in block <Test>.
-WARNING:Xst:1293 - FF/Latch <pixel_counter/current_31> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_30> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_29> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_28> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_27> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_26> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_25> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_24> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_23> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_22> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_21> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_20> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_19> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_18> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_17> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_16> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_15> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_14> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_13> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_12> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_11> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_10> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_9> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_8> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_7> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_6> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_5> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_4> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_3> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_counter/current_2> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <write_to_ram_state> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <write_enable> 
-INFO:Xst:2261 - The FF/Latch <pixel_counter/current_0> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <char_printer/state_FSM_FFd2> 
-INFO:Xst:2261 - The FF/Latch <vga/h_count_9> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <vga/column_9> 
+WARNING:Xst:2677 - Node <vga_module/row_31> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <vga_module/row_9> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <vga_module/column_31> of sequential type is unconnected in block <Test>.
+WARNING:Xst:1293 - FF/Latch <pixel_clock/current_31> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_30> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_29> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_28> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_27> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_26> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_25> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_24> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_23> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_22> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_21> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_20> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_19> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_18> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_17> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_16> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_15> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_14> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_13> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_12> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_11> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_10> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_9> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_8> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_7> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_6> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_5> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_4> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_3> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_clock/current_2> has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pixel_clock/current_0> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <char_printer/state_FSM_FFd2> 
+INFO:Xst:2261 - The FF/Latch <write_enable> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <write_to_ram_state> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -1142,8 +1120,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 125
- Flip-Flops                                            : 125
+# Registers                                            : 119
+ Flip-Flops                                            : 119
 
 =========================================================================
 
@@ -1166,23 +1144,23 @@ Top Level Output File Name         : Test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 253
+# BELS                             : 269
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 26
-#      LUT2                        : 19
-#      LUT3                        : 18
-#      LUT4                        : 24
-#      LUT5                        : 37
-#      LUT6                        : 54
-#      MUXCY                       : 38
+#      LUT2                        : 20
+#      LUT3                        : 23
+#      LUT4                        : 19
+#      LUT5                        : 26
+#      LUT6                        : 42
+#      MUXCY                       : 56
 #      VCC                         : 1
-#      XORCY                       : 33
-# FlipFlops/Latches                : 136
+#      XORCY                       : 53
+# FlipFlops/Latches                : 130
 #      FD                          : 31
-#      FDC                         : 27
-#      FDCE                        : 18
-#      FDE                         : 47
+#      FDC                         : 17
+#      FDCE                        : 29
+#      FDE                         : 40
 #      FDP                         : 2
 #      LD                          : 11
 # RAMS                             : 2
@@ -1201,16 +1179,16 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             132  out of  126800     0%  
- Number of Slice LUTs:                  180  out of  63400     0%  
-    Number used as Logic:               180  out of  63400     0%  
+ Number of Slice Registers:             126  out of  126800     0%  
+ Number of Slice LUTs:                  158  out of  63400     0%  
+    Number used as Logic:               158  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    200
-   Number with an unused Flip Flop:      68  out of    200    34%  
-   Number with an unused LUT:            20  out of    200    10%  
-   Number of fully used LUT-FF pairs:   112  out of    200    56%  
-   Number of unique control sets:         9
+ Number of LUT Flip Flop pairs used:    186
+   Number with an unused Flip Flop:      60  out of    186    32%  
+   Number with an unused LUT:            28  out of    186    15%  
+   Number of fully used LUT-FF pairs:    98  out of    186    52%  
+   Number of unique control sets:        10
 
 IO Utilization: 
  Number of IOs:                          40
@@ -1243,11 +1221,11 @@ Clock Information:
 -------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
 Clock Signal                                                                         | Clock buffer(FF name)                                                    | Load  |
 -------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-clk                                                                                  | BUFGP                                                                    | 85    |
-char_printer/GND_59_o_pixel_clk_OR_35_o1(char_printer/GND_59_o_pixel_clk_OR_35_o11:O)| BUFG(*)(G_0)                                                             | 42    |
+char_printer/GND_59_o_pixel_clk_OR_33_o1(char_printer/GND_59_o_pixel_clk_OR_33_o11:O)| BUFG(*)(R_1)                                                             | 43    |
+clk                                                                                  | BUFGP                                                                    | 78    |
 keyboard/converter/_n0275<0>(keyboard/converter/_n0275<0>3:O)                        | NONE(*)(keyboard/converter/ascii_0)                                      | 7     |
-pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<1>                        | NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
-input<7>                                                                             | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
+pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<1>                          | NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
+G_1_OBUF                                                                             | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
 -------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -1256,18 +1234,18 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+-----------------------------------------------------------+-------+
-Control Signal                     | Buffer(FF name)                                           | Load  |
------------------------------------+-----------------------------------------------------------+-------+
-input<7>(XST_GND:G)                | NONE(ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl)| 6     |
------------------------------------+-----------------------------------------------------------+-------+
+-----------------------------------+---------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                     | Load  |
+-----------------------------------+---------------------------------------------------------------------+-------+
+G_1_OBUF(XST_GND:G)                | NONE(character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl)| 6     |
+-----------------------------------+---------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 4.273ns (Maximum Frequency: 234.028MHz)
-   Minimum input arrival time before clock: 1.749ns
+   Minimum period: 3.988ns (Maximum Frequency: 250.752MHz)
+   Minimum input arrival time before clock: 1.748ns
    Maximum output required time after clock: 2.012ns
    Maximum combinational path delay: No path found
 
@@ -1276,120 +1254,128 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.377ns (frequency: 296.165MHz)
-  Total number of paths / destination ports: 841 / 136
+Timing constraint: Default period analysis for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
+  Clock period: 3.988ns (frequency: 250.752MHz)
+  Total number of paths / destination ports: 1211 / 72
 -------------------------------------------------------------------------
-Delay:               3.377ns (Levels of Logic = 11)
-  Source:            pixel_counter/current_1 (FF)
-  Destination:       pixel_counter/current_1 (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
+Delay:               3.988ns (Levels of Logic = 13)
+  Source:            vga_module/h_count_3 (FF)
+  Destination:       vga_module/h_count_9 (FF)
+  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
+  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
 
-  Data Path: pixel_counter/current_1 to pixel_counter/current_1
+  Data Path: vga_module/h_count_3 to vga_module/h_count_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              4   0.478   0.556  pixel_counter/current_1 (pixel_counter/current_1)
-     LUT2:I0->O            1   0.124   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>1 (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>)
-     MUXCY:S->O            1   0.472   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0>)
-     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1>)
-     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<2> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<2>)
-     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3>)
-     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4>)
-     MUXCY:CI->O           1   0.029   0.000  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5> (pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5>)
-     MUXCY:CI->O           3   0.029   0.435  pixel_counter/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<6> (pixel_counter/GND_5_o_current[31]_LessThan_3_o_inv)
-     LUT2:I1->O            1   0.124   0.000  pixel_counter/Mcount_current_lut<0> (pixel_counter/Mcount_current_lut<0>)
-     MUXCY:S->O            0   0.472   0.000  pixel_counter/Mcount_current_cy<0> (pixel_counter/Mcount_current_cy<0>)
-     XORCY:CI->O           1   0.510   0.000  pixel_counter/Mcount_current_xor<1> (pixel_counter/Mcount_current1)
-     FDC:D                     0.030          pixel_counter/current_1
+     FDC:C->Q              5   0.478   0.946  vga_module/h_count_3 (vga_module/h_count_3)
+     LUT5:I0->O            2   0.124   0.427  vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv1 (vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv1)
+     LUT6:I5->O           16   0.124   0.519  vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv2 (vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv)
+     LUT3:I2->O            1   0.124   0.000  vga_module/Mcount_h_count_lut<0> (vga_module/Mcount_h_count_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  vga_module/Mcount_h_count_cy<0> (vga_module/Mcount_h_count_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<1> (vga_module/Mcount_h_count_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<2> (vga_module/Mcount_h_count_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<3> (vga_module/Mcount_h_count_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<4> (vga_module/Mcount_h_count_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<5> (vga_module/Mcount_h_count_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<6> (vga_module/Mcount_h_count_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<7> (vga_module/Mcount_h_count_cy<7>)
+     MUXCY:CI->O           0   0.029   0.000  vga_module/Mcount_h_count_cy<8> (vga_module/Mcount_h_count_cy<8>)
+     XORCY:CI->O           1   0.510   0.000  vga_module/Mcount_h_count_xor<9> (vga_module/Mcount_h_count9)
+     FDC:D                     0.030          vga_module/h_count_9
+    ----------------------------------------
+    Total                      3.988ns (2.096ns logic, 1.892ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.377ns (frequency: 296.165MHz)
+  Total number of paths / destination ports: 736 / 115
+-------------------------------------------------------------------------
+Delay:               3.377ns (Levels of Logic = 11)
+  Source:            pixel_clock/current_1 (FF)
+  Destination:       pixel_clock/current_1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: pixel_clock/current_1 to pixel_clock/current_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.478   0.556  pixel_clock/current_1 (pixel_clock/current_1)
+     LUT2:I0->O            1   0.124   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>1 (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0> (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1> (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<2> (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3> (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4> (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5> (pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<5>)
+     MUXCY:CI->O           3   0.029   0.435  pixel_clock/Mcompar_GND_5_o_current[31]_LessThan_3_o_cy<6> (pixel_clock/GND_5_o_current[31]_LessThan_3_o_inv)
+     LUT2:I1->O            1   0.124   0.000  pixel_clock/Mcount_current_lut<0> (pixel_clock/Mcount_current_lut<0>)
+     MUXCY:S->O            0   0.472   0.000  pixel_clock/Mcount_current_cy<0> (pixel_clock/Mcount_current_cy<0>)
+     XORCY:CI->O           1   0.510   0.000  pixel_clock/Mcount_current_xor<1> (pixel_clock/Mcount_current1)
+     FDC:D                     0.030          pixel_clock/current_1
     ----------------------------------------
     Total                      3.377ns (2.386ns logic, 0.991ns route)
                                        (70.7% logic, 29.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'char_printer/GND_59_o_pixel_clk_OR_35_o1'
-  Clock period: 4.273ns (frequency: 234.028MHz)
-  Total number of paths / destination ports: 2554 / 60
--------------------------------------------------------------------------
-Delay:               4.273ns (Levels of Logic = 5)
-  Source:            vga/h_count_7 (FF)
-  Destination:       vga/v_sync (FF)
-  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
-  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
-
-  Data Path: vga/h_count_7 to vga/v_sync
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              3   0.478   0.730  vga/h_count_7 (vga/h_count_7)
-     LUT3:I0->O            4   0.124   0.556  vga/h_count[9]_PWR_7_o_LessThan_1_o1_SW0 (N20)
-     LUT6:I4->O            2   0.124   0.427  vga/h_count[9]_PWR_7_o_LessThan_1_o1_1 (vga/h_count[9]_PWR_7_o_LessThan_1_o1)
-     LUT5:I4->O           12   0.124   1.011  vga/GND_6_o_v_count[9]_mux_6_OUT<5>1 (vga/GND_6_o_v_count[9]_mux_6_OUT<5>)
-     LUT6:I0->O            1   0.124   0.421  vga/GND_6_o_GND_6_o_OR_33_o2 (vga/GND_6_o_GND_6_o_OR_33_o2)
-     LUT4:I3->O            1   0.124   0.000  vga/GND_6_o_GND_6_o_OR_33_o3 (vga/GND_6_o_GND_6_o_OR_33_o)
-     FDP:D                     0.030          vga/v_sync
-    ----------------------------------------
-    Total                      4.273ns (1.128ns logic, 3.145ns route)
-                                       (26.4% logic, 73.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
   Total number of paths / destination ports: 43 / 43
--------------------------------------------------------------------------
-Offset:              1.749ns (Levels of Logic = 2)
-  Source:            RESET (PAD)
-  Destination:       input_0 (FF)
-  Destination Clock: clk rising
-
-  Data Path: RESET to input_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            51   0.001   0.933  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O           35   0.124   0.552  write_to_ram_state_ascii_ready_AND_73_o11 (ascii_ready)
-     FDE:CE                    0.139          keyboard/ausgabe/opw/segment_buffer_4/output_1
-    ----------------------------------------
-    Total                      1.749ns (0.264ns logic, 1.485ns route)
-                                       (15.1% logic, 84.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'char_printer/GND_59_o_pixel_clk_OR_35_o1'
-  Total number of paths / destination ports: 42 / 42
 -------------------------------------------------------------------------
 Offset:              1.051ns (Levels of Logic = 1)
   Source:            RESET (PAD)
-  Destination:       G_0 (FF)
-  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
+  Destination:       R_1 (FF)
+  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
 
-  Data Path: RESET to G_0
+  Data Path: RESET to R_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            51   0.001   0.556  RESET_IBUF (RESET_IBUF)
-     FDC:CLR                   0.494          G_0
+     IBUF:I->O            52   0.001   0.556  RESET_IBUF (RESET_IBUF)
+     FDC:CLR                   0.494          R_1
     ----------------------------------------
     Total                      1.051ns (0.495ns logic, 0.556ns route)
                                        (47.1% logic, 52.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'char_printer/GND_59_o_pixel_clk_OR_35_o1'
-  Total number of paths / destination ports: 14 / 14
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 36 / 36
 -------------------------------------------------------------------------
-Offset:              0.949ns (Levels of Logic = 1)
-  Source:            G_0 (FF)
-  Destination:       R<3> (PAD)
-  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_35_o1 rising
+Offset:              1.748ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       keyboard/ausgabe/opw/segment_buffer_1/output_1 (FF)
+  Destination Clock: clk rising
 
-  Data Path: G_0 to R<3>
+  Data Path: RESET to keyboard/ausgabe/opw/segment_buffer_1/output_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             12   0.478   0.471  G_0 (G_0)
+     IBUF:I->O            52   0.001   0.933  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O           28   0.124   0.551  write_to_ram_state_ascii_ready_AND_76_o11 (ascii_ready)
+     FDE:CE                    0.139          keyboard/ausgabe/opw/segment_buffer_4/output_1
+    ----------------------------------------
+    Total                      1.748ns (0.264ns logic, 1.484ns route)
+                                       (15.1% logic, 84.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.910ns (Levels of Logic = 1)
+  Source:            R_1 (FF)
+  Destination:       R<3> (PAD)
+  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
+
+  Data Path: R_1 to R<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.478   0.432  R_1 (R_1)
      OBUF:I->O                 0.000          R_3_OBUF (R<3>)
     ----------------------------------------
-    Total                      0.949ns (0.478ns logic, 0.471ns route)
-                                       (50.4% logic, 49.6% route)
+    Total                      0.910ns (0.478ns logic, 0.432ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1416,12 +1402,12 @@ Offset:              2.012ns (Levels of Logic = 2)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock char_printer/GND_59_o_pixel_clk_OR_35_o1
+Clock to Setup on destination clock char_printer/GND_59_o_pixel_clk_OR_33_o1
 ----------------------------------------+---------+---------+---------+---------+
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-char_printer/GND_59_o_pixel_clk_OR_35_o1|    4.273|         |         |         |
+char_printer/GND_59_o_pixel_clk_OR_33_o1|    3.988|         |         |         |
 ----------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -1430,7 +1416,7 @@ Clock to Setup on destination clock clk
 Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------+---------+---------+---------+---------+
 clk                         |    3.377|         |         |         |
-keyboard/converter/_n0275<0>|         |    1.315|         |         |
+keyboard/converter/_n0275<0>|         |    1.761|         |         |
 ----------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock keyboard/converter/_n0275<0>
@@ -1438,21 +1424,21 @@ Clock to Setup on destination clock keyboard/converter/_n0275<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.603|         |
+clk            |         |         |    2.604|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 16.63 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 9.76 secs
  
 --> 
 
 
-Total memory usage is 533376 kilobytes
+Total memory usage is 533324 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  235 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :  208 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 
