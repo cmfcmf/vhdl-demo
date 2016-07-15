@@ -65,13 +65,17 @@ signal read_address : STD_LOGIC_VECTOR (11 downto 0);
 signal read_enable : STD_LOGIC := '0';
 signal read_output : STD_LOGIC_VECTOR(7 downto 0);
 
-signal write_address : STD_LOGIC_VECTOR (11 downto 0);
+signal write_address : STD_LOGIC_VECTOR (11 downto 0) := "000000000000";
 signal write_enable : STD_LOGIC := '0';
 signal input : STD_LOGIC_VECTOR(7 downto 0);
 
 signal write_to_ram_state : STD_LOGIC := '0';
 signal tmp : STD_LOGIC_VECTOR (31 downto 0);
 signal set_pixel : STD_LOGIC := '0';
+
+signal arrow_pressed : STD_LOGIC;
+signal arrow : STD_LOGIC_VECTOR (1 downto 0);
+signal cursor_blink_count : INTEGER;
 begin
 
 pixel_clock : entity work.Counter generic map (4) port map (clk, RESET, '1', pixel_clk, open);
@@ -86,6 +90,8 @@ char_printer : entity work.CharPrinter
 	generic map (640, 480) 
 	port map (clk, RESET, pixel_clk, column, row, set_pixel, read_address, read_output, read_enable);
 
+cursor_blink : entity work.Counter generic map (100000000) port map (clk, RESET, '1', open, cursor_blink_count);
+
 rgb_generator : process
 begin
 	if RESET = '1' then
@@ -93,10 +99,28 @@ begin
 		G <= "0000";
 		B <= "0000";
 	elsif rising_edge(pixel_clk) then
-		if displ_ena = '1' and set_pixel = '1' then
-			R <= "1111";
-			G <= "1111";
-			B <= "1111";
+		if displ_ena = '1' then
+			if write_address = read_address and cursor_blink_count < 50000000 then
+				if set_pixel = '0' then
+					R <= "1111";
+					G <= "1111";
+					B <= "1111";
+				else 
+					R <= "0000";
+					G <= "0000";
+					B <= "0000";
+				end if;
+			else
+				if set_pixel = '1' then
+					R <= "1111";
+					G <= "1111";
+					B <= "1111";
+				else 
+					R <= "0000";
+					G <= "0000";
+					B <= "0000";
+				end if;
+			end if;
 		else
 			R <= "0000";
 			G <= "0000";
@@ -107,14 +131,16 @@ end process;
 
 led <= '1';
 
-keyboard : entity work.KeyboardController port map (clk, RESET, kbclk, kbdata, open, segmentout, ascii_char, ascii_ready);
+keyboard : entity work.KeyboardController port map (clk, RESET, kbclk, kbdata, open, segmentout, ascii_char, ascii_ready, arrow_pressed, arrow);
+
+cursor_controller : entity work.CursorController port map (clk, RESET, arrow, arrow_pressed, write_address, ascii_ready);
 
 char_to_ram_writer : process 
 begin
 	input <= ascii_char;
 	if rising_edge(clk) then
 		if write_to_ram_state = '1' then
-			write_address <= std_logic_vector(unsigned(write_address) + 1);
+			-- write_address <= std_logic_vector(unsigned(write_address) + 1);
 			write_to_ram_state <= '0';
 			write_enable <= '0';
 		end if;

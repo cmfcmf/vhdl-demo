@@ -38,16 +38,44 @@ entity KeyboardController is
            ledout : out  STD_LOGIC_VECTOR (7 downto 0);
            segmentout : out  STD_LOGIC_VECTOR (11 downto 0);
 			  ascii_char : out STD_LOGIC_VECTOR (7 downto 0);
-			  ascii_read : out STD_LOGIC);
+			  ascii_ready : out STD_LOGIC;
+			  arrow_pressed : out STD_LOGIC;
+			  arrow : out STD_LOGIC_VECTOR (1 downto 0));
 end KeyboardController;
 
 architecture Behavioral of KeyboardController is	
 	signal scancode : STD_LOGIC_VECTOR (7 downto 0);
 	signal ready : STD_LOGIC;
+	signal key_pressed : STD_LOGIC;
 begin
 
 	eingabe : entity work.Eingabemodul_STK port map (clk, RESET, kbclk, kbdata, scancode, ready);
-	ausgabe : entity work.Ausgabemodul_STK port map (scancode, ready, RESET, clk, ledout, segmentout, ascii_read);
+	ausgabe : entity work.Ausgabemodul_STK port map (scancode, ready, RESET, clk, ledout, segmentout, key_pressed);
+	
+	control_process : process
+	begin
+		if rising_edge(clk) then
+			if key_pressed = '1' then
+				ascii_ready <= '0';
+				arrow_pressed <= '1';
+				if scancode = X"75" then -- Up arrow
+					arrow <= "00";
+				elsif scancode = X"6B" then -- Left arrow
+					arrow <= "01";
+				elsif scancode = X"72" then -- Down arrow
+					arrow <= "10";
+				elsif scancode = X"74" then -- Right arrow
+					arrow <= "11";
+				else
+					arrow_pressed <= '0';
+					ascii_ready <= '1';
+				end if;
+			else
+				ascii_ready <= '0';
+				arrow_pressed <= '0';
+			end if;
+		end if;
+	end process;
 	
 	converter : entity work.ScancodeToAscii port map (scancode, ascii_char);
 	

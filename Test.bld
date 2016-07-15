@@ -14,15 +14,16 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:483 - Attribute "INIT" on "G_1_OBUF" is on the wrong type of
-   object.  Please see the Constraints Guide for more information on this
-   attribute.
 WARNING:NgdBuild:483 - Attribute "INIT" on "pixel_clock/current<1>" is on the
    wrong type of object.  Please see the Constraints Guide for more information
    on this attribute.
 WARNING:NgdBuild:483 - Attribute "INIT" on "pixel_clock/current<0>" is on the
    wrong type of object.  Please see the Constraints Guide for more information
    on this attribute.
+WARNING:NgdBuild:483 - Attribute "INIT" on
+   "Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lutdi3" is on the wrong
+   type of object.  Please see the Constraints Guide for more information on
+   this attribute.
 
 Partition Implementation Status
 -------------------------------
@@ -35,10 +36,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   3
 
-Total memory usage is 456420 kilobytes
+Total memory usage is 458060 kilobytes
 
 Writing NGD file "Test.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
-Total CPU time to NGDBUILD completion:   5 sec
+Total REAL time to NGDBUILD completion:  6 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "Test.bld"...

@@ -1,48 +1,48 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Jul 15 15:49:59 2016
+// Written by: Map P.20131013 on Fri Jul 15 18:08:48 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "ledout<3>" LOCATE = SITE "N14" LEVEL 1;
-COMP "ledout<4>" LOCATE = SITE "R18" LEVEL 1;
-COMP "ledout<5>" LOCATE = SITE "V17" LEVEL 1;
-COMP "segmentout<10>" LOCATE = SITE "T9" LEVEL 1;
+COMP "v_sync" LOCATE = SITE "B12" LEVEL 1;
 COMP "h_sync" LOCATE = SITE "B11" LEVEL 1;
-COMP "ledout<6>" LOCATE = SITE "U17" LEVEL 1;
+COMP "rxd" LOCATE = SITE "J15" LEVEL 1;
+COMP "R<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "R<1>" LOCATE = SITE "B4" LEVEL 1;
+COMP "R<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "R<3>" LOCATE = SITE "A4" LEVEL 1;
+COMP "segmentout<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "segmentout<3>" LOCATE = SITE "K13" LEVEL 1;
+COMP "segmentout<4>" LOCATE = SITE "P15" LEVEL 1;
+COMP "segmentout<1>" LOCATE = SITE "R10" LEVEL 1;
+COMP "segmentout<2>" LOCATE = SITE "K16" LEVEL 1;
+COMP "segmentout<7>" LOCATE = SITE "H15" LEVEL 1;
+COMP "segmentout<8>" LOCATE = SITE "J17" LEVEL 1;
+COMP "segmentout<5>" LOCATE = SITE "T11" LEVEL 1;
+COMP "segmentout<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "segmentout<9>" LOCATE = SITE "J18" LEVEL 1;
 COMP "segmentout<11>" LOCATE = SITE "J14" LEVEL 1;
-COMP "ledout<7>" LOCATE = SITE "U16" LEVEL 1;
-COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "segmentout<10>" LOCATE = SITE "T9" LEVEL 1;
+COMP "kbdata" LOCATE = SITE "B2" LEVEL 1;
+COMP "RESET" LOCATE = SITE "V10" LEVEL 1;
+COMP "kbclk" LOCATE = SITE "F4" LEVEL 1;
 COMP "B<0>" LOCATE = SITE "B7" LEVEL 1;
 COMP "B<1>" LOCATE = SITE "C7" LEVEL 1;
 COMP "B<2>" LOCATE = SITE "D7" LEVEL 1;
 COMP "B<3>" LOCATE = SITE "D8" LEVEL 1;
-COMP "led" LOCATE = SITE "V11" LEVEL 1;
-COMP "segmentout<0>" LOCATE = SITE "T10" LEVEL 1;
-COMP "segmentout<1>" LOCATE = SITE "R10" LEVEL 1;
-COMP "segmentout<2>" LOCATE = SITE "K16" LEVEL 1;
-COMP "segmentout<3>" LOCATE = SITE "K13" LEVEL 1;
-COMP "segmentout<4>" LOCATE = SITE "P15" LEVEL 1;
-COMP "segmentout<5>" LOCATE = SITE "T11" LEVEL 1;
-COMP "R<0>" LOCATE = SITE "A3" LEVEL 1;
-COMP "kbdata" LOCATE = SITE "B2" LEVEL 1;
-COMP "segmentout<6>" LOCATE = SITE "L18" LEVEL 1;
-COMP "R<1>" LOCATE = SITE "B4" LEVEL 1;
-COMP "segmentout<7>" LOCATE = SITE "H15" LEVEL 1;
-COMP "R<2>" LOCATE = SITE "C5" LEVEL 1;
-COMP "v_sync" LOCATE = SITE "B12" LEVEL 1;
-COMP "segmentout<8>" LOCATE = SITE "J17" LEVEL 1;
-COMP "R<3>" LOCATE = SITE "A4" LEVEL 1;
-COMP "segmentout<9>" LOCATE = SITE "J18" LEVEL 1;
+COMP "ledout<7>" LOCATE = SITE "U16" LEVEL 1;
+COMP "ledout<6>" LOCATE = SITE "U17" LEVEL 1;
+COMP "ledout<5>" LOCATE = SITE "V17" LEVEL 1;
+COMP "ledout<0>" LOCATE = SITE "H17" LEVEL 1;
+COMP "ledout<4>" LOCATE = SITE "R18" LEVEL 1;
+COMP "ledout<3>" LOCATE = SITE "N14" LEVEL 1;
+COMP "ledout<2>" LOCATE = SITE "J13" LEVEL 1;
 COMP "G<0>" LOCATE = SITE "C6" LEVEL 1;
+COMP "ledout<1>" LOCATE = SITE "K15" LEVEL 1;
 COMP "G<1>" LOCATE = SITE "A5" LEVEL 1;
 COMP "G<2>" LOCATE = SITE "B6" LEVEL 1;
 COMP "G<3>" LOCATE = SITE "A6" LEVEL 1;
-COMP "kbclk" LOCATE = SITE "F4" LEVEL 1;
-COMP "rxd" LOCATE = SITE "J15" LEVEL 1;
-COMP "ledout<0>" LOCATE = SITE "H17" LEVEL 1;
-COMP "RESET" LOCATE = SITE "V10" LEVEL 1;
-COMP "ledout<1>" LOCATE = SITE "K15" LEVEL 1;
-COMP "ledout<2>" LOCATE = SITE "J13" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+COMP "led" LOCATE = SITE "V11" LEVEL 1;
 PIN
         char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<63>
         = BEL
@@ -66,12 +66,21 @@ PIN character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<64> =
         BEL "character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl"
         PINNAME CLKBWRCLKL;
 TIMEGRP sys_clk_pin = BEL "char_printer/read_enable" BEL
-        "keyboard/ausgabe/stw/state" BEL "char_printer/state_FSM_FFd1" BEL
-        "pixel_clock/current_0" BEL "pixel_clock/current_1" BEL
-        "write_address_0" BEL "write_address_1" BEL "write_address_2" BEL
-        "write_address_3" BEL "write_address_4" BEL "write_address_5" BEL
-        "write_address_6" BEL "write_address_7" BEL "write_address_8" BEL
-        "write_address_9" BEL "write_address_10" BEL "write_address_11" BEL
+        "char_printer/state_FSM_FFd1" BEL "pixel_clock/current_0" BEL
+        "pixel_clock/current_1" BEL "cursor_blink/current_2" BEL
+        "cursor_blink/current_3" BEL "cursor_blink/current_4" BEL
+        "cursor_blink/current_5" BEL "cursor_blink/current_6" BEL
+        "cursor_blink/current_7" BEL "cursor_blink/current_8" BEL
+        "cursor_blink/current_9" BEL "cursor_blink/current_10" BEL
+        "cursor_blink/current_11" BEL "cursor_blink/current_12" BEL
+        "cursor_blink/current_13" BEL "cursor_blink/current_14" BEL
+        "cursor_blink/current_15" BEL "cursor_blink/current_16" BEL
+        "cursor_blink/current_17" BEL "cursor_blink/current_18" BEL
+        "cursor_blink/current_19" BEL "cursor_blink/current_20" BEL
+        "cursor_blink/current_21" BEL "cursor_blink/current_22" BEL
+        "cursor_blink/current_23" BEL "cursor_blink/current_24" BEL
+        "cursor_blink/current_25" BEL "cursor_blink/current_26" BEL
+        "keyboard/ausgabe/stw/state" BEL "keyboard/ascii_ready" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_1" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_2" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_3" BEL
@@ -129,8 +138,53 @@ TIMEGRP sys_clk_pin = BEL "char_printer/read_enable" BEL
         "keyboard/ausgabe/opw/segment_buffer_4/output_4" BEL
         "keyboard/ausgabe/opw/segment_buffer_4/output_5" BEL
         "keyboard/ausgabe/opw/segment_buffer_4/output_6" BEL
-        "keyboard/ausgabe/opw/segment_buffer_4/output_7" BEL "write_enable"
-        BEL "clk_BUFGP/BUFG" PIN
+        "keyboard/ausgabe/opw/segment_buffer_4/output_7" BEL
+        "cursor_controller/write_address_t_31" BEL
+        "cursor_controller/increment_ram_address" BEL
+        "cursor_controller/write_address_t_12" BEL
+        "cursor_controller/write_address_t_13" BEL
+        "cursor_controller/write_address_t_15" BEL
+        "cursor_controller/write_address_t_16" BEL
+        "cursor_controller/write_address_t_14" BEL
+        "cursor_controller/write_address_t_18" BEL
+        "cursor_controller/write_address_t_19" BEL
+        "cursor_controller/write_address_t_17" BEL
+        "cursor_controller/write_address_t_21" BEL
+        "cursor_controller/write_address_t_22" BEL
+        "cursor_controller/write_address_t_20" BEL
+        "cursor_controller/write_address_t_24" BEL
+        "cursor_controller/write_address_t_25" BEL
+        "cursor_controller/write_address_t_23" BEL
+        "cursor_controller/write_address_t_27" BEL
+        "cursor_controller/write_address_t_28" BEL
+        "cursor_controller/write_address_t_26" BEL
+        "cursor_controller/write_address_t_30" BEL
+        "cursor_controller/write_address_t_29" BEL "write_to_ram_state" BEL
+        "keyboard/arrow_pressed" BEL "keyboard/arrow_1" BEL "keyboard/arrow_0"
+        BEL "cursor_controller/write_address_t_0_C_0" BEL
+        "cursor_controller/write_address_t_0_P_0" BEL
+        "cursor_controller/write_address_t_1_C_1" BEL
+        "cursor_controller/write_address_t_1_P_1" BEL
+        "cursor_controller/write_address_t_3_C_3" BEL
+        "cursor_controller/write_address_t_3_P_3" BEL
+        "cursor_controller/write_address_t_4_C_4" BEL
+        "cursor_controller/write_address_t_4_P_4" BEL
+        "cursor_controller/write_address_t_2_C_2" BEL
+        "cursor_controller/write_address_t_2_P_2" BEL
+        "cursor_controller/write_address_t_6_C_6" BEL
+        "cursor_controller/write_address_t_6_P_6" BEL
+        "cursor_controller/write_address_t_7_C_7" BEL
+        "cursor_controller/write_address_t_7_P_7" BEL
+        "cursor_controller/write_address_t_5_C_5" BEL
+        "cursor_controller/write_address_t_5_P_5" BEL
+        "cursor_controller/write_address_t_9_C_9" BEL
+        "cursor_controller/write_address_t_9_P_9" BEL
+        "cursor_controller/write_address_t_10_C_10" BEL
+        "cursor_controller/write_address_t_10_P_10" BEL
+        "cursor_controller/write_address_t_8_C_8" BEL
+        "cursor_controller/write_address_t_8_P_8" BEL
+        "cursor_controller/write_address_t_11_C_11" BEL
+        "cursor_controller/write_address_t_11_P_11" BEL "clk_BUFGP/BUFG" PIN
         "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<63>"
         PIN
         "char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl_pins<62>"

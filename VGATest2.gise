@@ -25,6 +25,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CharPrinter.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="CharPrinter.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="CharPrinter.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CursorController.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="CursorController.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="CursorController.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Test.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="Test.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Test.bld"/>
@@ -107,12 +110,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1468590548" xil_pn:in_ck="2130984393464202486" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7316433856866593266" xil_pn:start_ts="1468590535">
+    <transform xil_pn:end_ts="1468600150" xil_pn:in_ck="8590242200301021768" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-7316433856866593266" xil_pn:start_ts="1468600131">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Test.lso"/>
       <outfile xil_pn:name="Test.ngc"/>
       <outfile xil_pn:name="Test.ngr"/>
@@ -129,19 +130,24 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1468590556" xil_pn:in_ck="278524193498868624" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2028401143200815998" xil_pn:start_ts="1468590548">
+    <transform xil_pn:end_ts="1468598889" xil_pn:in_ck="278524193498868624" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2028401143200815998" xil_pn:start_ts="1468598880">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Test.bld"/>
       <outfile xil_pn:name="Test.ngd"/>
       <outfile xil_pn:name="Test_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1468590602" xil_pn:in_ck="278524236117311601" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-7188367874928765557" xil_pn:start_ts="1468590556">
+    <transform xil_pn:end_ts="1468598929" xil_pn:in_ck="278524236117311601" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-7188367874928765557" xil_pn:start_ts="1468598889">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Test.pcf"/>
       <outfile xil_pn:name="Test_map.map"/>
       <outfile xil_pn:name="Test_map.mrp"/>
@@ -152,10 +158,11 @@
       <outfile xil_pn:name="Test_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1468590647" xil_pn:in_ck="4339875849137050858" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1468590602">
+    <transform xil_pn:end_ts="1468598973" xil_pn:in_ck="4339875849137050858" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1468598929">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Test.ncd"/>
       <outfile xil_pn:name="Test.pad"/>
       <outfile xil_pn:name="Test.par"/>
@@ -167,10 +174,13 @@
       <outfile xil_pn:name="Test_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1468590679" xil_pn:in_ck="3715027388227" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1468590647">
+    <transform xil_pn:end_ts="1468599004" xil_pn:in_ck="3715027388227" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1468598973">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Test.bgn"/>
       <outfile xil_pn:name="Test.bit"/>
       <outfile xil_pn:name="Test.drc"/>
@@ -184,11 +194,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1468590647" xil_pn:in_ck="278518610482838637" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1468590628">
+    <transform xil_pn:end_ts="1468598973" xil_pn:in_ck="278518610482838637" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1468598956">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Test.twr"/>
       <outfile xil_pn:name="Test.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
