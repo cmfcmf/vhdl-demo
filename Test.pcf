@@ -1,11 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Jul 15 18:08:48 2016
+// Written by: Map P.20131013 on Sat Jul 16 17:10:34 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "v_sync" LOCATE = SITE "B12" LEVEL 1;
 COMP "h_sync" LOCATE = SITE "B11" LEVEL 1;
-COMP "rxd" LOCATE = SITE "J15" LEVEL 1;
 COMP "R<0>" LOCATE = SITE "A3" LEVEL 1;
 COMP "R<1>" LOCATE = SITE "B4" LEVEL 1;
 COMP "R<2>" LOCATE = SITE "C5" LEVEL 1;
@@ -23,6 +22,7 @@ COMP "segmentout<9>" LOCATE = SITE "J18" LEVEL 1;
 COMP "segmentout<11>" LOCATE = SITE "J14" LEVEL 1;
 COMP "segmentout<10>" LOCATE = SITE "T9" LEVEL 1;
 COMP "kbdata" LOCATE = SITE "B2" LEVEL 1;
+COMP "set_color" LOCATE = SITE "J15" LEVEL 1;
 COMP "RESET" LOCATE = SITE "V10" LEVEL 1;
 COMP "kbclk" LOCATE = SITE "F4" LEVEL 1;
 COMP "B<0>" LOCATE = SITE "B7" LEVEL 1;
@@ -65,22 +65,26 @@ PIN character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<65> =
 PIN character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl_pins<64> =
         BEL "character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl"
         PINNAME CLKBWRCLKL;
-TIMEGRP sys_clk_pin = BEL "char_printer/read_enable" BEL
-        "char_printer/state_FSM_FFd1" BEL "pixel_clock/current_0" BEL
-        "pixel_clock/current_1" BEL "cursor_blink/current_2" BEL
-        "cursor_blink/current_3" BEL "cursor_blink/current_4" BEL
-        "cursor_blink/current_5" BEL "cursor_blink/current_6" BEL
-        "cursor_blink/current_7" BEL "cursor_blink/current_8" BEL
-        "cursor_blink/current_9" BEL "cursor_blink/current_10" BEL
-        "cursor_blink/current_11" BEL "cursor_blink/current_12" BEL
-        "cursor_blink/current_13" BEL "cursor_blink/current_14" BEL
-        "cursor_blink/current_15" BEL "cursor_blink/current_16" BEL
-        "cursor_blink/current_17" BEL "cursor_blink/current_18" BEL
-        "cursor_blink/current_19" BEL "cursor_blink/current_20" BEL
-        "cursor_blink/current_21" BEL "cursor_blink/current_22" BEL
-        "cursor_blink/current_23" BEL "cursor_blink/current_24" BEL
-        "cursor_blink/current_25" BEL "cursor_blink/current_26" BEL
-        "keyboard/ausgabe/stw/state" BEL "keyboard/ascii_ready" BEL
+TIMEGRP sys_clk_pin = BEL "rgb_0" BEL "rgb_1" BEL "rgb_2" BEL "rgb_3" BEL
+        "rgb_4" BEL "rgb_5" BEL "rgb_6" BEL "rgb_7" BEL "rgb_8" BEL "rgb_9"
+        BEL "rgb_10" BEL "rgb_11" BEL "R_0" BEL "R_1" BEL "R_2" BEL "R_3" BEL
+        "G_0" BEL "G_1" BEL "G_2" BEL "G_3" BEL "B_0" BEL "B_1" BEL "B_2" BEL
+        "B_3" BEL "char_printer/read_enable" BEL "char_printer/state_FSM_FFd1"
+        BEL "pixel_clock/current_0" BEL "pixel_clock/current_1" BEL
+        "cursor_blink/current_2" BEL "cursor_blink/current_3" BEL
+        "cursor_blink/current_4" BEL "cursor_blink/current_5" BEL
+        "cursor_blink/current_6" BEL "cursor_blink/current_7" BEL
+        "cursor_blink/current_8" BEL "cursor_blink/current_9" BEL
+        "cursor_blink/current_10" BEL "cursor_blink/current_11" BEL
+        "cursor_blink/current_12" BEL "cursor_blink/current_13" BEL
+        "cursor_blink/current_14" BEL "cursor_blink/current_15" BEL
+        "cursor_blink/current_16" BEL "cursor_blink/current_17" BEL
+        "cursor_blink/current_18" BEL "cursor_blink/current_19" BEL
+        "cursor_blink/current_20" BEL "cursor_blink/current_21" BEL
+        "cursor_blink/current_22" BEL "cursor_blink/current_23" BEL
+        "cursor_blink/current_24" BEL "cursor_blink/current_25" BEL
+        "cursor_blink/current_26" BEL "keyboard/ausgabe/stw/state" BEL
+        "keyboard/ascii_ready" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_1" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_2" BEL
         "keyboard/eingabe/opw/bitregister_counter/output_3" BEL

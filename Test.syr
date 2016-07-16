@@ -168,8 +168,9 @@ WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/CharPrinter.vhd" L
 Parsing VHDL file "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" into library work
 Parsing entity <Test>.
 Parsing architecture <Behavioral> of entity <test>.
-WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 95: Possible infinite loop; process does not have a wait statement
-WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 138: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 102: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 121: Possible infinite loop; process does not have a wait statement
+WARNING:HDLCompiler:1369 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" Line 158: Possible infinite loop; process does not have a wait statement
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -181,7 +182,7 @@ Elaborating entity <Counter> (architecture <Behavioral>) with generics from libr
 
 Elaborating entity <vga_module> (architecture <behavior>) with generics from library <work>.
 
-Elaborating entity <RAM> (architecture <Behavioral>) from library <work>.
+Elaborating entity <RAM> (architecture <Behavioral>) with generics from library <work>.
 
 Elaborating entity <BRAM_SDP_MACRO> (architecture <bram_V>) with generics from library <unimacro>.
 WARNING:HDLCompiler:321 - "/build/xfndry10/P.20131013/rtf/devlib/vhdl/src/unimacro/BRAM_SDP_MACRO.vhd" Line 299: Comparison between arrays of unequal length always returns FALSE.
@@ -295,22 +296,22 @@ Elaborating entity <CursorController> (architecture <Behavioral>) from library <
 
 Synthesizing Unit <Test>.
     Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd".
-WARNING:Xst:647 - Input <rxd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 81: Output port <count> of the instance <pixel_clock> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 93: Output port <max_reached> of the instance <cursor_blink> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 134: Output port <ledout> of the instance <keyboard> is unconnected or connected to loadless signal.
-    Register <R> equivalent to <G> has been removed
-    Register <B> equivalent to <G> has been removed
+INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 83: Output port <count> of the instance <pixel_clock> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 98: Output port <max_reached> of the instance <cursor_blink> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/media/sf_Desktop/VHDL_Endprojekt/Test.vhd" line 154: Output port <ledout> of the instance <keyboard> is unconnected or connected to loadless signal.
+    Found 12-bit register for signal <rgb>.
     Found 4-bit register for signal <G>.
+    Found 4-bit register for signal <B>.
+    Found 4-bit register for signal <R>.
     Found 1-bit register for signal <write_to_ram_state>.
     Found 1-bit register for signal <write_enable>.
-    Found 12-bit comparator equal for signal <read_address[11]_write_address[11]_equal_1_o> created at line 103
-    Found 32-bit comparator greater for signal <GND_4_o_cursor_blink_count[31]_LessThan_2_o> created at line 103
+    Found 12-bit comparator equal for signal <read_address[11]_write_address[11]_equal_1_o> created at line 100
+    Found 32-bit comparator greater for signal <GND_4_o_cursor_blink_count[31]_LessThan_2_o> created at line 100
 INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal write_address may hinder XST clustering optimizations.
     Summary:
-	inferred   6 D-type flip-flop(s).
+	inferred  26 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred   2 Multiplexer(s).
+	inferred   4 Multiplexer(s).
 Unit <Test> synthesized.
 
 Synthesizing Unit <Counter_1>.
@@ -362,6 +363,9 @@ Unit <vga_module> synthesized.
 
 Synthesizing Unit <RAM>.
     Related source file is "/media/sf_Desktop/VHDL_Endprojekt/RAM.vhd".
+        address_length = 12
+        word_length = 8
+        we_length = 1
     Summary:
 	no macro.
 Unit <RAM> synthesized.
@@ -816,20 +820,21 @@ Unit <Ausgabemodul_STW> synthesized.
 Synthesizing Unit <Ausgabemodul_OPW>.
     Related source file is "/media/sf_Desktop/VHDL_Endprojekt/Ausgabemodul_OPW.vhd".
     Found 14-bit adder for signal <count_inc> created at line 1241.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[6]_MUX_153_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[5]_MUX_157_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[4]_MUX_161_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[3]_MUX_165_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[2]_MUX_169_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[1]_MUX_173_o> created at line 94.
-    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[0]_MUX_177_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[6]_MUX_154_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[5]_MUX_158_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[4]_MUX_162_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[3]_MUX_166_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[2]_MUX_170_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[1]_MUX_174_o> created at line 94.
+    Found 1-bit 4-to-1 multiplexer for signal <segmentout[11]_segmentcode_buffer_4[0]_MUX_178_o> created at line 94.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <segmentout<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   4 Latch(s).
+	inferred   5 Latch(s).
 	inferred  12 Multiplexer(s).
 Unit <Ausgabemodul_OPW> synthesized.
 
@@ -916,12 +921,11 @@ Synthesizing Unit <CursorController>.
     Found 32-bit 4-to-1 multiplexer for signal <GND_193_o_GND_193_o_mux_21_OUT> created at line 59.
     Found 32-bit comparator lessequal for signal <n0004> created at line 60
     Found 32-bit comparator greater for signal <GND_193_o_write_address_t[31]_LessThan_12_o> created at line 68
-    Found 32-bit comparator greater for signal <GND_193_o_write_address_t[31]_LessThan_16_o> created at line 72
     Found 32-bit comparator greater for signal <GND_193_o_write_address_t[31]_LessThan_23_o> created at line 77
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  33 D-type flip-flop(s).
-	inferred   4 Comparator(s).
+	inferred   3 Comparator(s).
 	inferred   7 Multiplexer(s).
 Unit <CursorController> synthesized.
 
@@ -938,32 +942,33 @@ Macro Statistics
  32-bit adder                                          : 4
  32-bit subtractor                                     : 2
  4-bit adder                                           : 1
-# Registers                                            : 59
+# Registers                                            : 62
  1-bit register                                        : 42
  10-bit register                                       : 2
  11-bit register                                       : 1
+ 12-bit register                                       : 1
  14-bit register                                       : 1
  2-bit register                                        : 2
  32-bit register                                       : 4
- 4-bit register                                        : 2
+ 4-bit register                                        : 4
  7-bit register                                        : 4
  8-bit register                                        : 1
-# Latches                                              : 12
- 1-bit latch                                           : 12
-# Comparators                                          : 16
+# Latches                                              : 13
+ 1-bit latch                                           : 13
+# Comparators                                          : 15
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 4
  12-bit comparator equal                               : 1
- 32-bit comparator greater                             : 6
+ 32-bit comparator greater                             : 5
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 34
- 1-bit 2-to-1 multiplexer                              : 10
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 11
  1-bit 4-to-1 multiplexer                              : 7
  10-bit 2-to-1 multiplexer                             : 2
  11-bit 2-to-1 multiplexer                             : 1
  32-bit 2-to-1 multiplexer                             : 8
  32-bit 4-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
  4-bit 3-to-1 multiplexer                              : 1
  7-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
@@ -979,6 +984,7 @@ WARNING:Xst:1290 - Hierarchical block <nach_scancode_register> is unconnected in
    It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <column_10> in Unit <vga_module> is equivalent to the following 20 FFs/Latches, which will be removed : <column_11> <column_12> <column_13> <column_14> <column_15> <column_16> <column_17> <column_18> <column_19> <column_20> <column_21> <column_22> <column_23> <column_24> <column_25> <column_26> <column_27> <column_28> <column_29> <column_30> 
 INFO:Xst:2261 - The FF/Latch <row_10> in Unit <vga_module> is equivalent to the following 20 FFs/Latches, which will be removed : <row_11> <row_12> <row_13> <row_14> <row_15> <row_16> <row_17> <row_18> <row_19> <row_20> <row_21> <row_22> <row_23> <row_24> <row_25> <row_26> <row_27> <row_28> <row_29> <row_30> 
+WARNING:Xst:1710 - FF/Latch <segmentout_7> (without init value) has a constant value of 1 in block <opw>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <converter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <column_10> of sequential type is unconnected in block <vga_module>.
 WARNING:Xst:2677 - Node <column_31> of sequential type is unconnected in block <vga_module>.
@@ -1021,21 +1027,21 @@ Macro Statistics
  10-bit up counter                                     : 2
  14-bit up counter                                     : 1
  32-bit up counter                                     : 2
-# Registers                                            : 165
- Flip-Flops                                            : 165
-# Comparators                                          : 16
+# Registers                                            : 185
+ Flip-Flops                                            : 185
+# Comparators                                          : 15
  10-bit comparator greater                             : 4
  10-bit comparator lessequal                           : 4
  12-bit comparator equal                               : 1
- 32-bit comparator greater                             : 6
+ 32-bit comparator greater                             : 5
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 27
+# Multiplexers                                         : 28
  1-bit 2-to-1 multiplexer                              : 7
  1-bit 4-to-1 multiplexer                              : 7
  11-bit 2-to-1 multiplexer                             : 1
  32-bit 2-to-1 multiplexer                             : 6
  32-bit 4-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
  4-bit 3-to-1 multiplexer                              : 1
  7-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
@@ -1046,6 +1052,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <segmentout_7> (without init value) has a constant value of 1 in block <Ausgabemodul_OPW>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ascii_7> (without init value) has a constant value of 0 in block <ScancodeToAscii>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1426 - The value init of the FF/Latch column_31 hinder the constant cleaning in the block vga_module.
    You should achieve better results by setting this init to 0.
@@ -1103,7 +1110,6 @@ Optimizing FSM <FSM_0> on signal <state[1:2]> with user encoding.
  11    | 11
  10    | 10
 -------------------
-INFO:Xst:2261 - The FF/Latch <G_0> in Unit <Test> is equivalent to the following 3 FFs/Latches, which will be removed : <G_1> <G_2> <G_3> 
 WARNING:Xst:3001 - This design contains one or more registers or latches with an active
    asynchronous set and asynchronous reset. While this circuit can be built,
    it creates a sub-optimal implementation in terms of area, power and
@@ -1134,9 +1140,9 @@ WARNING:Xst:3001 - This design contains one or more registers or latches with an
     write_address_t_8 in unit <CursorController>
     write_address_t_11 in unit <CursorController>
     segmentout_10 in unit <Ausgabemodul_OPW>
+    segmentout_11 in unit <Ausgabemodul_OPW>
     segmentout_9 in unit <Ausgabemodul_OPW>
     segmentout_8 in unit <Ausgabemodul_OPW>
-    segmentout_11 in unit <Ausgabemodul_OPW>
 
 
 Optimizing unit <DRegister_2> ...
@@ -1217,8 +1223,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 181
- Flip-Flops                                            : 181
+# Registers                                            : 204
+ Flip-Flops                                            : 204
 
 =========================================================================
 
@@ -1241,24 +1247,26 @@ Top Level Output File Name         : Test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 950
+# BELS                             : 953
 #      GND                         : 1
-#      INV                         : 43
+#      INV                         : 44
 #      LUT1                        : 75
 #      LUT2                        : 56
-#      LUT3                        : 69
-#      LUT4                        : 52
-#      LUT5                        : 91
-#      LUT6                        : 147
-#      MUXCY                       : 229
+#      LUT3                        : 79
+#      LUT4                        : 55
+#      LUT5                        : 82
+#      LUT6                        : 151
+#      MUXCY                       : 222
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 186
-# FlipFlops/Latches                : 204
+# FlipFlops/Latches                : 227
 #      FD                          : 30
-#      FDC                         : 74
-#      FDCE                        : 29
+#      FDC                         : 73
+#      FDCE                        : 41
 #      FDE                         : 28
 #      FDP                         : 14
+#      FDPE                        : 12
 #      FDR                         : 5
 #      FDSE                        : 1
 #      LD                          : 11
@@ -1268,8 +1276,8 @@ Primitive and Black Box Usage:
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 38
-#      IBUF                        : 3
+# IO Buffers                       : 39
+#      IBUF                        : 4
 #      OBUF                        : 35
 
 Device utilization summary:
@@ -1279,20 +1287,20 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             200  out of  126800     0%  
- Number of Slice LUTs:                  533  out of  63400     0%  
-    Number used as Logic:               533  out of  63400     0%  
+ Number of Slice Registers:             223  out of  126800     0%  
+ Number of Slice LUTs:                  542  out of  63400     0%  
+    Number used as Logic:               542  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    583
-   Number with an unused Flip Flop:     383  out of    583    65%  
-   Number with an unused LUT:            50  out of    583     8%  
-   Number of fully used LUT-FF pairs:   150  out of    583    25%  
-   Number of unique control sets:        50
+ Number of LUT Flip Flop pairs used:    596
+   Number with an unused Flip Flop:     373  out of    596    62%  
+   Number with an unused LUT:            54  out of    596     9%  
+   Number of fully used LUT-FF pairs:   169  out of    596    28%  
+   Number of unique control sets:        52
 
 IO Utilization: 
  Number of IOs:                          40
- Number of bonded IOBs:                  39  out of    210    18%  
+ Number of bonded IOBs:                  40  out of    210    19%  
     IOB Flip Flops/Latches:               4
 
 Specific Feature Utilization:
@@ -1318,27 +1326,27 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-Clock Signal                                                                                             | Clock buffer(FF name)                                                    | Load  |
----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-char_printer/GND_59_o_pixel_clk_OR_33_o1(char_printer/GND_59_o_pixel_clk_OR_33_o11:O)                    | BUFG(*)(G_0)                                                             | 43    |
-clk                                                                                                      | BUFGP                                                                    | 140   |
-keyboard/converter/_n0275<0>(keyboard/converter/_n0275<0>3:O)                                            | NONE(*)(keyboard/converter/ascii_0)                                      | 7     |
-Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lut<4>                                               | NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
-cursor_controller/RESET_write_address[0]_AND_100_o(cursor_controller/RESET_write_address[0]_AND_100_o1:O)| NONE(*)(cursor_controller/write_address_t_0_LDC)                         | 1     |
-cursor_controller/RESET_write_address[1]_AND_98_o(cursor_controller/RESET_write_address[1]_AND_98_o1:O)  | NONE(*)(cursor_controller/write_address_t_1_LDC)                         | 1     |
-cursor_controller/RESET_write_address[3]_AND_94_o(cursor_controller/RESET_write_address[3]_AND_94_o1:O)  | NONE(*)(cursor_controller/write_address_t_3_LDC)                         | 1     |
-cursor_controller/RESET_write_address[4]_AND_92_o(cursor_controller/RESET_write_address[4]_AND_92_o1:O)  | NONE(*)(cursor_controller/write_address_t_4_LDC)                         | 1     |
-cursor_controller/RESET_write_address[2]_AND_96_o(cursor_controller/RESET_write_address[2]_AND_96_o1:O)  | NONE(*)(cursor_controller/write_address_t_2_LDC)                         | 1     |
-cursor_controller/RESET_write_address[6]_AND_88_o(cursor_controller/RESET_write_address[6]_AND_88_o1:O)  | NONE(*)(cursor_controller/write_address_t_6_LDC)                         | 1     |
-cursor_controller/RESET_write_address[7]_AND_86_o(cursor_controller/RESET_write_address[7]_AND_86_o1:O)  | NONE(*)(cursor_controller/write_address_t_7_LDC)                         | 1     |
-cursor_controller/RESET_write_address[5]_AND_90_o(cursor_controller/RESET_write_address[5]_AND_90_o1:O)  | NONE(*)(cursor_controller/write_address_t_5_LDC)                         | 1     |
-cursor_controller/RESET_write_address[9]_AND_82_o(cursor_controller/RESET_write_address[9]_AND_82_o1:O)  | NONE(*)(cursor_controller/write_address_t_9_LDC)                         | 1     |
-cursor_controller/RESET_write_address[10]_AND_80_o(cursor_controller/RESET_write_address[10]_AND_80_o1:O)| NONE(*)(cursor_controller/write_address_t_10_LDC)                        | 1     |
-cursor_controller/RESET_write_address[8]_AND_84_o(cursor_controller/RESET_write_address[8]_AND_84_o1:O)  | NONE(*)(cursor_controller/write_address_t_8_LDC)                         | 1     |
-cursor_controller/RESET_write_address[11]_AND_78_o(cursor_controller/RESET_write_address[11]_AND_78_o1:O)| NONE(*)(cursor_controller/write_address_t_11_LDC)                        | 1     |
-Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lutdi3                                               | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+Clock Signal                                                                                               | Clock buffer(FF name)                                                    | Load  |
+-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+clk                                                                                                        | BUFGP                                                                    | 164   |
+keyboard/converter/_n0275<0>(keyboard/converter/_n0275<0>3:O)                                              | NONE(*)(keyboard/converter/ascii_0)                                      | 7     |
+char_printer/GND_59_o_pixel_clk_OR_33_o1(char_printer/GND_59_o_pixel_clk_OR_33_o11:O)                      | BUFG(*)(vga_module/v_count_9)                                            | 42    |
+Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lut<4>                                                 | NONE(keyboard/ausgabe/opw/segmentout_10)                                 | 4     |
+cursor_controller/RESET_write_address[0]_AND_120_o(cursor_controller/RESET_write_address[0]_AND_120_o1:O)  | NONE(*)(cursor_controller/write_address_t_0_LDC)                         | 1     |
+cursor_controller/RESET_write_address[1]_AND_118_o(cursor_controller/RESET_write_address[1]_AND_118_o1:O)  | NONE(*)(cursor_controller/write_address_t_1_LDC)                         | 1     |
+cursor_controller/RESET_write_address[3]_AND_114_o(cursor_controller/RESET_write_address[3]_AND_114_o1:O)  | NONE(*)(cursor_controller/write_address_t_3_LDC)                         | 1     |
+cursor_controller/RESET_write_address[4]_AND_112_o(cursor_controller/RESET_write_address[4]_AND_112_o1:O)  | NONE(*)(cursor_controller/write_address_t_4_LDC)                         | 1     |
+cursor_controller/RESET_write_address[2]_AND_116_o(cursor_controller/RESET_write_address[2]_AND_116_o1:O)  | NONE(*)(cursor_controller/write_address_t_2_LDC)                         | 1     |
+cursor_controller/RESET_write_address[6]_AND_108_o(cursor_controller/RESET_write_address[6]_AND_108_o1:O)  | NONE(*)(cursor_controller/write_address_t_6_LDC)                         | 1     |
+cursor_controller/RESET_write_address[7]_AND_106_o(cursor_controller/RESET_write_address[7]_AND_106_o1:O)  | NONE(*)(cursor_controller/write_address_t_7_LDC)                         | 1     |
+cursor_controller/RESET_write_address[5]_AND_110_o(cursor_controller/RESET_write_address[5]_AND_110_o1:O)  | NONE(*)(cursor_controller/write_address_t_5_LDC)                         | 1     |
+cursor_controller/RESET_write_address[9]_AND_102_o(cursor_controller/RESET_write_address[9]_AND_102_o1:O)  | NONE(*)(cursor_controller/write_address_t_9_LDC)                         | 1     |
+cursor_controller/RESET_write_address[10]_AND_100_o(cursor_controller/RESET_write_address[10]_AND_100_o1:O)| NONE(*)(cursor_controller/write_address_t_10_LDC)                        | 1     |
+cursor_controller/RESET_write_address[8]_AND_104_o(cursor_controller/RESET_write_address[8]_AND_104_o1:O)  | NONE(*)(cursor_controller/write_address_t_8_LDC)                         | 1     |
+cursor_controller/RESET_write_address[11]_AND_98_o(cursor_controller/RESET_write_address[11]_AND_98_o1:O)  | NONE(*)(cursor_controller/write_address_t_11_LDC)                        | 1     |
+Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lutdi3                                                 | NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 1     |
+-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
 (*) These 14 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -1346,18 +1354,18 @@ INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-Control Signal                                                       | Buffer(FF name)                                                          | Load  |
----------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lutdi3(XST_GND:G)| NONE(char_printer/font_rom/i_CharacterRom/ramb_bl.ramb36_sin_bl.ram36_bl)| 6     |
----------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
+---------------------------------------------------------------------+---------------------------------------------------------------------+-------+
+Control Signal                                                       | Buffer(FF name)                                                     | Load  |
+---------------------------------------------------------------------+---------------------------------------------------------------------+-------+
+Mcompar_GND_4_o_cursor_blink_count[31]_LessThan_2_o_lutdi3(XST_GND:G)| NONE(character_ram/BRAM_SDP_MACRO_inst/sdp_bl.ramb36_dp_bl.ram36_bl)| 6     |
+---------------------------------------------------------------------+---------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 5.227ns (Maximum Frequency: 191.314MHz)
-   Minimum input arrival time before clock: 2.420ns
+   Minimum period: 5.220ns (Maximum Frequency: 191.571MHz)
+   Minimum input arrival time before clock: 2.425ns
    Maximum output required time after clock: 2.012ns
    Maximum combinational path delay: No path found
 
@@ -1366,39 +1374,11 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
-  Clock period: 4.409ns (frequency: 226.809MHz)
-  Total number of paths / destination ports: 1506 / 72
--------------------------------------------------------------------------
-Delay:               4.409ns (Levels of Logic = 7)
-  Source:            vga_module/row_6 (FF)
-  Destination:       G_0 (FF)
-  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
-  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
-
-  Data Path: vga_module/row_6 to G_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q             2   0.478   0.542  vga_module/row_6 (vga_module/row_6)
-     LUT2:I0->O            1   0.124   0.000  char_printer/Maddsub_n0033_Madd1_lut<4> (char_printer/Maddsub_n0033_Madd1_lut<4>)
-     MUXCY:S->O            1   0.472   0.000  char_printer/Maddsub_n0033_Madd1_cy<4> (char_printer/Maddsub_n0033_Madd1_cy<4>)
-     XORCY:CI->O           7   0.510   0.461  char_printer/Maddsub_n0033_Madd1_xor<5> (char_printer/Maddsub_n0033_7)
-     LUT4:I3->O            6   0.124   0.454  read_address[11]_write_address[11]_equal_1_o811 (read_address[11]_write_address[11]_equal_1_o81)
-     LUT6:I5->O            1   0.124   0.421  read_address[11]_GND_4_o_AND_58_o7_SW0 (N114)
-     LUT6:I5->O            1   0.124   0.421  read_address[11]_GND_4_o_AND_58_o7 (read_address[11]_GND_4_o_AND_58_o7)
-     LUT6:I5->O            1   0.124   0.000  GND_4_o_GND_4_o_mux_11_OUT<0>1 (GND_4_o_GND_4_o_mux_11_OUT<0>)
-     FDC:D                     0.030          G_0
-    ----------------------------------------
-    Total                      4.409ns (2.110ns logic, 2.299ns route)
-                                       (47.9% logic, 52.1% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.227ns (frequency: 191.314MHz)
-  Total number of paths / destination ports: 40445 / 195
+  Clock period: 5.220ns (frequency: 191.571MHz)
+  Total number of paths / destination ports: 41253 / 239
 -------------------------------------------------------------------------
-Delay:               5.227ns (Levels of Logic = 27)
+Delay:               5.220ns (Levels of Logic = 27)
   Source:            cursor_controller/write_address_t_0_C_0 (FF)
   Destination:       cursor_controller/write_address_t_21 (FF)
   Source Clock:      clk rising
@@ -1409,7 +1389,7 @@ Delay:               5.227ns (Levels of Logic = 27)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              5   0.478   0.563  cursor_controller/write_address_t_0_C_0 (cursor_controller/write_address_t_0_C_0)
-     LUT3:I1->O            9   0.124   0.474  cursor_controller/write_address_t_01 (cursor_controller/write_address_t_0)
+     LUT3:I1->O            8   0.124   0.467  cursor_controller/write_address_t_01 (cursor_controller/write_address_t_0)
      LUT1:I0->O            1   0.124   0.000  cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<0>_rt (cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<0>_rt)
      MUXCY:S->O            1   0.472   0.000  cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<0> (cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<0>)
      MUXCY:CI->O           1   0.029   0.000  cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<1> (cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<1>)
@@ -1434,301 +1414,312 @@ Delay:               5.227ns (Levels of Logic = 27)
      MUXCY:CI->O           1   0.029   0.000  cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<20> (cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_cy<20>)
      XORCY:CI->O           1   0.510   0.421  cursor_controller/Msub_write_address_t[31]_GND_193_o_sub_9_OUT<31:0>_xor<21> (cursor_controller/write_address_t[31]_GND_193_o_sub_9_OUT<21>)
      LUT4:I3->O            1   0.124   0.000  cursor_controller/Mmux_GND_193_o_GND_193_o_mux_23_OUT28_SW0_lut1 (cursor_controller/Mmux_GND_193_o_GND_193_o_mux_23_OUT28_SW0_lut1)
-     MUXCY:S->O            1   0.777   0.421  cursor_controller/Mmux_GND_193_o_GND_193_o_mux_23_OUT28_SW0_cy1 (N29)
+     MUXCY:S->O            1   0.777   0.421  cursor_controller/Mmux_GND_193_o_GND_193_o_mux_23_OUT28_SW0_cy1 (N34)
      LUT6:I5->O            1   0.124   0.000  cursor_controller/Mmux_GND_193_o_GND_193_o_mux_23_OUT28 (cursor_controller/GND_193_o_GND_193_o_mux_23_OUT<21>)
      FDC:D                     0.030          cursor_controller/write_address_t_21
     ----------------------------------------
-    Total                      5.227ns (3.348ns logic, 1.879ns route)
+    Total                      5.220ns (3.348ns logic, 1.872ns route)
                                        (64.1% logic, 35.9% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[0]_AND_100_o'
+Timing constraint: Default period analysis for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
+  Clock period: 4.168ns (frequency: 239.923MHz)
+  Total number of paths / destination ports: 1340 / 71
+-------------------------------------------------------------------------
+Delay:               4.168ns (Levels of Logic = 9)
+  Source:            vga_module/h_count_3 (FF)
+  Destination:       vga_module/h_count_9 (FF)
+  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
+  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
+
+  Data Path: vga_module/h_count_3 to vga_module/h_count_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.478   0.946  vga_module/h_count_3 (vga_module/h_count_3)
+     LUT5:I0->O            3   0.124   0.435  vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv1 (vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv1)
+     LUT6:I5->O           15   0.124   0.808  vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv2 (vga_module/h_count[9]_PWR_7_o_LessThan_1_o_inv)
+     LUT3:I0->O            1   0.124   0.000  vga_module/Mcount_h_count_lut<4> (vga_module/Mcount_h_count_lut<4>)
+     MUXCY:S->O            1   0.472   0.000  vga_module/Mcount_h_count_cy<4> (vga_module/Mcount_h_count_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<5> (vga_module/Mcount_h_count_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<6> (vga_module/Mcount_h_count_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  vga_module/Mcount_h_count_cy<7> (vga_module/Mcount_h_count_cy<7>)
+     MUXCY:CI->O           0   0.029   0.000  vga_module/Mcount_h_count_cy<8> (vga_module/Mcount_h_count_cy<8>)
+     XORCY:CI->O           1   0.510   0.000  vga_module/Mcount_h_count_xor<9> (vga_module/Mcount_h_count9)
+     FDC:D                     0.030          vga_module/h_count_9
+    ----------------------------------------
+    Total                      4.168ns (1.979ns logic, 2.189ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[0]_AND_120_o'
   Clock period: 2.391ns (frequency: 418.235MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.391ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_0_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_0_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[0]_AND_100_o falling
-  Destination Clock: cursor_controller/RESET_write_address[0]_AND_100_o falling
+  Source Clock:      cursor_controller/RESET_write_address[0]_AND_120_o falling
+  Destination Clock: cursor_controller/RESET_write_address[0]_AND_120_o falling
 
   Data Path: cursor_controller/write_address_t_0_LDC to cursor_controller/write_address_t_0_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_0_LDC (cursor_controller/write_address_t_0_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[0]_AND_101_o1 (cursor_controller/RESET_write_address[0]_AND_101_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[0]_AND_121_o1 (cursor_controller/RESET_write_address[0]_AND_121_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_0_LDC
     ----------------------------------------
     Total                      2.391ns (1.243ns logic, 1.148ns route)
                                        (52.0% logic, 48.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[1]_AND_98_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[1]_AND_118_o'
   Clock period: 2.391ns (frequency: 418.235MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.391ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_1_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_1_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[1]_AND_98_o falling
-  Destination Clock: cursor_controller/RESET_write_address[1]_AND_98_o falling
+  Source Clock:      cursor_controller/RESET_write_address[1]_AND_118_o falling
+  Destination Clock: cursor_controller/RESET_write_address[1]_AND_118_o falling
 
   Data Path: cursor_controller/write_address_t_1_LDC to cursor_controller/write_address_t_1_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_1_LDC (cursor_controller/write_address_t_1_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[1]_AND_99_o1 (cursor_controller/RESET_write_address[1]_AND_99_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[1]_AND_119_o1 (cursor_controller/RESET_write_address[1]_AND_119_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_1_LDC
     ----------------------------------------
     Total                      2.391ns (1.243ns logic, 1.148ns route)
                                        (52.0% logic, 48.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[3]_AND_94_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[3]_AND_114_o'
   Clock period: 2.391ns (frequency: 418.235MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.391ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_3_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_3_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[3]_AND_94_o falling
-  Destination Clock: cursor_controller/RESET_write_address[3]_AND_94_o falling
+  Source Clock:      cursor_controller/RESET_write_address[3]_AND_114_o falling
+  Destination Clock: cursor_controller/RESET_write_address[3]_AND_114_o falling
 
   Data Path: cursor_controller/write_address_t_3_LDC to cursor_controller/write_address_t_3_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_3_LDC (cursor_controller/write_address_t_3_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[3]_AND_95_o1 (cursor_controller/RESET_write_address[3]_AND_95_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[3]_AND_115_o1 (cursor_controller/RESET_write_address[3]_AND_115_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_3_LDC
     ----------------------------------------
     Total                      2.391ns (1.243ns logic, 1.148ns route)
                                        (52.0% logic, 48.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[4]_AND_92_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[4]_AND_112_o'
   Clock period: 2.404ns (frequency: 415.973MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.404ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_4_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_4_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[4]_AND_92_o falling
-  Destination Clock: cursor_controller/RESET_write_address[4]_AND_92_o falling
+  Source Clock:      cursor_controller/RESET_write_address[4]_AND_112_o falling
+  Destination Clock: cursor_controller/RESET_write_address[4]_AND_112_o falling
 
   Data Path: cursor_controller/write_address_t_4_LDC to cursor_controller/write_address_t_4_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              7   0.625   0.756  cursor_controller/write_address_t_4_LDC (cursor_controller/write_address_t_4_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[4]_AND_93_o1 (cursor_controller/RESET_write_address[4]_AND_93_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[4]_AND_113_o1 (cursor_controller/RESET_write_address[4]_AND_113_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_4_LDC
     ----------------------------------------
     Total                      2.404ns (1.243ns logic, 1.161ns route)
                                        (51.7% logic, 48.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[2]_AND_96_o'
-  Clock period: 2.397ns (frequency: 417.188MHz)
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[2]_AND_116_o'
+  Clock period: 2.391ns (frequency: 418.235MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.397ns (Levels of Logic = 1)
+Delay:               2.391ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_2_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_2_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[2]_AND_96_o falling
-  Destination Clock: cursor_controller/RESET_write_address[2]_AND_96_o falling
+  Source Clock:      cursor_controller/RESET_write_address[2]_AND_116_o falling
+  Destination Clock: cursor_controller/RESET_write_address[2]_AND_116_o falling
 
   Data Path: cursor_controller/write_address_t_2_LDC to cursor_controller/write_address_t_2_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_2_LDC (cursor_controller/write_address_t_2_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[2]_AND_97_o1 (cursor_controller/RESET_write_address[2]_AND_97_o)
+     LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_2_LDC (cursor_controller/write_address_t_2_LDC)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[2]_AND_117_o1 (cursor_controller/RESET_write_address[2]_AND_117_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_2_LDC
     ----------------------------------------
-    Total                      2.397ns (1.243ns logic, 1.154ns route)
-                                       (51.9% logic, 48.1% route)
+    Total                      2.391ns (1.243ns logic, 1.148ns route)
+                                       (52.0% logic, 48.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[6]_AND_88_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[6]_AND_108_o'
   Clock period: 2.397ns (frequency: 417.188MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.397ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_6_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_6_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[6]_AND_88_o falling
-  Destination Clock: cursor_controller/RESET_write_address[6]_AND_88_o falling
+  Source Clock:      cursor_controller/RESET_write_address[6]_AND_108_o falling
+  Destination Clock: cursor_controller/RESET_write_address[6]_AND_108_o falling
 
   Data Path: cursor_controller/write_address_t_6_LDC to cursor_controller/write_address_t_6_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_6_LDC (cursor_controller/write_address_t_6_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[6]_AND_89_o1 (cursor_controller/RESET_write_address[6]_AND_89_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[6]_AND_109_o1 (cursor_controller/RESET_write_address[6]_AND_109_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_6_LDC
     ----------------------------------------
     Total                      2.397ns (1.243ns logic, 1.154ns route)
                                        (51.9% logic, 48.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[7]_AND_86_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[7]_AND_106_o'
   Clock period: 2.397ns (frequency: 417.188MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.397ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_7_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_7_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[7]_AND_86_o falling
-  Destination Clock: cursor_controller/RESET_write_address[7]_AND_86_o falling
+  Source Clock:      cursor_controller/RESET_write_address[7]_AND_106_o falling
+  Destination Clock: cursor_controller/RESET_write_address[7]_AND_106_o falling
 
   Data Path: cursor_controller/write_address_t_7_LDC to cursor_controller/write_address_t_7_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_7_LDC (cursor_controller/write_address_t_7_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[7]_AND_87_o1 (cursor_controller/RESET_write_address[7]_AND_87_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[7]_AND_107_o1 (cursor_controller/RESET_write_address[7]_AND_107_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_7_LDC
     ----------------------------------------
     Total                      2.397ns (1.243ns logic, 1.154ns route)
                                        (51.9% logic, 48.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[5]_AND_90_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[5]_AND_110_o'
   Clock period: 2.397ns (frequency: 417.188MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.397ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_5_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_5_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[5]_AND_90_o falling
-  Destination Clock: cursor_controller/RESET_write_address[5]_AND_90_o falling
+  Source Clock:      cursor_controller/RESET_write_address[5]_AND_110_o falling
+  Destination Clock: cursor_controller/RESET_write_address[5]_AND_110_o falling
 
   Data Path: cursor_controller/write_address_t_5_LDC to cursor_controller/write_address_t_5_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_5_LDC (cursor_controller/write_address_t_5_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[5]_AND_91_o1 (cursor_controller/RESET_write_address[5]_AND_91_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[5]_AND_111_o1 (cursor_controller/RESET_write_address[5]_AND_111_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_5_LDC
     ----------------------------------------
     Total                      2.397ns (1.243ns logic, 1.154ns route)
                                        (51.9% logic, 48.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[9]_AND_82_o'
-  Clock period: 2.410ns (frequency: 414.938MHz)
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[9]_AND_102_o'
+  Clock period: 2.404ns (frequency: 415.973MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.410ns (Levels of Logic = 1)
+Delay:               2.404ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_9_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_9_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[9]_AND_82_o falling
-  Destination Clock: cursor_controller/RESET_write_address[9]_AND_82_o falling
+  Source Clock:      cursor_controller/RESET_write_address[9]_AND_102_o falling
+  Destination Clock: cursor_controller/RESET_write_address[9]_AND_102_o falling
 
   Data Path: cursor_controller/write_address_t_9_LDC to cursor_controller/write_address_t_9_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              8   0.625   0.762  cursor_controller/write_address_t_9_LDC (cursor_controller/write_address_t_9_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[9]_AND_83_o1 (cursor_controller/RESET_write_address[9]_AND_83_o)
+     LDC:G->Q              7   0.625   0.756  cursor_controller/write_address_t_9_LDC (cursor_controller/write_address_t_9_LDC)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[9]_AND_103_o1 (cursor_controller/RESET_write_address[9]_AND_103_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_9_LDC
     ----------------------------------------
-    Total                      2.410ns (1.243ns logic, 1.167ns route)
-                                       (51.6% logic, 48.4% route)
+    Total                      2.404ns (1.243ns logic, 1.161ns route)
+                                       (51.7% logic, 48.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[10]_AND_80_o'
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[10]_AND_100_o'
   Clock period: 2.404ns (frequency: 415.973MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Delay:               2.404ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_10_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_10_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[10]_AND_80_o falling
-  Destination Clock: cursor_controller/RESET_write_address[10]_AND_80_o falling
+  Source Clock:      cursor_controller/RESET_write_address[10]_AND_100_o falling
+  Destination Clock: cursor_controller/RESET_write_address[10]_AND_100_o falling
 
   Data Path: cursor_controller/write_address_t_10_LDC to cursor_controller/write_address_t_10_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              7   0.625   0.756  cursor_controller/write_address_t_10_LDC (cursor_controller/write_address_t_10_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[10]_AND_81_o1 (cursor_controller/RESET_write_address[10]_AND_81_o)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[10]_AND_101_o1 (cursor_controller/RESET_write_address[10]_AND_101_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_10_LDC
     ----------------------------------------
     Total                      2.404ns (1.243ns logic, 1.161ns route)
                                        (51.7% logic, 48.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[8]_AND_84_o'
-  Clock period: 2.404ns (frequency: 415.973MHz)
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[8]_AND_104_o'
+  Clock period: 2.397ns (frequency: 417.188MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.404ns (Levels of Logic = 1)
+Delay:               2.397ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_8_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_8_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[8]_AND_84_o falling
-  Destination Clock: cursor_controller/RESET_write_address[8]_AND_84_o falling
+  Source Clock:      cursor_controller/RESET_write_address[8]_AND_104_o falling
+  Destination Clock: cursor_controller/RESET_write_address[8]_AND_104_o falling
 
   Data Path: cursor_controller/write_address_t_8_LDC to cursor_controller/write_address_t_8_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              7   0.625   0.756  cursor_controller/write_address_t_8_LDC (cursor_controller/write_address_t_8_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[8]_AND_85_o1 (cursor_controller/RESET_write_address[8]_AND_85_o)
+     LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_8_LDC (cursor_controller/write_address_t_8_LDC)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[8]_AND_105_o1 (cursor_controller/RESET_write_address[8]_AND_105_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_8_LDC
     ----------------------------------------
-    Total                      2.404ns (1.243ns logic, 1.161ns route)
-                                       (51.7% logic, 48.3% route)
+    Total                      2.397ns (1.243ns logic, 1.154ns route)
+                                       (51.9% logic, 48.1% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[11]_AND_78_o'
-  Clock period: 2.410ns (frequency: 414.938MHz)
+Timing constraint: Default period analysis for Clock 'cursor_controller/RESET_write_address[11]_AND_98_o'
+  Clock period: 2.404ns (frequency: 415.973MHz)
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               2.410ns (Levels of Logic = 1)
+Delay:               2.404ns (Levels of Logic = 1)
   Source:            cursor_controller/write_address_t_11_LDC (LATCH)
   Destination:       cursor_controller/write_address_t_11_LDC (LATCH)
-  Source Clock:      cursor_controller/RESET_write_address[11]_AND_78_o falling
-  Destination Clock: cursor_controller/RESET_write_address[11]_AND_78_o falling
+  Source Clock:      cursor_controller/RESET_write_address[11]_AND_98_o falling
+  Destination Clock: cursor_controller/RESET_write_address[11]_AND_98_o falling
 
   Data Path: cursor_controller/write_address_t_11_LDC to cursor_controller/write_address_t_11_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              8   0.625   0.762  cursor_controller/write_address_t_11_LDC (cursor_controller/write_address_t_11_LDC)
-     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[11]_AND_79_o1 (cursor_controller/RESET_write_address[11]_AND_79_o)
+     LDC:G->Q              7   0.625   0.756  cursor_controller/write_address_t_11_LDC (cursor_controller/write_address_t_11_LDC)
+     LUT4:I1->O            2   0.124   0.405  cursor_controller/RESET_write_address[11]_AND_99_o1 (cursor_controller/RESET_write_address[11]_AND_99_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_11_LDC
     ----------------------------------------
-    Total                      2.410ns (1.243ns logic, 1.167ns route)
-                                       (51.6% logic, 48.4% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
-  Total number of paths / destination ports: 43 / 43
--------------------------------------------------------------------------
-Offset:              1.067ns (Levels of Logic = 1)
-  Source:            RESET (PAD)
-  Destination:       G_0 (FF)
-  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
-
-  Data Path: RESET to G_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.572  RESET_IBUF (RESET_IBUF)
-     FDC:CLR                   0.494          G_0
-    ----------------------------------------
-    Total                      1.067ns (0.495ns logic, 0.572ns route)
-                                       (46.4% logic, 53.6% route)
+    Total                      2.404ns (1.243ns logic, 1.161ns route)
+                                       (51.7% logic, 48.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 114 / 112
+  Total number of paths / destination ports: 150 / 148
 -------------------------------------------------------------------------
-Offset:              2.420ns (Levels of Logic = 3)
+Offset:              2.425ns (Levels of Logic = 3)
   Source:            RESET (PAD)
   Destination:       cursor_controller/increment_ram_address (FF)
   Destination Clock: clk rising
@@ -1737,296 +1728,276 @@ Offset:              2.420ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.594  RESET_IBUF (RESET_IBUF)
-     LUT3:I2->O            1   0.124   0.000  cursor_controller/_n01201_lut (cursor_controller/_n01201_lut)
-     MUXCY:S->O            1   0.808   0.399  cursor_controller/_n01201_cy (cursor_controller/_n0120)
+     IBUF:I->O           148   0.001   0.599  RESET_IBUF (RESET_IBUF)
+     LUT3:I2->O            1   0.124   0.000  cursor_controller/_n01141_lut (cursor_controller/_n01141_lut)
+     MUXCY:S->O            1   0.808   0.399  cursor_controller/_n01141_cy (cursor_controller/_n0114)
      FDSE:S                    0.494          cursor_controller/increment_ram_address
     ----------------------------------------
-    Total                      2.420ns (1.427ns logic, 0.993ns route)
-                                       (59.0% logic, 41.0% route)
+    Total                      2.425ns (1.427ns logic, 0.998ns route)
+                                       (58.8% logic, 41.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[0]_AND_100_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              1.072ns (Levels of Logic = 1)
+  Source:            RESET (PAD)
+  Destination:       vga_module/v_count_9 (FF)
+  Destination Clock: char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
+
+  Data Path: RESET to vga_module/v_count_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           148   0.001   0.577  RESET_IBUF (RESET_IBUF)
+     FDP:PRE                   0.494          vga_module/v_sync
+    ----------------------------------------
+    Total                      1.072ns (0.495ns logic, 0.577ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[0]_AND_120_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_0_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[0]_AND_100_o falling
+  Destination Clock: cursor_controller/RESET_write_address[0]_AND_120_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_0_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[0]_AND_101_o1 (cursor_controller/RESET_write_address[0]_AND_101_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[0]_AND_121_o1 (cursor_controller/RESET_write_address[0]_AND_121_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_0_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[1]_AND_98_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[1]_AND_118_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_1_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[1]_AND_98_o falling
+  Destination Clock: cursor_controller/RESET_write_address[1]_AND_118_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_1_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[1]_AND_99_o1 (cursor_controller/RESET_write_address[1]_AND_99_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[1]_AND_119_o1 (cursor_controller/RESET_write_address[1]_AND_119_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_1_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[3]_AND_94_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[3]_AND_114_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_3_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[3]_AND_94_o falling
+  Destination Clock: cursor_controller/RESET_write_address[3]_AND_114_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_3_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[3]_AND_95_o1 (cursor_controller/RESET_write_address[3]_AND_95_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[3]_AND_115_o1 (cursor_controller/RESET_write_address[3]_AND_115_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_3_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[4]_AND_92_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[4]_AND_112_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_4_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[4]_AND_92_o falling
+  Destination Clock: cursor_controller/RESET_write_address[4]_AND_112_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_4_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[4]_AND_93_o1 (cursor_controller/RESET_write_address[4]_AND_93_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[4]_AND_113_o1 (cursor_controller/RESET_write_address[4]_AND_113_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_4_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[2]_AND_96_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[2]_AND_116_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_2_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[2]_AND_96_o falling
+  Destination Clock: cursor_controller/RESET_write_address[2]_AND_116_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_2_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[2]_AND_97_o1 (cursor_controller/RESET_write_address[2]_AND_97_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[2]_AND_117_o1 (cursor_controller/RESET_write_address[2]_AND_117_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_2_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[6]_AND_88_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[6]_AND_108_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_6_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[6]_AND_88_o falling
+  Destination Clock: cursor_controller/RESET_write_address[6]_AND_108_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_6_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[6]_AND_89_o1 (cursor_controller/RESET_write_address[6]_AND_89_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[6]_AND_109_o1 (cursor_controller/RESET_write_address[6]_AND_109_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_6_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[7]_AND_86_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[7]_AND_106_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_7_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[7]_AND_86_o falling
+  Destination Clock: cursor_controller/RESET_write_address[7]_AND_106_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_7_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[7]_AND_87_o1 (cursor_controller/RESET_write_address[7]_AND_87_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[7]_AND_107_o1 (cursor_controller/RESET_write_address[7]_AND_107_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_7_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[5]_AND_90_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[5]_AND_110_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_5_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[5]_AND_90_o falling
+  Destination Clock: cursor_controller/RESET_write_address[5]_AND_110_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_5_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[5]_AND_91_o1 (cursor_controller/RESET_write_address[5]_AND_91_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[5]_AND_111_o1 (cursor_controller/RESET_write_address[5]_AND_111_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_5_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[9]_AND_82_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[9]_AND_102_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_9_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[9]_AND_82_o falling
+  Destination Clock: cursor_controller/RESET_write_address[9]_AND_102_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_9_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[9]_AND_83_o1 (cursor_controller/RESET_write_address[9]_AND_83_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[9]_AND_103_o1 (cursor_controller/RESET_write_address[9]_AND_103_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_9_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[10]_AND_80_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[10]_AND_100_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_10_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[10]_AND_80_o falling
+  Destination Clock: cursor_controller/RESET_write_address[10]_AND_100_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_10_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[10]_AND_81_o1 (cursor_controller/RESET_write_address[10]_AND_81_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[10]_AND_101_o1 (cursor_controller/RESET_write_address[10]_AND_101_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_10_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[8]_AND_84_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[8]_AND_104_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_8_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[8]_AND_84_o falling
+  Destination Clock: cursor_controller/RESET_write_address[8]_AND_104_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_8_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[8]_AND_85_o1 (cursor_controller/RESET_write_address[8]_AND_85_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[8]_AND_105_o1 (cursor_controller/RESET_write_address[8]_AND_105_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_8_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[11]_AND_78_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cursor_controller/RESET_write_address[11]_AND_98_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.973ns (Levels of Logic = 2)
+Offset:              1.978ns (Levels of Logic = 2)
   Source:            RESET (PAD)
   Destination:       cursor_controller/write_address_t_11_LDC (LATCH)
-  Destination Clock: cursor_controller/RESET_write_address[11]_AND_78_o falling
+  Destination Clock: cursor_controller/RESET_write_address[11]_AND_98_o falling
 
   Data Path: RESET to cursor_controller/write_address_t_11_LDC
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           125   0.001   0.949  RESET_IBUF (RESET_IBUF)
-     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[11]_AND_79_o1 (cursor_controller/RESET_write_address[11]_AND_79_o)
+     IBUF:I->O           148   0.001   0.954  RESET_IBUF (RESET_IBUF)
+     LUT4:I0->O            2   0.124   0.405  cursor_controller/RESET_write_address[11]_AND_99_o1 (cursor_controller/RESET_write_address[11]_AND_99_o)
      LDC:CLR                   0.494          cursor_controller/write_address_t_11_LDC
     ----------------------------------------
-    Total                      1.973ns (0.619ns logic, 1.354ns route)
-                                       (31.4% logic, 68.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
-  Total number of paths / destination ports: 14 / 14
--------------------------------------------------------------------------
-Offset:              0.949ns (Levels of Logic = 1)
-  Source:            G_0 (FF)
-  Destination:       R<3> (PAD)
-  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
-
-  Data Path: G_0 to R<3>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q             12   0.478   0.471  G_0 (G_0)
-     OBUF:I->O                 0.000          R_3_OBUF (R<3>)
-    ----------------------------------------
-    Total                      0.949ns (0.478ns logic, 0.471ns route)
-                                       (50.4% logic, 49.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[7]_AND_86_o'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              1.977ns (Levels of Logic = 2)
-  Source:            cursor_controller/write_address_t_7_LDC (LATCH)
-  Destination:       ledout<7> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[7]_AND_86_o falling
-
-  Data Path: cursor_controller/write_address_t_7_LDC to ledout<7>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_7_LDC (cursor_controller/write_address_t_7_LDC)
-     LUT3:I0->O           13   0.124   0.479  cursor_controller/write_address_t_71 (cursor_controller/write_address_t_7)
-     OBUF:I->O                 0.000          ledout_7_OBUF (ledout<7>)
-    ----------------------------------------
-    Total                      1.977ns (0.749ns logic, 1.228ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                      1.978ns (0.619ns logic, 1.359ns route)
+                                       (31.3% logic, 68.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 58 / 15
+  Total number of paths / destination ports: 70 / 27
 -------------------------------------------------------------------------
 Offset:              2.012ns (Levels of Logic = 2)
   Source:            keyboard/ausgabe/opw/counter_register/output_13 (FF)
@@ -2038,151 +2009,190 @@ Offset:              2.012ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              12   0.478   1.011  keyboard/ausgabe/opw/counter_register/output_13 (keyboard/ausgabe/opw/counter_register/output_13)
-     LUT6:I0->O            1   0.124   0.399  keyboard/ausgabe/opw/Mmux_segmentout[11]_segmentcode_buffer_4[6]_MUX_153_o11 (segmentout_6_OBUF)
+     LUT6:I0->O            1   0.124   0.399  keyboard/ausgabe/opw/Mmux_segmentout[11]_segmentcode_buffer_4[6]_MUX_154_o11 (segmentout_6_OBUF)
      OBUF:I->O                 0.000          segmentout_6_OBUF (segmentout<6>)
     ----------------------------------------
     Total                      2.012ns (0.602ns logic, 1.410ns route)
                                        (29.9% logic, 70.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[6]_AND_88_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[7]_AND_106_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.977ns (Levels of Logic = 2)
+Offset:              1.969ns (Levels of Logic = 2)
+  Source:            cursor_controller/write_address_t_7_LDC (LATCH)
+  Destination:       ledout<7> (PAD)
+  Source Clock:      cursor_controller/RESET_write_address[7]_AND_106_o falling
+
+  Data Path: cursor_controller/write_address_t_7_LDC to ledout<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_7_LDC (cursor_controller/write_address_t_7_LDC)
+     LUT3:I0->O           12   0.124   0.471  cursor_controller/write_address_t_71 (cursor_controller/write_address_t_7)
+     OBUF:I->O                 0.000          ledout_7_OBUF (ledout<7>)
+    ----------------------------------------
+    Total                      1.969ns (0.749ns logic, 1.220ns route)
+                                       (38.0% logic, 62.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[6]_AND_108_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.969ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_6_LDC (LATCH)
   Destination:       ledout<6> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[6]_AND_88_o falling
+  Source Clock:      cursor_controller/RESET_write_address[6]_AND_108_o falling
 
   Data Path: cursor_controller/write_address_t_6_LDC to ledout<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_6_LDC (cursor_controller/write_address_t_6_LDC)
-     LUT3:I0->O           13   0.124   0.479  cursor_controller/write_address_t_61 (cursor_controller/write_address_t_6)
+     LUT3:I0->O           12   0.124   0.471  cursor_controller/write_address_t_61 (cursor_controller/write_address_t_6)
      OBUF:I->O                 0.000          ledout_6_OBUF (ledout<6>)
     ----------------------------------------
-    Total                      1.977ns (0.749ns logic, 1.228ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                      1.969ns (0.749ns logic, 1.220ns route)
+                                       (38.0% logic, 62.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[5]_AND_90_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[5]_AND_110_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.977ns (Levels of Logic = 2)
+Offset:              1.969ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_5_LDC (LATCH)
   Destination:       ledout<5> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[5]_AND_90_o falling
+  Source Clock:      cursor_controller/RESET_write_address[5]_AND_110_o falling
 
   Data Path: cursor_controller/write_address_t_5_LDC to ledout<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_5_LDC (cursor_controller/write_address_t_5_LDC)
-     LUT3:I0->O           13   0.124   0.479  cursor_controller/write_address_t_51 (cursor_controller/write_address_t_5)
+     LUT3:I0->O           12   0.124   0.471  cursor_controller/write_address_t_51 (cursor_controller/write_address_t_5)
      OBUF:I->O                 0.000          ledout_5_OBUF (ledout<5>)
     ----------------------------------------
-    Total                      1.977ns (0.749ns logic, 1.228ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                      1.969ns (0.749ns logic, 1.220ns route)
+                                       (38.0% logic, 62.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[4]_AND_92_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[4]_AND_112_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.957ns (Levels of Logic = 2)
+Offset:              1.950ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_4_LDC (LATCH)
   Destination:       ledout<4> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[4]_AND_92_o falling
+  Source Clock:      cursor_controller/RESET_write_address[4]_AND_112_o falling
 
   Data Path: cursor_controller/write_address_t_4_LDC to ledout<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              7   0.625   0.756  cursor_controller/write_address_t_4_LDC (cursor_controller/write_address_t_4_LDC)
-     LUT3:I0->O            9   0.124   0.452  cursor_controller/write_address_t_41 (cursor_controller/write_address_t_4)
+     LUT3:I0->O            8   0.124   0.445  cursor_controller/write_address_t_41 (cursor_controller/write_address_t_4)
      OBUF:I->O                 0.000          ledout_4_OBUF (ledout<4>)
     ----------------------------------------
-    Total                      1.957ns (0.749ns logic, 1.208ns route)
-                                       (38.3% logic, 61.7% route)
+    Total                      1.950ns (0.749ns logic, 1.201ns route)
+                                       (38.4% logic, 61.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[3]_AND_94_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[3]_AND_114_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.944ns (Levels of Logic = 2)
+Offset:              1.937ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_3_LDC (LATCH)
   Destination:       ledout<3> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[3]_AND_94_o falling
+  Source Clock:      cursor_controller/RESET_write_address[3]_AND_114_o falling
 
   Data Path: cursor_controller/write_address_t_3_LDC to ledout<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_3_LDC (cursor_controller/write_address_t_3_LDC)
-     LUT3:I0->O            9   0.124   0.452  cursor_controller/write_address_t_32 (cursor_controller/write_address_t_3)
+     LUT3:I0->O            8   0.124   0.445  cursor_controller/write_address_t_32 (cursor_controller/write_address_t_3)
      OBUF:I->O                 0.000          ledout_3_OBUF (ledout<3>)
     ----------------------------------------
-    Total                      1.944ns (0.749ns logic, 1.195ns route)
-                                       (38.5% logic, 61.5% route)
+    Total                      1.937ns (0.749ns logic, 1.188ns route)
+                                       (38.7% logic, 61.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[2]_AND_96_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[2]_AND_116_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.943ns (Levels of Logic = 2)
+Offset:              1.937ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_2_LDC (LATCH)
   Destination:       ledout<2> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[2]_AND_96_o falling
+  Source Clock:      cursor_controller/RESET_write_address[2]_AND_116_o falling
 
   Data Path: cursor_controller/write_address_t_2_LDC to ledout<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDC:G->Q              6   0.625   0.749  cursor_controller/write_address_t_2_LDC (cursor_controller/write_address_t_2_LDC)
+     LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_2_LDC (cursor_controller/write_address_t_2_LDC)
      LUT3:I0->O            8   0.124   0.445  cursor_controller/write_address_t_210 (cursor_controller/write_address_t_2)
      OBUF:I->O                 0.000          ledout_2_OBUF (ledout<2>)
     ----------------------------------------
-    Total                      1.943ns (0.749ns logic, 1.194ns route)
-                                       (38.5% logic, 61.5% route)
+    Total                      1.937ns (0.749ns logic, 1.188ns route)
+                                       (38.7% logic, 61.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[1]_AND_98_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[1]_AND_118_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.944ns (Levels of Logic = 2)
+Offset:              1.937ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_1_LDC (LATCH)
   Destination:       ledout<1> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[1]_AND_98_o falling
+  Source Clock:      cursor_controller/RESET_write_address[1]_AND_118_o falling
 
   Data Path: cursor_controller/write_address_t_1_LDC to ledout<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_1_LDC (cursor_controller/write_address_t_1_LDC)
-     LUT3:I0->O            9   0.124   0.452  cursor_controller/write_address_t_110 (cursor_controller/write_address_t_1)
+     LUT3:I0->O            8   0.124   0.445  cursor_controller/write_address_t_110 (cursor_controller/write_address_t_1)
      OBUF:I->O                 0.000          ledout_1_OBUF (ledout<1>)
     ----------------------------------------
-    Total                      1.944ns (0.749ns logic, 1.195ns route)
-                                       (38.5% logic, 61.5% route)
+    Total                      1.937ns (0.749ns logic, 1.188ns route)
+                                       (38.7% logic, 61.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[0]_AND_100_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cursor_controller/RESET_write_address[0]_AND_120_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.944ns (Levels of Logic = 2)
+Offset:              1.937ns (Levels of Logic = 2)
   Source:            cursor_controller/write_address_t_0_LDC (LATCH)
   Destination:       ledout<0> (PAD)
-  Source Clock:      cursor_controller/RESET_write_address[0]_AND_100_o falling
+  Source Clock:      cursor_controller/RESET_write_address[0]_AND_120_o falling
 
   Data Path: cursor_controller/write_address_t_0_LDC to ledout<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LDC:G->Q              5   0.625   0.743  cursor_controller/write_address_t_0_LDC (cursor_controller/write_address_t_0_LDC)
-     LUT3:I0->O            9   0.124   0.452  cursor_controller/write_address_t_01 (cursor_controller/write_address_t_0)
+     LUT3:I0->O            8   0.124   0.445  cursor_controller/write_address_t_01 (cursor_controller/write_address_t_0)
      OBUF:I->O                 0.000          ledout_0_OBUF (ledout<0>)
     ----------------------------------------
-    Total                      1.944ns (0.749ns logic, 1.195ns route)
-                                       (38.5% logic, 61.5% route)
+    Total                      1.937ns (0.749ns logic, 1.188ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'char_printer/GND_59_o_pixel_clk_OR_33_o1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            vga_module/h_sync (FF)
+  Destination:       h_sync (PAD)
+  Source Clock:      char_printer/GND_59_o_pixel_clk_OR_33_o1 rising
+
+  Data Path: vga_module/h_sync to h_sync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.478   0.399  vga_module/h_sync (vga_module/h_sync)
+     OBUF:I->O                 0.000          h_sync_OBUF (h_sync)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
 
 =========================================================================
 
@@ -2190,175 +2200,163 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock char_printer/GND_59_o_pixel_clk_OR_33_o1
---------------------------------------------------+---------+---------+---------+---------+
-                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------------------------------+---------+---------+---------+---------+
-char_printer/GND_59_o_pixel_clk_OR_33_o1          |    4.409|         |         |         |
-clk                                               |    6.040|         |         |         |
-cursor_controller/RESET_write_address[0]_AND_100_o|         |    5.028|         |         |
-cursor_controller/RESET_write_address[10]_AND_80_o|         |    3.498|         |         |
-cursor_controller/RESET_write_address[11]_AND_78_o|         |    2.861|         |         |
-cursor_controller/RESET_write_address[1]_AND_98_o |         |    4.940|         |         |
-cursor_controller/RESET_write_address[2]_AND_96_o |         |    3.453|         |         |
-cursor_controller/RESET_write_address[3]_AND_94_o |         |    5.000|         |         |
-cursor_controller/RESET_write_address[4]_AND_92_o |         |    3.945|         |         |
-cursor_controller/RESET_write_address[5]_AND_90_o |         |    3.971|         |         |
-cursor_controller/RESET_write_address[6]_AND_88_o |         |    3.828|         |         |
-cursor_controller/RESET_write_address[7]_AND_86_o |         |    3.331|         |         |
-cursor_controller/RESET_write_address[8]_AND_84_o |         |    2.560|         |         |
-cursor_controller/RESET_write_address[9]_AND_82_o |         |    3.516|         |         |
---------------------------------------------------+---------+---------+---------+---------+
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+char_printer/GND_59_o_pixel_clk_OR_33_o1|    4.168|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
---------------------------------------------------+---------+---------+---------+---------+
-                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------------------------------+---------+---------+---------+---------+
-clk                                               |    5.227|         |         |         |
-cursor_controller/RESET_write_address[0]_AND_100_o|         |    5.554|         |         |
-cursor_controller/RESET_write_address[10]_AND_80_o|         |    5.331|         |         |
-cursor_controller/RESET_write_address[11]_AND_78_o|         |    5.299|         |         |
-cursor_controller/RESET_write_address[1]_AND_98_o |         |    5.317|         |         |
-cursor_controller/RESET_write_address[2]_AND_96_o |         |    4.982|         |         |
-cursor_controller/RESET_write_address[3]_AND_94_o |         |    5.077|         |         |
-cursor_controller/RESET_write_address[4]_AND_92_o |         |    5.378|         |         |
-cursor_controller/RESET_write_address[5]_AND_90_o |         |    5.470|         |         |
-cursor_controller/RESET_write_address[6]_AND_88_o |         |    5.235|         |         |
-cursor_controller/RESET_write_address[7]_AND_86_o |         |    5.411|         |         |
-cursor_controller/RESET_write_address[8]_AND_84_o |         |    5.375|         |         |
-cursor_controller/RESET_write_address[9]_AND_82_o |         |    5.358|         |         |
-keyboard/converter/_n0275<0>                      |         |    1.761|         |         |
---------------------------------------------------+---------+---------+---------+---------+
+---------------------------------------------------+---------+---------+---------+---------+
+                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------+---------+---------+---------+---------+
+char_printer/GND_59_o_pixel_clk_OR_33_o1           |    6.147|         |         |         |
+clk                                                |    5.220|         |         |         |
+cursor_controller/RESET_write_address[0]_AND_120_o |         |    5.547|         |         |
+cursor_controller/RESET_write_address[10]_AND_100_o|         |    5.310|         |         |
+cursor_controller/RESET_write_address[11]_AND_98_o |         |    5.280|         |         |
+cursor_controller/RESET_write_address[1]_AND_118_o |         |    5.310|         |         |
+cursor_controller/RESET_write_address[2]_AND_116_o |         |    5.132|         |         |
+cursor_controller/RESET_write_address[3]_AND_114_o |         |    5.070|         |         |
+cursor_controller/RESET_write_address[4]_AND_112_o |         |    5.351|         |         |
+cursor_controller/RESET_write_address[5]_AND_110_o |         |    5.462|         |         |
+cursor_controller/RESET_write_address[6]_AND_108_o |         |    5.167|         |         |
+cursor_controller/RESET_write_address[7]_AND_106_o |         |    5.403|         |         |
+cursor_controller/RESET_write_address[8]_AND_104_o |         |    5.368|         |         |
+cursor_controller/RESET_write_address[9]_AND_102_o |         |    5.339|         |         |
+keyboard/converter/_n0275<0>                       |         |    2.309|         |         |
+---------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[0]_AND_100_o
+Clock to Setup on destination clock cursor_controller/RESET_write_address[0]_AND_120_o
 --------------------------------------------------+---------+---------+---------+---------+
                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------------+---------+---------+---------+---------+
 clk                                               |         |         |    2.064|         |
-cursor_controller/RESET_write_address[0]_AND_100_o|         |         |    2.391|         |
+cursor_controller/RESET_write_address[0]_AND_120_o|         |         |    2.391|         |
 --------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[10]_AND_80_o
+Clock to Setup on destination clock cursor_controller/RESET_write_address[10]_AND_100_o
+---------------------------------------------------+---------+---------+---------+---------+
+                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------+---------+---------+---------+---------+
+clk                                                |         |         |    2.077|         |
+cursor_controller/RESET_write_address[10]_AND_100_o|         |         |    2.404|         |
+---------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[11]_AND_98_o
 --------------------------------------------------+---------+---------+---------+---------+
                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------------+---------+---------+---------+---------+
 clk                                               |         |         |    2.077|         |
-cursor_controller/RESET_write_address[10]_AND_80_o|         |         |    2.404|         |
+cursor_controller/RESET_write_address[11]_AND_98_o|         |         |    2.404|         |
 --------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[11]_AND_78_o
+Clock to Setup on destination clock cursor_controller/RESET_write_address[1]_AND_118_o
 --------------------------------------------------+---------+---------+---------+---------+
                                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------------------+---------+---------+---------+---------+
-clk                                               |         |         |    2.083|         |
-cursor_controller/RESET_write_address[11]_AND_78_o|         |         |    2.410|         |
+clk                                               |         |         |    2.064|         |
+cursor_controller/RESET_write_address[1]_AND_118_o|         |         |    2.391|         |
 --------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[1]_AND_98_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.064|         |
-cursor_controller/RESET_write_address[1]_AND_98_o|         |         |    2.391|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[2]_AND_116_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.064|         |
+cursor_controller/RESET_write_address[2]_AND_116_o|         |         |    2.391|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[2]_AND_96_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.070|         |
-cursor_controller/RESET_write_address[2]_AND_96_o|         |         |    2.397|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[3]_AND_114_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.064|         |
+cursor_controller/RESET_write_address[3]_AND_114_o|         |         |    2.391|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[3]_AND_94_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.064|         |
-cursor_controller/RESET_write_address[3]_AND_94_o|         |         |    2.391|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[4]_AND_112_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.077|         |
+cursor_controller/RESET_write_address[4]_AND_112_o|         |         |    2.404|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[4]_AND_92_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.077|         |
-cursor_controller/RESET_write_address[4]_AND_92_o|         |         |    2.404|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[5]_AND_110_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.070|         |
+cursor_controller/RESET_write_address[5]_AND_110_o|         |         |    2.397|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[5]_AND_90_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.070|         |
-cursor_controller/RESET_write_address[5]_AND_90_o|         |         |    2.397|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[6]_AND_108_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.070|         |
+cursor_controller/RESET_write_address[6]_AND_108_o|         |         |    2.397|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[6]_AND_88_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.070|         |
-cursor_controller/RESET_write_address[6]_AND_88_o|         |         |    2.397|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[7]_AND_106_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.070|         |
+cursor_controller/RESET_write_address[7]_AND_106_o|         |         |    2.397|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[7]_AND_86_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.070|         |
-cursor_controller/RESET_write_address[7]_AND_86_o|         |         |    2.397|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[8]_AND_104_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.070|         |
+cursor_controller/RESET_write_address[8]_AND_104_o|         |         |    2.397|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock cursor_controller/RESET_write_address[8]_AND_84_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.077|         |
-cursor_controller/RESET_write_address[8]_AND_84_o|         |         |    2.404|         |
--------------------------------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock cursor_controller/RESET_write_address[9]_AND_82_o
--------------------------------------------------+---------+---------+---------+---------+
-                                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------+---------+---------+---------+---------+
-clk                                              |         |         |    2.083|         |
-cursor_controller/RESET_write_address[9]_AND_82_o|         |         |    2.410|         |
--------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock cursor_controller/RESET_write_address[9]_AND_102_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+clk                                               |         |         |    2.077|         |
+cursor_controller/RESET_write_address[9]_AND_102_o|         |         |    2.404|         |
+--------------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock keyboard/converter/_n0275<0>
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    2.604|         |
+clk            |         |         |    2.605|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 13.23 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 12.15 secs
  
 --> 
 
 
-Total memory usage is 534352 kilobytes
+Total memory usage is 534520 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  200 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :  203 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 

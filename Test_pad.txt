@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Jul 15 18:09:15 2016
+Sat Jul 16 17:11:09 2016
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -178,7 +178,7 @@ Pinout by Pin Number:
 |J12       |              |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
 |J13       |ledout<2>     |IOB33    |IO_L17N_T2_A25_15           |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |J14       |segmentout<11>|IOB33    |IO_L19P_T3_A22_15           |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|J15       |rxd           |IOB33    |IO_L24N_T3_RS0_15           |INPUT    |LVCMOS33   |15            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|J15       |set_color     |IOB33    |IO_L24N_T3_RS0_15           |INPUT    |LVCMOS33   |15            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |J16       |              |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
 |J17       |segmentout<8> |IOB33    |IO_L23P_T3_FOE_B_15         |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |J18       |segmentout<9> |IOB33    |IO_L23N_T3_FWE_B_15         |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |

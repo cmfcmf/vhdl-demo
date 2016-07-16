@@ -74,7 +74,7 @@ begin
 				end if;
 			end if;
 		elsif ascii_ready = '1' then
-			if write_address_t < 2559 then
+			if write_address_t < 2399 then
 				increment_ram_address <= '1';
 			end if;
 		end if;

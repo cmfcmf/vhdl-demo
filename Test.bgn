@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file '7a100t.nph' in environment
    "Test" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
 Opened constraints file Test.pcf.
 
-Fri Jul 15 18:09:43 2016
+Sat Jul 16 17:11:40 2016
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:3 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:Disable -g ConfigFallback:Disable -g BPI_page_size:1 -g BPI_sync_mode:Disable -g SPI_32bit_addr:No -g SPI_buswidth:1 -g SPI_Fall_Edge:No -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g Encrypt:No Test.ncd 
 
@@ -152,60 +152,58 @@ There were 0 CONFIG constraint(s) processed from Test.pcf.
 
 Running DRC.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[10]_AND_80_o is sourced by a
+   cursor_controller/RESET_write_address[10]_AND_100_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[6]_AND_88_o is sourced by a
+   cursor_controller/RESET_write_address[4]_AND_112_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[7]_AND_86_o is sourced by a
+   cursor_controller/RESET_write_address[7]_AND_106_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[8]_AND_84_o is sourced by a
+   cursor_controller/RESET_write_address[1]_AND_118_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[1]_AND_98_o is sourced by a
+   cursor_controller/RESET_write_address[5]_AND_110_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[9]_AND_82_o is sourced by a
+   cursor_controller/RESET_write_address[8]_AND_104_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[11]_AND_78_o is sourced by a
+   cursor_controller/RESET_write_address[2]_AND_116_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[2]_AND_96_o is sourced by a
+   cursor_controller/RESET_write_address[9]_AND_102_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[0]_AND_100_o is sourced by a
+   cursor_controller/RESET_write_address[11]_AND_98_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[3]_AND_94_o is sourced by a
+   cursor_controller/RESET_write_address[0]_AND_120_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[4]_AND_92_o is sourced by a
+   cursor_controller/RESET_write_address[3]_AND_114_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   cursor_controller/RESET_write_address[5]_AND_90_o is sourced by a
+   cursor_controller/RESET_write_address[6]_AND_108_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    keyboard/converter/_n0275<0> is sourced by a combinatorial pin. This is not
    good design practice. Use the CE pin to control the loading of data into the
    flip-flop.
-WARNING:PhysDesignRules:367 - The signal <rxd_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-DRC detected 0 errors and 14 warnings.  Please see the previously displayed
+DRC detected 0 errors and 13 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "Test.bit".

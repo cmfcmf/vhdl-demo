@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-isemachine::  Fri Jul 15 18:08:52 2016
+isemachine::  Sat Jul 16 17:10:39 2016
 
 par -w -intstyle ise -ol high -mt off Test_map.ncd Test.ncd Test.pcf 
 
@@ -26,29 +26,29 @@ Device speed data version:  "PRODUCTION 1.10 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   200 out of 126,800    1%
-    Number used as Flip Flops:                 181
+  Number of Slice Registers:                   223 out of 126,800    1%
+    Number used as Flip Flops:                 204
     Number used as Latches:                     19
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        464 out of  63,400    1%
-    Number used as logic:                      457 out of  63,400    1%
-      Number using O6 output only:             217
+  Number of Slice LUTs:                        472 out of  63,400    1%
+    Number used as logic:                      469 out of  63,400    1%
+      Number using O6 output only:             220
       Number using O5 output only:              60
-      Number using O5 and O6:                  180
+      Number using O5 and O6:                  189
       Number used as ROM:                        0
     Number used as Memory:                       0 out of  19,000    0%
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:      3
+      Number with same-slice register load:      0
       Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   180 out of  15,850    1%
-  Number of LUT Flip Flop pairs used:          501
-    Number with an unused Flip Flop:           309 out of     501   61%
-    Number with an unused LUT:                  37 out of     501    7%
-    Number of fully used LUT-FF pairs:         155 out of     501   30%
+  Number of occupied Slices:                   195 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          530
+    Number with an unused Flip Flop:           318 out of     530   60%
+    Number with an unused LUT:                  58 out of     530   10%
+    Number of fully used LUT-FF pairs:         154 out of     530   29%
     Number of slice register sites lost
       to control set restrictions:               0 out of 126,800    0%
 
@@ -103,34 +103,33 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 14 secs 
-Finished initial Timing Analysis.  REAL time: 14 secs 
+Starting initial Timing Analysis.  REAL time: 20 secs 
+Finished initial Timing Analysis.  REAL time: 20 secs 
 
-WARNING:Par:288 - The signal rxd_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 2664 unrouted;      REAL time: 15 secs 
+Phase  1  : 2760 unrouted;      REAL time: 22 secs 
 
-Phase  2  : 2074 unrouted;      REAL time: 16 secs 
+Phase  2  : 2155 unrouted;      REAL time: 22 secs 
 
-Phase  3  : 667 unrouted;      REAL time: 17 secs 
+Phase  3  : 683 unrouted;      REAL time: 23 secs 
 
-Phase  4  : 667 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
+Phase  4  : 682 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
 
 Updating file: Test.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 21 secs 
-Total REAL time to Router completion: 21 secs 
-Total CPU time to Router completion: 21 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
+Total REAL time to Router completion: 27 secs 
+Total CPU time to Router completion: 27 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -150,59 +149,59 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.580ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.155ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.142ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.159ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.155ns|     N/A|           0
-  sor_controller/RESET_write_address[10]_AN | HOLD        |     0.667ns|            |       0|           0
-  D_80_o                                    |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.507ns|     N/A|           0
-  sor_controller/RESET_write_address[6]_AND | HOLD        |     0.784ns|            |       0|           0
-  _88_o                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.140ns|     N/A|           0
-  sor_controller/RESET_write_address[7]_AND | HOLD        |     0.652ns|            |       0|           0
-  _86_o                                     |             |            |            |        |            
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.398ns|     N/A|           0
+  sor_controller/RESET_write_address[10]_AN | HOLD        |     0.769ns|            |       0|           0
+  D_100_o                                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.061ns|     N/A|           0
-  sor_controller/RESET_write_address[8]_AND | HOLD        |     0.623ns|            |       0|           0
-  _84_o                                     |             |            |            |        |            
+  sor_controller/RESET_write_address[4]_AND | HOLD        |     0.623ns|            |       0|           0
+  _112_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.371ns|     N/A|           0
+  sor_controller/RESET_write_address[7]_AND | HOLD        |     0.733ns|            |       0|           0
+  _106_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.029ns|     N/A|           0
+  sor_controller/RESET_write_address[1]_AND | HOLD        |     0.594ns|            |       0|           0
+  _118_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.274ns|     N/A|           0
+  sor_controller/RESET_write_address[5]_AND | HOLD        |     0.707ns|            |       0|           0
+  _110_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.046ns|     N/A|           0
+  sor_controller/RESET_write_address[8]_AND | HOLD        |     0.608ns|            |       0|           0
+  _104_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.179ns|     N/A|           0
+  sor_controller/RESET_write_address[2]_AND | HOLD        |     0.657ns|            |       0|           0
+  _116_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.196ns|     N/A|           0
+  sor_controller/RESET_write_address[9]_AND | HOLD        |     0.674ns|            |       0|           0
+  _102_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.538ns|     N/A|           0
+  sor_controller/RESET_write_address[11]_AN | HOLD        |     0.787ns|            |       0|           0
+  D_98_o                                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.341ns|     N/A|           0
+  sor_controller/RESET_write_address[0]_AND | HOLD        |     0.719ns|            |       0|           0
+  _120_o                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.276ns|     N/A|           0
-  sor_controller/RESET_write_address[1]_AND | HOLD        |     0.709ns|            |       0|           0
-  _98_o                                     |             |            |            |        |            
+  sor_controller/RESET_write_address[3]_AND | HOLD        |     0.709ns|            |       0|           0
+  _114_o                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.497ns|     N/A|           0
-  sor_controller/RESET_write_address[9]_AND | HOLD        |     0.774ns|            |       0|           0
-  _82_o                                     |             |            |            |        |            
+  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.338ns|     N/A|           0
+  sor_controller/RESET_write_address[6]_AND | HOLD        |     0.722ns|            |       0|           0
+  _108_o                                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.424ns|     N/A|           0
-  sor_controller/RESET_write_address[11]_AN | HOLD        |     0.738ns|            |       0|           0
-  D_78_o                                    |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.505ns|     N/A|           0
-  sor_controller/RESET_write_address[2]_AND | HOLD        |     0.782ns|            |       0|           0
-  _96_o                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.293ns|     N/A|           0
-  sor_controller/RESET_write_address[0]_AND | HOLD        |     0.720ns|            |       0|           0
-  _100_o                                    |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.413ns|     N/A|           0
-  sor_controller/RESET_write_address[3]_AND | HOLD        |     0.756ns|            |       0|           0
-  _94_o                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.047ns|     N/A|           0
-  sor_controller/RESET_write_address[4]_AND | HOLD        |     0.609ns|            |       0|           0
-  _92_o                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cur | SETUP       |         N/A|     2.171ns|     N/A|           0
-  sor_controller/RESET_write_address[5]_AND | HOLD        |     0.649ns|            |       0|           0
-  _90_o                                     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cha | SETUP       |         N/A|     4.070ns|     N/A|           0
-  r_printer/GND_59_o_pixel_clk_OR_33_o1_BUF | HOLD        |     0.190ns|            |       0|           0
+  Autotimespec constraint for clock net cha | SETUP       |         N/A|     3.768ns|     N/A|           0
+  r_printer/GND_59_o_pixel_clk_OR_33_o1_BUF | HOLD        |     0.192ns|            |       0|           0
   G                                         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
@@ -219,18 +218,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+Total REAL time to PAR completion: 30 secs 
+Total CPU time to PAR completion: 29 secs 
 
-Total REAL time to PAR completion: 23 secs 
-Total CPU time to PAR completion: 22 secs 
-
-Peak Memory Usage:  1059 MB
+Peak Memory Usage:  1060 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 3
+Number of warning messages: 0
 Number of info messages: 2
 
 Writing design to file Test.ncd

@@ -4,7 +4,7 @@ NET "RESET" LOC = V10;
 NET "h_sync" LOC = B11;
 NET "v_sync" LOC = B12;
 NET "led" LOC = V11;
-NET "rxd" LOC = J15;
+NET "set_color" LOC = J15;
 
 NET "kbclk" LOC = F4;
 NET "kbdata" LOC = B2;
@@ -33,7 +33,7 @@ NET "RESET" IOSTANDARD = LVCMOS33;
 NET "h_sync" IOSTANDARD = LVCMOS33;
 NET "v_sync" IOSTANDARD = LVCMOS33;
 NET "led" IOSTANDARD = LVCMOS33;
-NET "rxd" IOSTANDARD = LVCMOS33;
+NET "set_color" IOSTANDARD = LVCMOS33;
 
 NET "kbclk" IOSTANDARD = LVCMOS33;
 NET "kbdata" IOSTANDARD = LVCMOS33;

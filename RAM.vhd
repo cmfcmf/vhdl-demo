@@ -36,21 +36,28 @@ use UNIMACRO.vcomponents.all;
 --use UNISIM.VComponents.all;
 
 entity RAM is
+	Generic (
+		address_length : INTEGER;
+		word_length : INTEGER;
+		we_length : INTEGER
+	);
 	Port (
       clk : in STD_LOGIC;
       RESET : in STD_LOGIC;
-      read_address : in STD_LOGIC_VECTOR (11 downto 0);
+      read_address : in STD_LOGIC_VECTOR (address_length downto 1);
       read_enable : in STD_LOGIC;
-		output : out STD_LOGIC_VECTOR (7 downto 0);
-		write_address : in STD_LOGIC_VECTOR (11 downto 0);
+		output : out STD_LOGIC_VECTOR (word_length downto 1);
+		write_address : in STD_LOGIC_VECTOR (address_length downto 1);
 		write_enable : in STD_LOGIC;
-		input : in STD_LOGIC_VECTOR(7 downto 0)
+		input : in STD_LOGIC_VECTOR(word_length downto 1)
    );	
 end RAM;
 
 architecture Behavioral of RAM is
-
+signal we : STD_LOGIC_VECTOR (we_length downto 1);
 begin
+	we <= (others => '1');
+
    -----------------------------------------------------------------------
    --  READ_WIDTH | BRAM_SIZE | READ Depth  | RDADDR Width |            --
    -- WRITE_WIDTH |           | WRITE Depth | WRADDR Width |  WE Width  --
@@ -70,13 +77,12 @@ begin
    --       1     |  "18Kb"   |    16384    |    14-bit    |    1-bit   --
    -----------------------------------------------------------------------
 
-
    BRAM_SDP_MACRO_inst : BRAM_SDP_MACRO
    generic map (
       BRAM_SIZE => "36Kb", -- Target BRAM, "18Kb" or "36Kb" 
       DEVICE => "7SERIES", -- Target device: "VIRTEX5", "VIRTEX6", "7SERIES", "SPARTAN6" 
-      WRITE_WIDTH => 8,    -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
-      READ_WIDTH => 8,     -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
+      WRITE_WIDTH => word_length,    -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
+      READ_WIDTH => word_length,     -- Valid values are 1-72 (37-72 only valid when BRAM_SIZE="36Kb")
       DO_REG => 0, -- Optional output register (0 or 1)
       INIT_FILE => "NONE",
       SIM_COLLISION_CHECK => "ALL", -- Collision check enable "ALL", "WARNING_ONLY", 
@@ -244,7 +250,7 @@ begin
       RDEN => read_enable,     -- 1-bit input read port enable
       REGCE => '0',   -- 1-bit input read output register enable
       RST => RESET,       -- 1-bit input reset 
-      WE => "1",         -- Input write enable, width defined by write port depth
+      WE => we,         -- Input write enable, width defined by write port depth
       WRADDR => write_address, -- Input write address, width defined by write port depth
       WRCLK => clk,   -- 1-bit input write clock
       WREN => write_enable      -- 1-bit input write port enable

@@ -68,8 +68,8 @@ begin
 		WHEN x"2A" => ascii <= x"56"; --V
 		WHEN x"1D" => ascii <= x"57"; --W
 		WHEN x"22" => ascii <= x"58"; --X
-		WHEN x"35" => ascii <= x"59"; --Y
-		WHEN x"1A" => ascii <= x"5A"; --Z    
+		WHEN x"35" => ascii <= x"5A"; --Y (swapped with Z for German layout)
+		WHEN x"1A" => ascii <= x"59"; --Z (swapped with Y for German layout)
 		WHEN x"45" => ascii <= x"30"; --0
 		WHEN x"16" => ascii <= x"31"; --1
 		WHEN x"1E" => ascii <= x"32"; --2
